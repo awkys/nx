@@ -18,11 +18,15 @@
         <div class="d-flex flex-column flex-root">
 
             <div class="login login-1 login-signin-on d-flex flex-row-fluid" id="kt_login">
-                <div class="d-flex flex-center bgi-size-cover bgi-no-repeat flex-row-fluid" style="background-image: url('http://shige.group/such/pic.php/forum/pic/item/060828381f30e92492f5737d5b086e061d95f72d/mlike.jpg');">
+                <!-- http://shige.group/such/pic.php/forum/pic/item/060828381f30e92492f5737d5b086e061d95f72d/mlike.jpg -->
+{*                <div class="d-flex flex-center bgi-size-cover bgi-no-repeat flex-row-fluid" style="background-image:url('../../images/bg01.jpeg');">*}
+                <div class="d-flex flex-center bgi-size-cover bgi-no-repeat flex-row-fluid" style="background-image: url(http://shige.group/such/pic.php/forum/pic/item/060828381f30e92492f5737d5b086e061d95f72d/mlike.jpg);">
                     <div class="login-form text-center text-white p-7 position-relative overflow-hidden">
-
                         <div class="d-flex flex-center mb-15">
                             <a href="/">
-                                <img src="http://shige.group/such/pic.php/forum/pic/item/d52a2834349b033b3e2d109602ce36d3d439bdd1/mlike.jpg" class="max-h-100px bg-white shadow-light rounded-circle shadow" alt="" />
+                                <img src="/theme/metron/images/authlogo.jpg" class="max-h-100px bg-white shadow-light rounded-circle shadow" alt="" />
                             </a>
+                            <div class="title big-title" style="font-size:5rem;"> &nbsp;
+                                {$config["appName"]}
+                            </div>
                         </div>

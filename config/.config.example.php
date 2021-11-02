@@ -16,8 +16,8 @@ $_ENV['version'] = 2;    //仅当涉及【需要修改config以外的文件】�
 //基本设置--------------------------------------------------------------------------------------------
 $_ENV['key'] = '1145141919810';                //!!! 瞎 jb 修改此key为随机字符串确保网站安全 !!!
 $_ENV['debug'] = false;                          //正式环境请确保为 false
-$_ENV['appName'] = 'sspanel';                      //站点名称
-$_ENV['baseUrl'] = 'http://url.com';               //站点地址
+$_ENV['appName'] = '万克网络';                      //站点名称
+$_ENV['baseUrl'] = 'https://oneky.xyz';               //站点地址
 $_ENV['muKey'] = 'default_mu_key';               //用于校验魔改后端请求，可以随意修改，但请保持前后端一致，否则节点不能工作！
 
 //添加主题首页
@@ -40,7 +40,7 @@ $_ENV['db_prefix'] = '';
 
 
 //邮件设置--------------------------------------------------------------------------------------------
-$_ENV['mailDriver'] = 'none';      //发送邮件方式：none / mailgun / smtp / sendgrid / aliyunweb
+$_ENV['mailDriver'] = 'smtp';      //发送邮件方式：none / mailgun / smtp / sendgrid / aliyunweb
 $_ENV['sendPageLimit'] = 50;          //发信分页 解决大站发公告超时问题
 $_ENV['email_queue']     = true;        //如题，自动计划任务邮件使用队列 需要每分钟执行 php xcat Job SendMail
 
@@ -50,20 +50,20 @@ $_ENV['mailgun_domain'] = '';
 $_ENV['mailgun_sender'] = '';
 
 # smtp
-$_ENV['smtp_host'] = '';                          // SMTP 邮局服务器域名
-$_ENV['smtp_username'] = '';                          // SMTP 账户名
-$_ENV['smtp_password'] = '';                           // SMTP 账户密码
+$_ENV['smtp_host'] = 'smtp.zoho.com';                          // SMTP 邮局服务器域名
+$_ENV['smtp_username'] = 'lingxi@oneky.xyz';                          // SMTP 账户名
+$_ENV['smtp_password'] = 'lingxi_Admin6688';                           // SMTP 账户密码
 $_ENV['smtp_port'] = 465;                         // SMTP 端口(常见端口 25, 587 465)
-$_ENV['smtp_name'] = '';                          // SMTP 发信名称
-$_ENV['smtp_sender'] = '';                          // SMTP 账户发信地址
+$_ENV['smtp_name'] = 'oneky';                          // SMTP 发信名称
+$_ENV['smtp_sender'] = 'lingxi@oneky.xyz';                          // SMTP 账户发信地址
 $_ENV['smtp_ssl'] = true;                        // 是否使用 TLS/SSL 发信
 $_ENV['smtp_reply_to'] = $_ENV['smtp_username'];      // 用户回复邮件的接受地址
 $_ENV['smtp_reply_to_name'] = $_ENV['smtp_sender'];        // 回复地址显示名
 
 # sendgrid
 $_ENV['sendgrid_key'] = '';
-$_ENV['sendgrid_sender'] = '';       //发件邮箱
-$_ENV['sendgrid_name'] = '';       //发件人名称
+$_ENV['sendgrid_sender'] = 'oneky.xyz';       //发件邮箱
+$_ENV['sendgrid_name'] = '万克网络';       //发件人名称
 
 # 阿里云邮件推送 WEB API
 # 阿里云api发信参数以及域名查看地址 https://help.aliyun.com/document_detail/96856.html

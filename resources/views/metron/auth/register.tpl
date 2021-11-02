@@ -5,8 +5,20 @@
         {include file='include/auth/head.tpl'}
 
                         <div class="register-signin">
+{*                            <div class="d-flex flex-center mb-15">*}
+{*                                <div class="test_temp">*}
+{*                                    <a href="/">*}
+{*                                        <!-- http://shige.group/such/pic.php/forum/pic/item/d52a2834349b033b3e2d109602ce36d3d439bdd1/mlike.jpg -->*}
+{*                                        <img src="/theme/metron/images/authlogo.jpg" class="max-h-100px bg-white shadow-light rounded-circle shadow" alt="">*}
+{*                                    </a>*}
+{*                                </div>*}
+{*                                <div class="title big-title" style="font-size:5rem;"> &nbsp;*}
+{*                                    {$config["appName"]}*}
+{*                                </div>*}
+{*                            </div>*}
                             <div class="mb-10">
                                 <h3>新用户注册</h3>
+                                <span class="opacity-70 mr-4">收不到验证码请检查邮箱垃圾邮件</span>
                             </div>
                             <form class="form" id="register_form">
                                 <div id="register_form_1">

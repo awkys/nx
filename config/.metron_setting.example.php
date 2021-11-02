@@ -18,10 +18,10 @@ $_MT['style_shadow'] = 'rounded-lg shadow';    // 卡片圆角: rounded / rounde
 $_MT['index_enable'] = false;                // true: 开启落地页 false:关闭落地页,并自动跳转至用户中心  落地页还在咕,先不要开
 
 #####  重要通知弹窗  --------------------------------------------------------------------------------------------
-$_MT['domain_info']  = true;                     // 当用户访问网站的地址不是config设置的, 提示用户转到 config 地址
+$_MT['domain_info']  = false;                     // 当用户访问网站的地址不是config设置的, 提示用户转到 config 地址
 $_MT['domain_time']  = 15;                     // 弹出后间隔多久再提示 (单位:分钟)
 
-$_MT['enable_pop']   = true;                      // 开启右下角重要通知弹窗
+$_MT['enable_pop']   = false;                      // 开启右下角重要通知弹窗
 $_MT['pop_time']     = 1440;                          // 每次弹出间隔多久时间 (单位:分钟)
 
 /**  弹窗内容
@@ -76,18 +76,18 @@ $_MT['user_level'] = [      // 等级 => 对应的名称显示
 ];
 #####  用户注册  --------------------------------------------------------------------------------------------
 $_MT['register_code']               = false;          // true: 注册必须邀请码, false: 邀请码可不填 (admin面板 - 用户注册 - 将注册模式改为 invite)
-$_MT['register_restricted_email']   = true;      // 设置为true时，注册时必须使用指定的邮箱后缀;
+$_MT['register_restricted_email']   = false;      // 设置为true时，注册时必须使用指定的邮箱后缀;
 $_MT['list_of_available_mailboxes'] = [ '@qq.com', '@gmail.com', '@outlook.com', '@163.com', '@126.com', '@live.com', '@msn.com', '@yeah.net', '@foxmail.com', ];         // 注册邮箱可以使用的邮箱后缀,仅在上面设置为true时生效;
 $_MT['disable_mailbox_list']        = [ '@bcaoo.com', '@chacuo.net', '@tmpmail.net', '@tmail.ws', '@tmpmail.org', '@moimoi.re', '@bccto.me', '@027168.com', '@disbox.org', '@linshiyouxiang.net', '@t.odmail.cn', '@tmails.net', '@moakt.co', '@moakt.ws', '@disbox.net', '@bareed.ws', ];            // 注册邮箱禁止使用的邮箱后缀;
 
 # ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 # │                                              客服系统 设置                                                │
 # └──────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-$_MT['enable_cust']                 = 'none';                   // 使用哪种客服系统  none: 关闭 目前支持: crisp | chatra
+$_MT['enable_cust']                 = 'crisp';                   // 使用哪种客服系统  none: 关闭 目前支持: crisp | chatra
 $_MT['enable_cust_auth']            = true;                     // 在登录注册页显示客服
 
 # crisp  |  https://crisp.chat
-$_MT['crisp_id']                    = '';  // Crisp 的网站ID，格式类似 '18b46e92-eb21-76d3-bfb7-8f2ae9adba64'
+$_MT['crisp_id']                    = 'b33a6c52-6294-4533-a723-f2469ce5f227';  // Crisp 的网站ID，格式类似 '18b46e92-eb21-76d3-bfb7-8f2ae9adba64'
 
 # chatra  |  https://chatra.io
 $_MT['chatra_id']                   = '';  // Chatra 的 ChatraID，可以在 Chatra 提供的网站代码里找到
@@ -115,16 +115,17 @@ $_MT['nodes_miniName'] = false;     // 允许用户开启节点正则匹配简�
 $_MT['nodes_regex'] = '/\[(.*?)\]/';     // 节点筛选设置中节点名称缩短的正则表达式, 默认 [ ] 中的字符都会被移除
 # 主页订阅框显示哪些订阅     可选: ssr, v2ray, surge, clash, clashr, surfboard, kitsunebi, shadowrocket, quantumult, quantumultx,
 $_MT['index_sub'] = [
-    'ssr',
-    'v2ray',
-    'surge',
+//    'ssr',
+//    'v2ray',
     'clash',
-    'clashr',
-    'surfboard',
-    'kitsunebi',
-    'quantumult',
-    'quantumultx',
     'shadowrocket',
+    'surge',
+//    'clashr',
+//    'surfboard',
+//    'kitsunebi',
+//    'quantumult',
+//    'quantumultx',
+
 ];
 # 共享账号
 $_MT['shared_account_enable'] = true;       // 显示 共享账号 导航菜单
@@ -288,11 +289,11 @@ $_MT['Telegram_Payment'] = true;    // 用户充值提醒
  */
 $_MT['client_windows'] = [
     'clash' => array(           // 一个array为一个客户端, 可以自行增加或删除
-        'name'  => 'Bob加速器',      // 客户端名称
+        'name'  => 'Clash',      // 客户端名称
         'img'   => 'https://img-youpai.weixiaoi.com/tu/2021/0406/1617693954210406.png',        // 图标, 使用png透明文件
         'url'   => '/user/tutorial?os=Windows&client=Clash',      // 安装教程的url地址
-        'down'  => 'https://www.google.com',              // 教程页里的客户端下载地址
-        'vs'    => 'v3.2.4',     // 版本号
+        'down'  => 'https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.15.4/Clash.for.Windows.Setup.0.15.4.exe',              // 教程页里的客户端下载地址
+        'vs'    => 'v0.15.4',     // 版本号
     ),
 ];
 
@@ -301,11 +302,11 @@ $_MT['client_windows'] = [
  */
 $_MT['client_android'] = [
     'clash' => array(
-        'name'  => 'Bob加速器',
+        'name'  => 'Clash',
         'img'   => 'https://img-youpai.weixiaoi.com/tu/2021/0406/1617693954210406.png',
         'url'   => '/user/tutorial?os=Android&client=Clash',
-        'down'  => 'https://www.google.com',
-        'vs'    => 'v2.0.0',
+        'down'  => 'https://github.com/Kr328/ClashForAndroid/releases/download/v2.3.18/app-universal-release.apk',
+        'vs'    => 'v2.3.18',
     ),
 ];
 
@@ -315,11 +316,11 @@ $_MT['client_android'] = [
  */
 $_MT['client_macos'] = [
     'clash' => array(
-        'name'  => 'Bob加速器',
+        'name'  => 'ClashX',
         'img'   => 'https://img-youpai.weixiaoi.com/tu/2021/0406/1617693954210406.png',
         'url'   => '/user/tutorial?os=MacOS&client=Clash',
-        'down'  => 'https://www.google.com',
-        'vs'    => 'v3.2.4',
+        'down'  => 'https://github.com/yichengchen/clashX/releases/download/1.50.1/ClashX.dmg',
+        'vs'    => 'v1.50.1',
     ),
 ];
 
@@ -333,17 +334,17 @@ $_MT['client_ios'] = [
         'url'   => '/user/tutorial?os=iOS&client=Shadowrocket',
         'vs'    => 'v0.10.0',
     ),
-    'Quantumult' => array(
-        'name'  => 'Quantumult',
-        'img'   => $_MT['assets_url'].'/media/client-logos/quantumult-ico.png',
-        'url'   => '/user/tutorial?os=iOS&client=Quantumult',
-        'vs'    => 'v1.1.0.1',
-    ),
+//    'Quantumult' => array(
+//        'name'  => 'Quantumult',
+//        'img'   => $_MT['assets_url'].'/media/client-logos/quantumult-ico.png',
+//        'url'   => '/user/tutorial?os=iOS&client=Quantumult',
+//        'vs'    => 'v1.1.0.1',
+//    ),
 ];
 # 教程页共享账号
-$_MT['ios_class']    = 2;    //iOS账户多少级以上可见(包括)
-$_MT['ios_account']  = '';    //iOS账户
-$_MT['ios_password'] = '';    //ios密码
+$_MT['ios_class']    = 20;    //iOS账户多少级以上可见(包括)
+$_MT['ios_account']  = 'bestvpn4@gmail.com';    //iOS账户
+$_MT['ios_password'] = 'Bestvpn168';    //ios密码
 
 # ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 # │                                              任务计划 设置                                               │

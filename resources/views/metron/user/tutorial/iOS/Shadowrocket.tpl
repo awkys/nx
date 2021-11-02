@@ -34,22 +34,22 @@
                                             </div>
                                             <div class="card-body">
 
-                                                <div class="row p-5">
-                                                    <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
-                                                        <p class="font-size-h1 pb-5"><strong>0. 简介</strong></p>
-                                                        <div class="example-preview">
-                                                            <p>Shadowrocket是一款基于规则的网络调试工具，具有性能高和稳定好、使用流畅，功能多样的特点，只占用最少的系统资源，全盘接管所有的连接，根据规则来进行处理，让你无忧无虑。独有的场景模式，方便根据不同需求自动切换配置及节点。</p>
-                                                            <p>由于App Store中国区禁止上架VPN类所有软件，所以该软件仅在美区、港区等非国区App Store可下载，并且该软件是收费软件，为开发者收取。
-                                                            {if $metron['ios_account'] != ''}
-                                                            <p>本站对符合要求的会员提供已购买该软件的Apple ID共享账号进行下载，有条件建议自行搜索相关教程注册非国区账号购买该软件以支持开发者。</p>
-                                                            {/if}</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/ios/shadowrocket/shadowrocket.jpg" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/ios/shadowrocket/shadowrocket.jpg"/></a>
-                                                    </div>
-                                                </div>
+{*                                                <div class="row p-5">*}
+{*                                                    <div class="col-sm-12 col-md-12 col-lg-7 pb-5">*}
+{*                                                        <p class="font-size-h1 pb-5"><strong>0. 简介</strong></p>*}
+{*                                                        <div class="example-preview">*}
+{*                                                            <p>Shadowrocket是一款基于规则的网络调试工具，具有性能高和稳定好、使用流畅，功能多样的特点，只占用最少的系统资源，全盘接管所有的连接，根据规则来进行处理，让你无忧无虑。独有的场景模式，方便根据不同需求自动切换配置及节点。</p>*}
+{*                                                            <p>由于App Store中国区禁止上架VPN类所有软件，所以该软件仅在美区、港区等非国区App Store可下载，并且该软件是收费软件，为开发者收取。*}
+{*                                                            {if $metron['ios_account'] != ''}*}
+{*                                                            <p>本站对符合要求的会员提供已购买该软件的Apple ID共享账号进行下载，有条件建议自行搜索相关教程注册非国区账号购买该软件以支持开发者。</p>*}
+{*                                                            {/if}</p>*}
+{*                                                        </div>*}
+{*                                                    </div>*}
+{*                                                    <div class="col-sm-12 col-md-12 col-lg-5">*}
+{*                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/ios/shadowrocket/shadowrocket.jpg" data-lightbox="images">*}
+{*                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/ios/shadowrocket/shadowrocket.jpg"/></a>*}
+{*                                                    </div>*}
+{*                                                </div>*}
 
                                                 <div class="separator separator-dashed separator-border-4"></div>
 
@@ -101,8 +101,10 @@
                                                         <p class="mb-2">安装完成可正常打开app后 打开手机<code>设置</code> -> <code>iTunes Store 与 App Store</code> 退出共享账号，安装完成后不再需要Appe ID，所以请不要保留在手机登录。</p>
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/ios/shadowrocket/01.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/ios/shadowrocket/01.png"/></a>
+                                                        <a class="image-popup-no-margins" href="/theme/metron/images/ios/shadowrocket-01.png" data-lightbox="images">
+                                                        <img class="rounded-lg" style="width:100%" src="/theme/metron/images/ios/shadowrocket-01.png"/></a>
+                                                        <a class="image-popup-no-margins" href="/theme/metron/images/ios/shadowrocket-02.png" data-lightbox="images">
+                                                            <img class="rounded-lg" style="width:100%" src="/theme/metron/images/ios/shadowrocket-02.png"/></a>
                                                     </div>
                                                 </div>
 
@@ -144,32 +146,32 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/ios/shadowrocket/02.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/ios/shadowrocket/02.png"/></a>
+                                                        <a class="image-popup-no-margins" href="/theme/metron/images/ios/shadowrocket-03.png" data-lightbox="images">
+                                                        <img class="rounded-lg" style="width:100%" src="/theme/metron/images/ios/shadowrocket-03.png"/></a>
                                                     </div>
                                                 </div>
 
                                                 <div class="separator separator-dashed separator-border-4"></div>
 
+{*                                                <div class="row p-5">*}
+{*                                                    <div class="col-sm-12 col-md-12 col-lg-7 pb-5">*}
+{*                                                        <p class="font-size-h1 pb-5"><strong>3. 添加规则配置</strong></p>*}
+{*                                                        <button type="button" class="btn btn-pill btn-shadowrocket copy-text mb-4" data-clipboard-text="{$metron['shadowrocket_conf']}"><i class="fa fa-copy text-white"></i>&nbsp;&nbsp;复制配置链接</button>*}
+{*                                                        <p class="mb-2">点击底栏的<code>配置</code>，选择<code>添加配置</code>，<code>粘贴上面复制的配置链接</code>，<code>下载</code></p>*}
+{*                                                        <p class="mb-2">随后点击 远程文件中新增的配置文件地址，在弹出的菜单中选择第二个<code>使用配置</code></p>*}
+{*                                                        <p class="mb-2">此时 APP 会自动开始下载配置并应用配置。</p>*}
+{*                                                    </div>*}
+{*                                                    <div class="col-sm-12 col-md-12 col-lg-5">*}
+{*                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/ios/shadowrocket/03.png" data-lightbox="images">*}
+{*                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/ios/shadowrocket/03.png"/></a>*}
+{*                                                    </div>*}
+{*                                                </div>*}
+
+{*                                                <div class="separator separator-dashed separator-border-4"></div>*}
+
                                                 <div class="row p-5">
                                                     <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
-                                                        <p class="font-size-h1 pb-5"><strong>3. 添加规则配置</strong></p>
-                                                        <button type="button" class="btn btn-pill btn-shadowrocket copy-text mb-4" data-clipboard-text="{$metron['shadowrocket_conf']}"><i class="fa fa-copy text-white"></i>&nbsp;&nbsp;复制配置链接</button>
-                                                        <p class="mb-2">点击底栏的<code>配置</code>，选择<code>添加配置</code>，<code>粘贴上面复制的配置链接</code>，<code>下载</code></p>
-                                                        <p class="mb-2">随后点击 远程文件中新增的配置文件地址，在弹出的菜单中选择第二个<code>使用配置</code></p>
-                                                        <p class="mb-2">此时 APP 会自动开始下载配置并应用配置。</p>
-                                                    </div>
-                                                    <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/ios/shadowrocket/03.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/ios/shadowrocket/03.png"/></a>
-                                                    </div>
-                                                </div>
-
-                                                <div class="separator separator-dashed separator-border-4"></div>
-
-                                                <div class="row p-5">
-                                                    <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
-                                                        <p class="font-size-h1 pb-5"><strong>4. 开启代理</strong></p>
+                                                        <p class="font-size-h1 pb-5"><strong>3. 开启代理</strong></p>
                                                         <p class="mb-2"><code>回到首页</code>，点击进入<code>全局路由</code>将其更改为 <code>配置</code></p>
                                                         <p class="mb-2">在节点列表中选择节点，小黄点表示当前选择的节点</p>
                                                         <p class="mb-2">点击最顶上的开关开启代理</p>

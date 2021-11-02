@@ -25,12 +25,12 @@
                                             </li>
                                             <li class="menu-item menu-item-submenu menu-item-rel">
                                                 <a href="/user/shop" class="menu-link">
-                                                    <span class="menu-text"><strong>商店</strong></span>
+                                                    <span class="menu-text"><strong>套餐商店</strong></span>
                                                 </a>
                                             </li>
                                             <li class="menu-item menu-item-submenu menu-item-rel">
                                                 <a href="/user/node" class="menu-link">
-                                                    <span class="menu-text"><strong>节点</strong></span>
+                                                    <span class="menu-text"><strong>节点列表</strong></span>
                                                 </a>
                                             </li>
                                             <li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="click" aria-haspopup="true">
@@ -123,24 +123,24 @@
                                                                 <span class="menu-text">订阅设置</span>
                                                             </a>
                                                         </li>
-                                                        {if $metron['node_relay_enable'] === true}
-                                                        <li class="menu-item" aria-haspopup="true">
-                                                            <a href="/user/setting/relay" class="menu-link">
-                                                                <span class="svg-icon menu-icon">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                            <rect x="0" y="0" width="24" height="24"/>
-                                                                            <path d="M6,7 C7.1045695,7 8,6.1045695 8,5 C8,3.8954305 7.1045695,3 6,3 C4.8954305,3 4,3.8954305 4,5 C4,6.1045695 4.8954305,7 6,7 Z M6,9 C3.790861,9 2,7.209139 2,5 C2,2.790861 3.790861,1 6,1 C8.209139,1 10,2.790861 10,5 C10,7.209139 8.209139,9 6,9 Z" fill="#000000" fill-rule="nonzero"/>
-                                                                            <path d="M7,11.4648712 L7,17 C7,18.1045695 7.8954305,19 9,19 L15,19 L15,21 L9,21 C6.790861,21 5,19.209139 5,17 L5,8 L5,7 L7,7 L7,8 C7,9.1045695 7.8954305,10 9,10 L15,10 L15,12 L9,12 C8.27142571,12 7.58834673,11.8052114 7,11.4648712 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
-                                                                            <path d="M18,22 C19.1045695,22 20,21.1045695 20,20 C20,18.8954305 19.1045695,18 18,18 C16.8954305,18 16,18.8954305 16,20 C16,21.1045695 16.8954305,22 18,22 Z M18,24 C15.790861,24 14,22.209139 14,20 C14,17.790861 15.790861,16 18,16 C20.209139,16 22,17.790861 22,20 C22,22.209139 20.209139,24 18,24 Z" fill="#000000" fill-rule="nonzero"/>
-                                                                            <path d="M18,13 C19.1045695,13 20,12.1045695 20,11 C20,9.8954305 19.1045695,9 18,9 C16.8954305,9 16,9.8954305 16,11 C16,12.1045695 16.8954305,13 18,13 Z M18,15 C15.790861,15 14,13.209139 14,11 C14,8.790861 15.790861,7 18,7 C20.209139,7 22,8.790861 22,11 C22,13.209139 20.209139,15 18,15 Z" fill="#000000" fill-rule="nonzero"/>
-                                                                        </g>
-                                                                    </svg>
-                                                                </span>
-                                                                <span class="menu-text">节点中转</span>
-                                                            </a>
-                                                        </li>
-                                                        {/if}
+{*                                                        {if $metron['node_relay_enable'] === true}*}
+{*                                                        <li class="menu-item" aria-haspopup="true">*}
+{*                                                            <a href="/user/setting/relay" class="menu-link">*}
+{*                                                                <span class="svg-icon menu-icon">*}
+{*                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">*}
+{*                                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">*}
+{*                                                                            <rect x="0" y="0" width="24" height="24"/>*}
+{*                                                                            <path d="M6,7 C7.1045695,7 8,6.1045695 8,5 C8,3.8954305 7.1045695,3 6,3 C4.8954305,3 4,3.8954305 4,5 C4,6.1045695 4.8954305,7 6,7 Z M6,9 C3.790861,9 2,7.209139 2,5 C2,2.790861 3.790861,1 6,1 C8.209139,1 10,2.790861 10,5 C10,7.209139 8.209139,9 6,9 Z" fill="#000000" fill-rule="nonzero"/>*}
+{*                                                                            <path d="M7,11.4648712 L7,17 C7,18.1045695 7.8954305,19 9,19 L15,19 L15,21 L9,21 C6.790861,21 5,19.209139 5,17 L5,8 L5,7 L7,7 L7,8 C7,9.1045695 7.8954305,10 9,10 L15,10 L15,12 L9,12 C8.27142571,12 7.58834673,11.8052114 7,11.4648712 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>*}
+{*                                                                            <path d="M18,22 C19.1045695,22 20,21.1045695 20,20 C20,18.8954305 19.1045695,18 18,18 C16.8954305,18 16,18.8954305 16,20 C16,21.1045695 16.8954305,22 18,22 Z M18,24 C15.790861,24 14,22.209139 14,20 C14,17.790861 15.790861,16 18,16 C20.209139,16 22,17.790861 22,20 C22,22.209139 20.209139,24 18,24 Z" fill="#000000" fill-rule="nonzero"/>*}
+{*                                                                            <path d="M18,13 C19.1045695,13 20,12.1045695 20,11 C20,9.8954305 19.1045695,9 18,9 C16.8954305,9 16,9.8954305 16,11 C16,12.1045695 16.8954305,13 18,13 Z M18,15 C15.790861,15 14,13.209139 14,11 C14,8.790861 15.790861,7 18,7 C20.209139,7 22,8.790861 22,11 C22,13.209139 20.209139,15 18,15 Z" fill="#000000" fill-rule="nonzero"/>*}
+{*                                                                        </g>*}
+{*                                                                    </svg>*}
+{*                                                                </span>*}
+{*                                                                <span class="menu-text">节点中转</span>*}
+{*                                                            </a>*}
+{*                                                        </li>*}
+{*                                                        {/if}*}
                                                         <li class="menu-item" aria-haspopup="true">
                                                             <a href="/user/setting/invite" class="menu-link">
                                                                 <span class="svg-icon menu-icon">
@@ -155,29 +155,29 @@
                                                                 <span class="menu-text">邀请注册</span>
                                                             </a>
                                                         </li>
-                                                        <li class="menu-item" aria-haspopup="true">
-                                                            <a href="/user/setting/telegram" class="menu-link">
-                                                                <span class="svg-icon menu-icon">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                            <rect x="0" y="0" width="24" height="24"/>
-                                                                            <path d="M3,13.5 L19,12 L3,10.5 L3,3.7732928 C3,3.70255344 3.01501031,3.63261921 3.04403925,3.56811047 C3.15735832,3.3162903 3.45336217,3.20401298 3.70518234,3.31733205 L21.9867539,11.5440392 C22.098181,11.5941815 22.1873901,11.6833905 22.2375323,11.7948177 C22.3508514,12.0466378 22.2385741,12.3426417 21.9867539,12.4559608 L3.70518234,20.6826679 C3.64067359,20.7116969 3.57073936,20.7267072 3.5,20.7267072 C3.22385763,20.7267072 3,20.5028496 3,20.2267072 L3,13.5 Z" fill="#000000"/>
-                                                                        </g>
-                                                                    </svg>
-                                                                </span>
-                                                                <span class="menu-text">Telegram 设置</span>
-                                                            </a>
-                                                        </li>
+{*                                                        <li class="menu-item" aria-haspopup="true">*}
+{*                                                            <a href="/user/setting/telegram" class="menu-link">*}
+{*                                                                <span class="svg-icon menu-icon">*}
+{*                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">*}
+{*                                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">*}
+{*                                                                            <rect x="0" y="0" width="24" height="24"/>*}
+{*                                                                            <path d="M3,13.5 L19,12 L3,10.5 L3,3.7732928 C3,3.70255344 3.01501031,3.63261921 3.04403925,3.56811047 C3.15735832,3.3162903 3.45336217,3.20401298 3.70518234,3.31733205 L21.9867539,11.5440392 C22.098181,11.5941815 22.1873901,11.6833905 22.2375323,11.7948177 C22.3508514,12.0466378 22.2385741,12.3426417 21.9867539,12.4559608 L3.70518234,20.6826679 C3.64067359,20.7116969 3.57073936,20.7267072 3.5,20.7267072 C3.22385763,20.7267072 3,20.5028496 3,20.2267072 L3,13.5 Z" fill="#000000"/>*}
+{*                                                                        </g>*}
+{*                                                                    </svg>*}
+{*                                                                </span>*}
+{*                                                                <span class="menu-text">Telegram 设置</span>*}
+{*                                                            </a>*}
+{*                                                        </li>*}
                                                     </ul>
                                                 </div>
                                             </li>
-                                            {if $metron['shared_account_enable'] === true}
-                                            <li class="menu-item menu-item-submenu menu-item-rel">
-                                                <a href="/user/shared_account" class="menu-link">
-                                                    <span class="menu-text"><strong>共享账号</strong></span>
-                                                </a>
-                                            </li>
-                                            {/if}
+{*                                            {if $metron['shared_account_enable'] === true}*}
+{*                                            <li class="menu-item menu-item-submenu menu-item-rel">*}
+{*                                                <a href="/user/shared_account" class="menu-link">*}
+{*                                                    <span class="menu-text"><strong>共享账号</strong></span>*}
+{*                                                </a>*}
+{*                                            </li>*}
+{*                                            {/if}*}
                                             {if $config['enable_ticket'] === true}
                                             <li class="menu-item menu-item-submenu menu-item-rel">
                                                 <a href="/user/ticket" class="menu-link">
@@ -185,11 +185,11 @@
                                                 </a>
                                             </li>
                                             {/if}
-                                            <li class="menu-item menu-item-submenu menu-item-rel">
-                                                <a href="/user/help" class="menu-link">
-                                                    <span class="menu-text"><strong>文档中心</strong></span>
-                                                </a>
-                                            </li>
+{*                                            <li class="menu-item menu-item-submenu menu-item-rel">*}
+{*                                                <a href="/user/help" class="menu-link">*}
+{*                                                    <span class="menu-text"><strong>文档中心</strong></span>*}
+{*                                                </a>*}
+{*                                            </li>*}
                                             {if $metron['agent_menu_enable'] === true && $user->agent > 0}
                                             <li class="menu-item menu-item-submenu menu-item-rel">
                                                 <a href="/user/agent" class="menu-link">

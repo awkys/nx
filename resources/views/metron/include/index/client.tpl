@@ -23,13 +23,13 @@
                                                     <li class="nav-item d-flex col flex-grow-1 flex-shrink-0 mr-3 mb-3 mb-lg-0 cursor_onclick">
                                                         <a class="nav-link border d-flex flex-grow-1 rounded flex-column align-items-center" data-toggle="pill" href="#tab_macos">
                                                             <span class="nav-icon py-2 w-auto"><i class="fab la-apple icon-3x"></i></span>
-                                                            <span class="nav-text font-size-lg py-2 font-weight-bold text-center">Mac OS</span>
+                                                            <span class="nav-text font-size-lg py-2 font-weight-bold text-center">Mac</span>
                                                         </a>
                                                     </li>
                                                     <li class="nav-item d-flex col flex-grow-1 flex-shrink-0 mr-3 mb-3 mb-lg-0 cursor_onclick">
                                                         <a class="nav-link border d-flex flex-grow-1 rounded flex-column align-items-center" data-toggle="pill" href="#tab_ios">
                                                             <span class="nav-icon py-2 w-auto"><i class="fab la-apple icon-3x"></i></span>
-                                                            <span class="nav-text font-size-lg py-2 font-weight-bold text-center">iPhone OS</span>
+                                                            <span class="nav-text font-size-lg py-2 font-weight-bold text-center">iPhone</span>
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -44,7 +44,7 @@
                                                                     <div class="d-flex align-items-center mr-2">
                                                                         <div class="symbol symbol-60 symbol-light mr-3 flex-shrink-0">
                                                                             <div class="symbol-label">
-                                                                                <img src="{$c_w['img']}" alt="" class="h-50">
+                                                                                <img src="/theme/metron/images/clashr-ico.png" alt="" class="h-50">
                                                                             </div>
                                                                         </div>
                                                                         <div class="ml-3">
@@ -53,6 +53,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <a href="{$c_w['down']}" class="btn btn-primary font-weight-bold btn-pill">点击下载</a>
+                                                                    <button type="button" class="btn btn-primary font-weight-bold btn-pill href="##" onclick="importSublink('clash')">添加线路</button>
                                                                 </div>
                                                                 {if !$c_w@last}
                                                                 <div class="separator separator-dashed mb-5"></div>
@@ -69,7 +70,7 @@
                                                                     <div class="d-flex align-items-center mr-2">
                                                                         <div class="symbol symbol-60 symbol-light mr-3 flex-shrink-0">
                                                                             <div class="symbol-label">
-                                                                                <img src="{$c_w['img']}" alt="" class="h-50">
+                                                                                <img src="/theme/metron/images/clashr-ico.png" alt="" class="h-50">
                                                                             </div>
                                                                         </div>
                                                                         <div class="ml-3">
@@ -78,6 +79,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <a href="{$c_w['down']}" class="btn btn-primary font-weight-bold btn-pill" target="_blank">点击下载</a>
+                                                                    <button type="button" class="btn btn-primary font-weight-bold btn-pill href="##" onclick="importSublink('clash')">添加线路</button>
                                                                 </div>
                                                                 {if !$c_w@last}
                                                                 <div class="separator separator-dashed mb-5"></div>
@@ -119,7 +121,7 @@
                                                                     <div class="d-flex align-items-center mr-2">
                                                                         <div class="symbol symbol-60 symbol-light mr-3 flex-shrink-0">
                                                                             <div class="symbol-label">
-                                                                                <img src="{$c_w['img']}" alt="" class="h-50">
+                                                                                <img src="/theme/metron/images/clashr-ico.png" alt="" class="h-50">
                                                                             </div>
                                                                         </div>
                                                                         <div class="ml-3">
@@ -128,6 +130,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <a href="{$c_w['down']}" class="btn btn-primary font-weight-bold btn-pill">点击下载</a>
+                                                                    <button type="button" class="btn btn-primary font-weight-bold btn-pill href="##" onclick="importSublink('clash')">添加线路</button>
                                                                 </div>
                                                                 {if !$c_w@last}
                                                                 <div class="separator separator-dashed mb-5"></div>

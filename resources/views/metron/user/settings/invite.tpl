@@ -20,17 +20,6 @@
                                     <div class="flex-row-fluid ml-lg-8">
                                         <div class="row">
                                             <div class="col-md-5 col-lg-12 col-xl-5">
-                                                <div class="card card-custom bgi-no-repeat gutter-b {$metron['style_shadow']}" style="min-height: 250px; background-position: calc(100% + 0.5rem) calc(100% + 0.5rem); background-size: 100% auto; background-image: url({$metron['assets_url']}/media/svg/patterns/rhone-2.svg)">
-                                                    <div class="card-body">
-                                                        <div class="p-4">
-                                                            <h3 class="{$style[$theme_style]['global']['title']} font-weight-bolder">返利余额</h3>
-                                                            <p class="{$style[$theme_style]['global']['title']} display-3 display1-lg pb-2" style="padding-top: 10px; padding-bottom: 10px"><span class="display-4"><strong>¥</strong> </span><strong>{$user->back_money}</strong></p>
-                                                            <div class="pb-5">
-                                                                <a href="Javascript:;" class="btn btn-danger font-weight-bold px-6 py-3" data-toggle="modal" data-target="#take_money_modal">提现</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                                 <div class="card card-custom bgi-no-repeat gutter-b {$metron['style_shadow']}" style="min-height: 400px; background-position: right top; background-size: 30% auto; background-image: url({$metron['assets_url']}/media/svg/shapes/abstract-3.svg)">
                                                     <div class="card-header border-0 pt-5">
                                                         <div class="card-title font-weight-bolder">
@@ -101,6 +90,17 @@
                                                                     </div>
                                                                     {/if}
                                                                 </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card card-custom bgi-no-repeat gutter-b {$metron['style_shadow']}" style="min-height: 250px; background-position: calc(100% + 0.5rem) calc(100% + 0.5rem); background-size: 100% auto; background-image: url({$metron['assets_url']}/media/svg/patterns/rhone-2.svg)">
+                                                    <div class="card-body">
+                                                        <div class="p-4">
+                                                            <h3 class="{$style[$theme_style]['global']['title']} font-weight-bolder">返利余额</h3>
+                                                            <p class="{$style[$theme_style]['global']['title']} display-3 display1-lg pb-2" style="padding-top: 10px; padding-bottom: 10px"><span class="display-4"><strong>¥</strong> </span><strong>{$user->back_money}</strong></p>
+                                                            <div class="pb-5">
+                                                                <a href="Javascript:;" class="btn btn-danger font-weight-bold px-6 py-3" data-toggle="modal" data-target="#take_money_modal">提现</a>
                                                             </div>
                                                         </div>
                                                     </div>
