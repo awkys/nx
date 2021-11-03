@@ -12,9 +12,9 @@ require __DIR__ . '/../config/.config.php';
 require __DIR__ . '/../config/appprofile.php';
 require __DIR__ . '/../app/predefine.php';
 require __DIR__ . '/../app/envload.php';
-require __DIR__ . '/../config/.metron_setting.php';
+require __DIR__ . '/../config/.metron_setting.example.php';
 require __DIR__ . '/../config/style.php';
-require __DIR__ . '/../config/.i18n.php';
+require __DIR__ . '/../config/.i18n.example.php';
 
 // 限制地区访问
 if ($_MT['Restricted_access'] === true) {
