@@ -8,18 +8,18 @@
                 <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
                     {include file='include/global/menu.tpl'}
                     <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-                        <div class="subheader min-h-lg-175px pt-5 pb-7 subheader-transparent" id="kt_subheader">
-                            <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
-                                <div class="d-flex align-items-center flex-wrap mr-2">
-                                    <div class="d-flex flex-column">
-                                        <h2 class="text-white font-weight-bold my-2 mr-5">套餐商店</h2>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <a href="javascript:;" class="btn {$style[$theme_style]['global']['btn_subheader']} font-weight-bold py-3 px-6" data-toggle="modal" data-target="#traffic_package_modal">购买流量包</a>
-                                </div>
-                            </div>
-                        </div>
+{*                        <div class="subheader min-h-lg-175px pt-5 pb-7 subheader-transparent" id="kt_subheader">*}
+{*                            <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">*}
+{*                                <div class="d-flex align-items-center flex-wrap mr-2">*}
+{*                                    <div class="d-flex flex-column">*}
+{*                                        <h2 class="text-white font-weight-bold my-2 mr-5">套餐商店</h2>*}
+{*                                    </div>*}
+{*                                </div>*}
+{*                                <div class="d-flex align-items-center">*}
+{*                                    <a href="javascript:;" class="btn {$style[$theme_style]['global']['btn_subheader']} font-weight-bold py-3 px-6" data-toggle="modal" data-target="#traffic_package_modal">购买流量包</a>*}
+{*                                </div>*}
+{*                            </div>*}
+{*                        </div>*}
 
                         <div class="d-flex flex-column-fluid">
                             <div class="container">
@@ -71,15 +71,15 @@
                                                             {$shopLt = $shop->limitamount()}
                                                             {$shopBi = $shop->limitamount('bi')}
                                                             {$shopCan = $shop->limitamount('can')}
-                                                            <div class="d-flex flex-column w-100 pl-2 pt-3">
-                                                                <span class="font-size-sm text-muted font-weight-bold pb-3">
-                                                                    {if $shopLt == 0}此商品无限制购买{else}<span class="{if $shopBi < 5}text-danger{else}text-primary{/if}">{if $shopCan === 0}此商品已售空, 可尝试购买其它时长{else}此商品限购剩余 {$shopCan} 份{/if}{/if}</span>
-                                                                </span>
-                                                                <div class="progress progress-md w-100">
-                                                                    <div class="progress-bar progress-bar-striped {if $shopBi < 5}bg-danger{else}bg-primary{/if}" role="progressbar" style="width: {$shopBi}%;" aria-valuenow="{$shopBi}" aria-valuemin="0" aria-valuemax="100">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+{*                                                            <div class="d-flex flex-column w-100 pl-2 pt-3">*}
+{*                                                                <span class="font-size-sm text-muted font-weight-bold pb-3">*}
+{*                                                                    {if $shopLt == 0}此商品无限制购买{else}<span class="{if $shopBi < 5}text-danger{else}text-primary{/if}">{if $shopCan === 0}此商品已售空, 可尝试购买其它时长{else}此商品限购剩余 {$shopCan} 份{/if}{/if}</span>*}
+{*                                                                </span>*}
+{*                                                                <div class="progress progress-md w-100">*}
+{*                                                                    <div class="progress-bar progress-bar-striped {if $shopBi < 5}bg-danger{else}bg-primary{/if}" role="progressbar" style="width: {$shopBi}%;" aria-valuenow="{$shopBi}" aria-valuemin="0" aria-valuemax="100">*}
+{*                                                                    </div>*}
+{*                                                                </div>*}
+{*                                                            </div>*}
                                                             <div class="row text-center {$style[$theme_style]['shop']['card_text']}">
                                                                 <div class="col pl-6 pt-6 pb-0">
                                                                     <div class="font-size-sm text-muted font-weight-bold">会员等级</div>
@@ -100,16 +100,16 @@
                                                                     <div class="font-size-h4 font-weight-bolder">{if $shop->reset()!=0}{$shop->reset()}天重置{else}到期清零{/if}</div>
                                                                 </div>
                                                             </div>
-                                                            <div class="row text-center {$style[$theme_style]['shop']['card_text']}">
-                                                                <div class="col pl-6 pt-6 pb-0">
-                                                                    <div class="font-size-sm text-muted font-weight-bold">同时在线</div>
-                                                                    <div class="font-size-h4 font-weight-bolder">{if {$shop->connector()} == '0' }无限制{else}{$shop->connector()}个设备{/if}</div>
-                                                                </div>
-                                                                <div class="col pl-6 pt-6 pb-0">
-                                                                    <div class="font-size-sm text-muted font-weight-bold">峰值速率</div>
-                                                                    <div class="font-size-h4 font-weight-bolder">{if {$shop->speedlimit()} == '0' }无限制{else}{$shop->speedlimit()}Mbps{/if}</div>
-                                                                </div>
-                                                            </div>
+{*                                                            <div class="row text-center {$style[$theme_style]['shop']['card_text']}">*}
+{*                                                                <div class="col pl-6 pt-6 pb-0">*}
+{*                                                                    <div class="font-size-sm text-muted font-weight-bold">同时在线</div>*}
+{*                                                                    <div class="font-size-h4 font-weight-bolder">{if {$shop->connector()} == '0' }无限制{else}{$shop->connector()}个设备{/if}</div>*}
+{*                                                                </div>*}
+{*                                                                <div class="col pl-6 pt-6 pb-0">*}
+{*                                                                    <div class="font-size-sm text-muted font-weight-bold">峰值速率</div>*}
+{*                                                                    <div class="font-size-h4 font-weight-bolder">{if {$shop->speedlimit()} == '0' }无限制{else}{$shop->speedlimit()}Mbps{/if}</div>*}
+{*                                                                </div>*}
+{*                                                            </div>*}
                                                             {if $metron['shop_activity_text'] !== ''}
                                                             <div class="row text-center">
                                                                 <div class="col pl-6 pt-4 pb-0">
@@ -184,15 +184,15 @@
                                                             {$shopLt = $shop->limitamount()}
                                                             {$shopBi = $shop->limitamount('bi')}
                                                             {$shopCan = $shop->limitamount('can')}
-                                                            <div class="d-flex flex-column w-100 pl-2 pt-3">
-                                                                <span class="font-size-sm text-muted font-weight-bold pb-3">
-                                                                    {if $shopLt == 0}此商品无限制购买{else}<span class="{if $shopBi < 5}text-danger{else}text-primary{/if}">{if $shopCan === 0}此商品已售空, 可尝试购买其它时长{else}此商品限购剩余 {$shopCan} 份{/if}{/if}</span>
-                                                                </span>
-                                                                <div class="progress progress-md w-100">
-                                                                    <div class="progress-bar progress-bar-striped {if $shopBi < 5}bg-danger{else}bg-primary{/if}" role="progressbar" style="width: {$shopBi}%;" aria-valuenow="{$shopBi}" aria-valuemin="0" aria-valuemax="100">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+{*                                                            <div class="d-flex flex-column w-100 pl-2 pt-3">*}
+{*                                                                <span class="font-size-sm text-muted font-weight-bold pb-3">*}
+{*                                                                    {if $shopLt == 0}此商品无限制购买{else}<span class="{if $shopBi < 5}text-danger{else}text-primary{/if}">{if $shopCan === 0}此商品已售空, 可尝试购买其它时长{else}此商品限购剩余 {$shopCan} 份{/if}{/if}</span>*}
+{*                                                                </span>*}
+{*                                                                <div class="progress progress-md w-100">*}
+{*                                                                    <div class="progress-bar progress-bar-striped {if $shopBi < 5}bg-danger{else}bg-primary{/if}" role="progressbar" style="width: {$shopBi}%;" aria-valuenow="{$shopBi}" aria-valuemin="0" aria-valuemax="100">*}
+{*                                                                    </div>*}
+{*                                                                </div>*}
+{*                                                            </div>*}
                                                             <div class="row text-center {$style[$theme_style]['shop']['card_text']}">
                                                                 <div class="col pl-6 pt-6 pb-0">
                                                                     <div class="font-size-sm text-muted font-weight-bold">会员等级</div>
@@ -205,7 +205,7 @@
                                                             </div>
                                                             <div class="row text-center {$style[$theme_style]['shop']['card_text']}">
                                                                 <div class="col pl-6 pt-6 pb-0">
-                                                                    <div class="font-size-sm text-muted font-weight-bold">添加流量</div>
+                                                                    <div class="font-size-sm text-muted font-weight-bold">套餐流量</div>
                                                                     <div class="font-size-h4 font-weight-bolder">{$shop->bandwidth()} GB</div>
                                                                 </div>
                                                                 <div class="col pl-6 pt-6 pb-0">
@@ -213,16 +213,16 @@
                                                                     <div class="font-size-h4 font-weight-bolder">{if $shop->reset()!=0}{$shop->reset()}天重置{else}到期清零{/if}</div>
                                                                 </div>
                                                             </div>
-                                                            <div class="row text-center {$style[$theme_style]['shop']['card_text']}">
-                                                                <div class="col pl-6 pt-6 pb-0">
-                                                                    <div class="font-size-sm text-muted font-weight-bold">同时在线</div>
-                                                                    <div class="font-size-h4 font-weight-bolder">{if {$shop->connector()} == '0' }无限制{else}{$shop->connector()}个设备{/if}</div>
-                                                                </div>
-                                                                <div class="col pl-6 pt-6 pb-0">
-                                                                    <div class="font-size-sm text-muted font-weight-bold">峰值速率</div>
-                                                                    <div class="font-size-h4 font-weight-bolder">{if {$shop->speedlimit()} == '0' }无限制{else}{$shop->speedlimit()}Mbps{/if}</div>
-                                                                </div>
-                                                            </div>
+{*                                                            <div class="row text-center {$style[$theme_style]['shop']['card_text']}">*}
+{*                                                                <div class="col pl-6 pt-6 pb-0">*}
+{*                                                                    <div class="font-size-sm text-muted font-weight-bold">同时在线</div>*}
+{*                                                                    <div class="font-size-h4 font-weight-bolder">{if {$shop->connector()} == '0' }无限制{else}{$shop->connector()}个设备{/if}</div>*}
+{*                                                                </div>*}
+{*                                                                <div class="col pl-6 pt-6 pb-0">*}
+{*                                                                    <div class="font-size-sm text-muted font-weight-bold">峰值速率</div>*}
+{*                                                                    <div class="font-size-h4 font-weight-bolder">{if {$shop->speedlimit()} == '0' }无限制{else}{$shop->speedlimit()}Mbps{/if}</div>*}
+{*                                                                </div>*}
+{*                                                            </div>*}
                                                             {if $shop_info !== ''}
                                                             <div class="row text-center">
                                                                 <div class="col pl-6 pt-4 pb-0">

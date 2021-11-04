@@ -8,8 +8,8 @@ declare(strict_types=1);
  *          Addition: You shouldn't remove staff page or entrance of that page.
  */
 require __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . '/../config/.config.php';
-require __DIR__ . '/../config/appprofile.php';
+require __DIR__ . '/../config/.config.example.php';
+require __DIR__ . '/../config/appprofile.example.php';
 require __DIR__ . '/../app/predefine.php';
 require __DIR__ . '/../app/envload.php';
 require __DIR__ . '/../config/.metron_setting.example.php';
