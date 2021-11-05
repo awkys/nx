@@ -311,9 +311,9 @@ $_ENV['merchant_private_key'] = '';
 $_ENV['f2fNotifyUrl'] = null;           //自定义当面付回调地址
 
 #THeadPay 平头哥支付
-$_ENV['theadpay_url'] = 'https://jk.theadpay.com/v1/jk/orders';
-$_ENV['theadpay_mchid'] = '';
-$_ENV['theadpay_key'] = '';
+$_ENV['theadpay_url'] = 'https://api.yuanser.xyz/v1/jk/orders';
+$_ENV['theadpay_mchid'] = 'uUy4JFiAKG7IYP3t';
+$_ENV['theadpay_key'] = 'x5JnPnwbsDFxCAYGTFNGFUZyGr4vTIDy';
 
 #PaymentWall
 $_ENV['pmw_publickey'] = '';
