@@ -81,25 +81,29 @@
 {*                                                                </div>*}
 {*                                                            </div>*}
                                                             <div class="row text-center {$style[$theme_style]['shop']['card_text']}">
-                                                                <div class="col pl-6 pt-6 pb-0">
-                                                                    <div class="font-size-sm text-muted font-weight-bold">会员等级</div>
-                                                                    <div class="font-size-h4 font-weight-bolder">{$metron['user_level'][$shop->user_class()]}</div>
-                                                                </div>
+{*                                                                <div class="col pl-6 pt-6 pb-0">*}
+{*                                                                    <div class="font-size-sm text-muted font-weight-bold">会员等级</div>*}
+{*                                                                    <div class="font-size-h4 font-weight-bolder">{$metron['user_level'][$shop->user_class()]}</div>*}
+{*                                                                </div>*}
                                                                 <div class="col pl-6 pt-6 pb-0">
                                                                     <div class="font-size-sm text-muted font-weight-bold">等级时长</div>
                                                                     <div class="font-size-h4 font-weight-bolder">{$shop->class_expire()} 天</div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="row text-center {$style[$theme_style]['shop']['card_text']}">
                                                                 <div class="col pl-6 pt-6 pb-0">
-                                                                    <div class="font-size-sm text-muted font-weight-bold">添加流量</div>
+                                                                    <div class="font-size-sm text-muted font-weight-bold">套餐流量</div>
                                                                     <div class="font-size-h4 font-weight-bolder">{$shop->bandwidth()} GB</div>
                                                                 </div>
-                                                                <div class="col pl-6 pt-6 pb-0">
-                                                                    <div class="font-size-sm text-muted font-weight-bold">重置周期</div>
-                                                                    <div class="font-size-h4 font-weight-bolder">{if $shop->reset()!=0}{$shop->reset()}天重置{else}到期清零{/if}</div>
-                                                                </div>
                                                             </div>
+{*                                                            <div class="row text-center {$style[$theme_style]['shop']['card_text']}">*}
+{*                                                                <div class="col pl-6 pt-6 pb-0">*}
+{*                                                                    <div class="font-size-sm text-muted font-weight-bold">添加流量</div>*}
+{*                                                                    <div class="font-size-h4 font-weight-bolder">{$shop->bandwidth()} GB</div>*}
+{*                                                                </div>*}
+{*                                                                <div class="col pl-6 pt-6 pb-0">*}
+{*                                                                    <div class="font-size-sm text-muted font-weight-bold">重置周期</div>*}
+{*                                                                    <div class="font-size-h4 font-weight-bolder">{if $shop->reset()!=0}{$shop->reset()}天重置{else}到期清零{/if}</div>*}
+{*                                                                </div>*}
+{*                                                            </div>*}
 {*                                                            <div class="row text-center {$style[$theme_style]['shop']['card_text']}">*}
 {*                                                                <div class="col pl-6 pt-6 pb-0">*}
 {*                                                                    <div class="font-size-sm text-muted font-weight-bold">同时在线</div>*}
@@ -194,25 +198,29 @@
 {*                                                                </div>*}
 {*                                                            </div>*}
                                                             <div class="row text-center {$style[$theme_style]['shop']['card_text']}">
-                                                                <div class="col pl-6 pt-6 pb-0">
-                                                                    <div class="font-size-sm text-muted font-weight-bold">会员等级</div>
-                                                                    <div class="font-size-h4 font-weight-bolder">{$metron['user_level'][$shop->user_class()]}</div>
-                                                                </div>
+{*                                                                <div class="col pl-6 pt-6 pb-0">*}
+{*                                                                    <div class="font-size-sm text-muted font-weight-bold">会员等级</div>*}
+{*                                                                    <div class="font-size-h4 font-weight-bolder">{$metron['user_level'][$shop->user_class()]}</div>*}
+{*                                                                </div>*}
                                                                 <div class="col pl-6 pt-6 pb-0">
                                                                     <div class="font-size-sm text-muted font-weight-bold">等级时长</div>
                                                                     <div class="font-size-h4 font-weight-bolder">{$shop->class_expire()} 天</div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="row text-center {$style[$theme_style]['shop']['card_text']}">
                                                                 <div class="col pl-6 pt-6 pb-0">
                                                                     <div class="font-size-sm text-muted font-weight-bold">套餐流量</div>
                                                                     <div class="font-size-h4 font-weight-bolder">{$shop->bandwidth()} GB</div>
                                                                 </div>
-                                                                <div class="col pl-6 pt-6 pb-0">
-                                                                    <div class="font-size-sm text-muted font-weight-bold">重置周期</div>
-                                                                    <div class="font-size-h4 font-weight-bolder">{if $shop->reset()!=0}{$shop->reset()}天重置{else}到期清零{/if}</div>
-                                                                </div>
                                                             </div>
+{*                                                            <div class="row text-center {$style[$theme_style]['shop']['card_text']}">*}
+{*                                                                <div class="col pl-6 pt-6 pb-0">*}
+{*                                                                    <div class="font-size-sm text-muted font-weight-bold">套餐流量</div>*}
+{*                                                                    <div class="font-size-h4 font-weight-bolder">{$shop->bandwidth()} GB</div>*}
+{*                                                                </div>*}
+{*                                                                <div class="col pl-6 pt-6 pb-0">*}
+{*                                                                    <div class="font-size-sm text-muted font-weight-bold">重置周期</div>*}
+{*                                                                    <div class="font-size-h4 font-weight-bolder">{if $shop->reset()!=0}{$shop->reset()}天重置{else}到期清零{/if}</div>*}
+{*                                                                </div>*}
+{*                                                            </div>*}
 {*                                                            <div class="row text-center {$style[$theme_style]['shop']['card_text']}">*}
 {*                                                                <div class="col pl-6 pt-6 pb-0">*}
 {*                                                                    <div class="font-size-sm text-muted font-weight-bold">同时在线</div>*}

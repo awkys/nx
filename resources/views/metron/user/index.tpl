@@ -185,7 +185,7 @@
                                                     <p class="text-dark-50">钱包余额</p>
                                                 </div>
                                                 <div class="d-flex flex-column">
-                                                    <a href="/user/node" class="btn btn-primary font-weight-bold btn-pill">余额充值</a>
+                                                    <a href="/user/code" class="btn btn-primary font-weight-bold btn-pill">余额充值</a>
                                                 </div>
                                             </div>
                                         </div>
