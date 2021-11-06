@@ -52,8 +52,8 @@
                                                                             <div class="font-size-sm text-muted font-weight-bold mt-1">{$c_w['vs']}</div>
                                                                         </div>
                                                                         <div class="d-flex ml-30">
-                                                                            <a href="{$c_w['down']}" class="btn mr-30 btn-primary font-weight-bold btn-pill">点击下载</a>
-                                                                            <button type="button" class="btn  btn-primary font-weight-bold btn-pill href="##" onclick="importSublink('clash')">添加线路</button>
+                                                                            <a href="{$c_w['down']}" class="d-flex btn mr-30 btn-primary font-weight-bold btn-pill">点击下载</a>
+                                                                            <button type="button" class="d-flex btn  btn-primary font-weight-bold btn-pill href="##" onclick="importSublink('clash')">添加线路</button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
