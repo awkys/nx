@@ -41,7 +41,7 @@
                                                             <div class="flex-grow-1 card-spacer-x">
                                                                 {foreach $metron['client_windows'] as $c_w}
                                                                 <div class="d-flex align-items-center justify-content-between mb-5">
-                                                                    <div class="d-flex align-items-center mr-2">
+                                                                    <div class="d-flex align-items-center">
                                                                         <div class="symbol symbol-60 symbol-light mr-3 flex-shrink-0">
                                                                             <div class="symbol-label">
                                                                                 <img src="/theme/metron/images/clashr-ico.png" alt="" class="h-50">
@@ -51,17 +51,35 @@
                                                                             <span class="font-size-h5 text-primary font-weight-bolder">{$c_w['name']}</span>
                                                                             <div class="font-size-sm text-muted font-weight-bold mt-1">{$c_w['vs']}</div>
                                                                         </div>
-                                                                        <div class="d-flex ml-30">
-                                                                            <a href="{$c_w['down']}" class="d-flex btn mr-30 btn-primary font-weight-bold btn-pill">点击下载</a>
-                                                                            <button type="button" class="d-flex btn  btn-primary font-weight-bold btn-pill href="##" onclick="importSublink('clash')">添加线路</button>
+{*                                                                        <div class="ml-10">*}
+{*                                                                            <a href="{$c_w['down']}" class="btn btn-primary font-weight-bold btn-pill">点击下载</a>*}
+{*                                                                            <button type="button" class="btn btn-primary font-weight-bold btn-pill mt-2 href="##" onclick="importSublink('clash')">添加线路</button>*}
+{*                                                                        </div>*}
+                                                                    </div>
+                                                                    <a href="{$c_w['down']}" class="btn btn-primary font-weight-bold btn-pill">点击下载</a>
+
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-between mb-5">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <div class="symbol symbol-60 symbol-light mr-3 flex-shrink-0">
+                                                                            <div class="symbol-label">
+                                                                                <img src="/theme/metron/images/add.jpg" alt="" class="h-50">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="ml-3">
+                                                                            <span class="font-size-h5 text-primary font-weight-bolder">导入</span>
+                                                                            <div class="font-size-sm text-muted font-weight-bold mt-1">到clash</div>
                                                                         </div>
                                                                     </div>
+                                                                    <button type="button" class="btn btn-primary font-weight-bold btn-pill mt-2 href="##" onclick="importSublink('clash')">添加线路</button>
+
                                                                 </div>
                                                                 {if !$c_w@last}
                                                                 <div class="separator separator-dashed mb-5"></div>
                                                                 {/if}
                                                                 {/foreach}
                                                             </div>
+
                                                         </div>
                                                     </div>
                                                     <div class="tab-pane" id="tab_android" role="tabpanel">
@@ -79,13 +97,22 @@
                                                                             <span class="font-size-h5 text-primary font-weight-bolder">{$c_w['name']}</span>
                                                                             <div class="font-size-sm text-muted font-weight-bold mt-1">{$c_w['vs']}</div>
                                                                         </div>
-                                                                        <div class="ml-30">
-                                                                            <a href="{$c_w['down']}" class="btn mr-30 btn-primary font-weight-bold btn-pill">点击下载</a>
-                                                                            <button type="button" class="btn  btn-primary font-weight-bold btn-pill href="##" onclick="importSublink('clash')">添加线路</button>
+                                                                    </div>
+                                                                    <a href="{$c_w['down']}" class="btn btn-primary font-weight-bold btn-pill" target="_blank">点击下载</a>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-between mb-5">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <div class="symbol symbol-60 symbol-light mr-3 flex-shrink-0">
+                                                                            <div class="symbol-label">
+                                                                                <img src="/theme/metron/images/add.jpg" alt="" class="h-50">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="ml-3">
+                                                                            <span class="font-size-h5 text-primary font-weight-bolder">导入</span>
+                                                                            <div class="font-size-sm text-muted font-weight-bold mt-1">到clash</div>
                                                                         </div>
                                                                     </div>
-{*                                                                    <a href="{$c_w['down']}" class="btn btn-primary font-weight-bold btn-pill" target="_blank">点击下载</a>*}
-{*                                                                    <button type="button" class="btn btn-primary font-weight-bold btn-pill href="##" onclick="importSublink('clash')">添加线路</button>*}
+                                                                    <button type="button" class="btn btn-primary font-weight-bold btn-pill mt-2 href="##" onclick="importSublink('clash')">添加线路</button>
                                                                 </div>
                                                                 {if !$c_w@last}
                                                                 <div class="separator separator-dashed mb-5"></div>
@@ -106,7 +133,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="ml-3">
-                                                                            <span class="font-size-h5 text-primary font-weight-bolder">{$c_w['name']}</span>
+                                                                            <span class="font-size-h10 text-primary font-weight-bolder">{$c_w['name']}</span>
                                                                             <div class="font-size-sm text-muted font-weight-bold mt-1">{$c_w['vs']}</div>
                                                                         </div>
                                                                     </div>
@@ -134,13 +161,22 @@
                                                                             <span class="font-size-h5 text-primary font-weight-bolder">{$c_w['name']}</span>
                                                                             <div class="font-size-sm text-muted font-weight-bold mt-1">{$c_w['vs']}</div>
                                                                         </div>
-                                                                        <div class="ml-30">
-                                                                            <a href="{$c_w['down']}" class="btn mr-30 btn-primary font-weight-bold btn-pill">点击下载</a>
-                                                                            <button type="button" class="btn  btn-primary font-weight-bold btn-pill href="##" onclick="importSublink('clash')">添加线路</button>
+                                                                    </div>
+                                                                    <a href="{$c_w['down']}" class="btn btn-primary font-weight-bold btn-pill">点击下载</a>
+                                                                </div>
+                                                                <div class="d-flex align-items-center justify-content-between mb-5">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <div class="symbol symbol-60 symbol-light mr-3 flex-shrink-0">
+                                                                            <div class="symbol-label">
+                                                                                <img src="/theme/metron/images/add.jpg" alt="" class="h-50">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="ml-3">
+                                                                            <span class="font-size-h5 text-primary font-weight-bolder">导入</span>
+                                                                            <div class="font-size-sm text-muted font-weight-bold mt-1">到clashX</div>
                                                                         </div>
                                                                     </div>
-{*                                                                    <a href="{$c_w['down']}" class="btn btn-primary font-weight-bold btn-pill">点击下载</a>*}
-{*                                                                    <button type="button" class="btn btn-primary font-weight-bold btn-pill href="##" onclick="importSublink('clash')">添加线路</button>*}
+                                                                    <button type="button" class="btn btn-primary font-weight-bold btn-pill mt-2 href="##" onclick="importSublink('clash')">添加线路</button>
                                                                 </div>
                                                                 {if !$c_w@last}
                                                                 <div class="separator separator-dashed mb-5"></div>

@@ -32,7 +32,7 @@ $_ENV['db_host'] = '';
 $_ENV['db_socket'] = '';
 $_ENV['db_database'] = 'sspanel';           //数据库名
 $_ENV['db_username'] = 'root';              //数据库用户名
-$_ENV['db_password'] = '123456';           //用户名对应的密码
+$_ENV['db_password'] = 'Cisco123';           //用户名对应的密码
 #高级
 $_ENV['db_charset'] = 'utf8';
 $_ENV['db_collation'] = 'utf8_general_ci';
