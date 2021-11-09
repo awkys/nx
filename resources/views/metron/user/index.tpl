@@ -35,7 +35,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-6 col-lg-6 col-xl-3 ">
-                                    <div class="card card-custom mb-8 {$style[$theme_style]['index']['dash1']['bg']} {$metron['style_shadow']}">
+                                    <div class="card card-custom mb-8 {$metron['style_shadow']}" style="background:#aae4de;">
                                         <div class="card-body pt-6 pl-4 pb-0">
                                             <div class="d-flex pt-4 pl-4 pr-4 pb-0 justify-content-between mb-0">
                                                     <span class="svg-icon svg-icon-4x {$style[$theme_style]['index']['dash1']['svg']}">
@@ -85,7 +85,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-lg-6 col-xl-3 ">
-                                    <div class="card card-custom mb-8 {$style[$theme_style]['index']['dash2']['bg']} {$metron['style_shadow']}">
+                                    <div class="card card-custom mb-8 {$metron['style_shadow']}" style="background:#d1d7eb;">
                                         <div class="card-body pt-6 pl-4 pb-0">
                                             <div class="d-flex pt-4 pl-4 pr-4 pb-0 justify-content-between mb-0">
                                                     <span class="svg-icon svg-icon-4x {$style[$theme_style]['index']['dash2']['svg']}">
@@ -159,7 +159,7 @@
 {*                                    </div>*}
 {*                                </div>*}
                                 <div class="col-sm-6 col-lg-6 col-xl-3 ">
-                                    <div class="card card-custom mb-8 {$style[$theme_style]['index']['dash4']['bg']} {$metron['style_shadow']}">
+                                    <div class="card card-custom mb-8 {$metron['style_shadow']}" style="background:#ebdcd1;">
                                         <div class="card-body pt-6 pl-4 pb-0">
                                             <div class="d-flex pt-4 pl-4 pr-4 pb-0  justify-content-between mb-0">
                                                     <span class="svg-icon svg-icon-4x {$style[$theme_style]['index']['dash4']['svg']}">
