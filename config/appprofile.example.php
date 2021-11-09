@@ -251,7 +251,9 @@ $_ENV['Clash_Profiles'] = [
             'external-controller' => '0.0.0.0:9090',
             'secret'              => ''
         ],
-        'Proxy' => [],
+        'Proxy' => [
+            '🚀直接连接 = direct'
+        ],
         'ProxyGroup' => [
             [
                 'name' => '✈️选择线路',
