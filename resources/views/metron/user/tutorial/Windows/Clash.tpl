@@ -37,32 +37,32 @@
                                             <div class="card-body">
 
 <!-- 开始 :: 内容段落 1 -->
-                                                <div class="row p-5">
+{*                                                <div class="row p-5">*}
 
-                                                    <!-- 开始 :: 段落文本区 -->
-                                                    <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
-                                                        <!-- 开始 :: 段落标题 -->
-                                                        <p class="font-size-h1 pb-5"><strong>0. 简介</strong></p>
-                                                        <!-- 结束 :: 段落标题 -->
-                                                        <div class="example-preview">
-                                                            <p><code>Clash</code>是一款用 Go语言 开发的支持 Linux/MacOS/Windows/Android 等多平台的代理工具，支持 ss/v2ray（不支持 ssr），支持规则分流（类似于 Surge 的配置）。</p>
-                                                            <p>由于客户端长期更新中可能出现界面或功能与教程不符，我们建议您把本教程仅作为参考，具体需要根据自己使用过程中熟悉了解。</p>
-                                                            <p><code>ClashR</code>则在Clash的基础上增加对SSR的支持</p>
-                                                            <code>Clash for Windows 仅支持Windows 64位系统，32位系统请选用其他客户端</code>
-                                                        </div>
-                                                    </div>
-                                                    <!-- 结束 :: 段落文本区 -->
+{*                                                    <!-- 开始 :: 段落文本区 -->*}
+{*                                                    <div class="col-sm-12 col-md-12 col-lg-7 pb-5">*}
+{*                                                        <!-- 开始 :: 段落标题 -->*}
+{*                                                        <p class="font-size-h1 pb-5"><strong>0. 简介</strong></p>*}
+{*                                                        <!-- 结束 :: 段落标题 -->*}
+{*                                                        <div class="example-preview">*}
+{*                                                            <p><code>Clash</code>是一款用 Go语言 开发的支持 Linux/MacOS/Windows/Android 等多平台的代理工具，支持 ss/v2ray（不支持 ssr），支持规则分流（类似于 Surge 的配置）。</p>*}
+{*                                                            <p>由于客户端长期更新中可能出现界面或功能与教程不符，我们建议您把本教程仅作为参考，具体需要根据自己使用过程中熟悉了解。</p>*}
+{*                                                            <p><code>ClashR</code>则在Clash的基础上增加对SSR的支持</p>*}
+{*                                                            <code>Clash for Windows 仅支持Windows 64位系统，32位系统请选用其他客户端</code>*}
+{*                                                        </div>*}
+{*                                                    </div>*}
+{*                                                    <!-- 结束 :: 段落文本区 -->*}
 
-                                                    <!-- 开始 :: 图片 -->
-                                                    <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <!-- 图片点击打开的灯箱高清图 -->
-                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/windows/clashr/clashr.png" data-lightbox="images">
-                                                        <!-- 页面显示的图片缩略图 -->
-                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/windows/clashr/clashr.png"/></a>
-                                                    </div>
-                                                    <!-- 结束 :: 图片 -->
+{*                                                    <!-- 开始 :: 图片 -->*}
+{*                                                    <div class="col-sm-12 col-md-12 col-lg-5">*}
+{*                                                        <!-- 图片点击打开的灯箱高清图 -->*}
+{*                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/windows/clashr/clashr.png" data-lightbox="images">*}
+{*                                                        <!-- 页面显示的图片缩略图 -->*}
+{*                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/windows/clashr/clashr.png"/></a>*}
+{*                                                    </div>*}
+{*                                                    <!-- 结束 :: 图片 -->*}
 
-                                                </div>
+{*                                                </div>*}
 <!-- 结束 :: 内容段落 1 -->
 
                                                 <!-- 开始 :: 分割线 -->
@@ -83,8 +83,8 @@
                                                     </div>
                                                     <!-- 开始 :: 图片 -->
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/windows/clashr/clashr.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/windows/clashr/clashr.png"/></a>
+                                                        <a class="image-popup-no-margins" href="/theme/metron/images/win/clash-1.png"  data-lightbox="images">
+                                                        <img class="rounded-lg" style="width:100%" src="/theme/metron/images/win/clash-1.png"/></a>
                                                     </div>
                                                     <!-- 结束 :: 图片 -->
                                                 </div>
@@ -130,8 +130,8 @@
                                                         <div class="h6 pt-2">如果弹出配置错误提示，请重启客户端并重新选中刚刚导入的配置</div>
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/windows/clashr/clashr.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/windows/clashr/clashr.png"/></a>
+                                                        <a class="image-popup-no-margins" href="/theme/metron/images/win/clash-2.png" data-lightbox="images">
+                                                        <img class="rounded-lg" style="width:100%" src="/theme/metron/images/win/clash-2.png"/></a>
                                                     </div>
                                                 </div>
 <!-- 结束 :: 内容段落 3 -->
@@ -150,8 +150,8 @@
                                                         <div class="h6 pt-2">根据规则链路设置相应的节点</div>
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/windows/clashr/clashr.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/windows/clashr/clashr.png"/></a>
+                                                        <a class="image-popup-no-margins" href="/theme/metron/images/win/clash-3.png" data-lightbox="images">
+                                                        <img class="rounded-lg" style="width:100%" src="/theme/metron/images/win/clash-3.png"/></a>
                                                     </div>
                                                 </div>
 <!-- 结束 :: 内容段落 4 -->
@@ -171,8 +171,8 @@
                                                         <div class="h6 pt-2">一切准备就绪~~~</div>
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/windows/clashr/clashr.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/windows/clashr/clashr.png"/></a>
+                                                        <a class="image-popup-no-margins" href="/theme/metron/images/win/clash-4.png" data-lightbox="images">
+                                                        <img class="rounded-lg" style="width:100%" src="/theme/metron/images/win/clash-4.png"/></a>
                                                     </div>
                                                 </div>
 <!-- 结束 :: 内容段落 5 -->
@@ -182,7 +182,7 @@
                                     </div>
                                 </div>
                                 <!-- 结束 :: 教程内容 -->
-                                
+
 							</div>
 						</div>
 					</div>

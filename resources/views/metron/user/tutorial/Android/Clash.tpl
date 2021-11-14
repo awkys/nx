@@ -34,20 +34,20 @@
                                             </div>
                                             <div class="card-body">
 
-                                                <div class="row p-5">
-                                                    <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
-                                                        <p class="font-size-h1 pb-5"><strong>0. 简介</strong></p>
-                                                        <div class="example-preview">
-                                                            <p><code>Clash</code>是一款用 Go语言 开发的支持 Linux/MacOS/Windows/Android 等多平台的代理工具，支持 ss/v2ray（不支持 ssr），支持规则分流（类似于 Surge 的配置）。</p>
-                                                            <p><code>Clash(R)</code>则是基于<code>Clash</code>开发，从而支持SSR节点，请注意SS和SSR是有区别的！</p>
-                                                            <p>由于客户端长期更新中可能出现界面或功能与教程不符，我们建议您把本教程仅作为参考，具体需要根据自己使用过程中熟悉了解。</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png"/></a>
-                                                    </div>
-                                                </div>
+{*                                                <div class="row p-5">*}
+{*                                                    <div class="col-sm-12 col-md-12 col-lg-7 pb-5">*}
+{*                                                        <p class="font-size-h1 pb-5"><strong>0. 简介</strong></p>*}
+{*                                                        <div class="example-preview">*}
+{*                                                            <p><code>Clash</code>是一款用 Go语言 开发的支持 Linux/MacOS/Windows/Android 等多平台的代理工具，支持 ss/v2ray（不支持 ssr），支持规则分流（类似于 Surge 的配置）。</p>*}
+{*                                                            <p><code>Clash(R)</code>则是基于<code>Clash</code>开发，从而支持SSR节点，请注意SS和SSR是有区别的！</p>*}
+{*                                                            <p>由于客户端长期更新中可能出现界面或功能与教程不符，我们建议您把本教程仅作为参考，具体需要根据自己使用过程中熟悉了解。</p>*}
+{*                                                        </div>*}
+{*                                                    </div>*}
+{*                                                    <div class="col-sm-12 col-md-12 col-lg-5">*}
+{*                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png" data-lightbox="images">*}
+{*                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png"/></a>*}
+{*                                                    </div>*}
+{*                                                </div>*}
 
                                                 <div class="separator separator-dashed separator-border-4"></div>
 
@@ -58,10 +58,10 @@
                                                         <p class="mb-2">下载客户端并进行安装</p>
                                                         <p class="mb-2">启动客户端并进行下面操作</p>
                                                     </div>
-                                                    <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png"/></a>
-                                                    </div>
+{*                                                    <div class="col-sm-12 col-md-12 col-lg-5">*}
+{*                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png" data-lightbox="images">*}
+{*                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png"/></a>*}
+{*                                                    </div>*}
                                                 </div>
 
                                                 <div class="separator separator-dashed separator-border-4"></div>
@@ -116,8 +116,8 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png"/></a>
+                                                        <a class="image-popup-no-margins" href="/theme/metron/images/and/android-2.png" data-lightbox="images">
+                                                        <img class="rounded-lg" style="width:100%" src="/theme/metron/images/and/android-2.png"/></a>
                                                     </div>
                                                 </div>
 
@@ -131,8 +131,8 @@
                                                         <p class="mb-2">根据规则设置节点即可</p>
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/android/clashr/clashr.png"/></a>
+                                                        <a class="image-popup-no-margins" href="/theme/metron/images/and/android-3.png" data-lightbox="images">
+                                                        <img class="rounded-lg" style="width:100%" src="/theme/metron/images/and/android-3.png"/></a>
                                                     </div>
                                                 </div>
 
@@ -140,7 +140,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
 							</div>
 						</div>
 					</div>

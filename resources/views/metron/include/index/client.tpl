@@ -72,8 +72,27 @@
                                                                         </div>
                                                                     </div>
                                                                     <button type="button" class="btn btn-primary font-weight-bold btn-pill mt-2 href="##" onclick="importSublink('clash')">添加线路</button>
-
                                                                 </div>
+
+                                                                <!-- 开始 :: 分割线 -->
+{*                                                                <div class="separator separator-dashed separator-border-4 p-5"></div>*}
+                                                                <!-- 结束 :: 分割线 -->
+
+                                                                <div class="d-flex align-items-center justify-content-between mb-5">
+                                                                    <span class="font-size-h4 text-primary font-weight-bolder">使用步驟&nbsp;:&nbsp;
+                                                                        <span class="font-size-h6">
+                                                                        1.&nbsp;点击下载&nbsp;&nbsp;2.&nbsp;添加线路&nbsp;&nbsp;
+                                                                        3.&nbsp;打开clash&nbsp;点击System&nbsp;Proxy连接
+                                                                        </span>
+                                                                    </span>
+                                                                </div>
+
+                                                                <div class="d-flex align-items-center justify-content-between mb-5">
+                                                                <span class="font-size-h4 text-primary font-weight-bolder">点击查看&nbsp;-->&nbsp;
+                                                                    <a href="/user/tutorial?os=Windows&amp;client=Clash" style="color:#F00">详细教程</a>
+                                                                </span>
+                                                                </div>
+
                                                                 {if !$c_w@last}
                                                                 <div class="separator separator-dashed mb-5"></div>
                                                                 {/if}
@@ -114,6 +133,22 @@
                                                                     </div>
                                                                     <button type="button" class="btn btn-primary font-weight-bold btn-pill mt-2 href="##" onclick="importSublink('clash')">添加线路</button>
                                                                 </div>
+
+                                                                <div class="d-flex align-items-center justify-content-between mb-5">
+                                                                    <span class="font-size-h4 text-primary font-weight-bolder">使用步驟&nbsp;:&nbsp;
+                                                                        <span class="font-size-h6">
+                                                                        1.&nbsp;点击下载&nbsp;&nbsp;2.&nbsp;添加线路&nbsp;&nbsp;
+                                                                        3.&nbsp;右上角保存配置&nbsp;-&nbsp;点击启动
+                                                                        </span>
+                                                                    </span>
+                                                                </div>
+
+                                                                <div class="d-flex align-items-center justify-content-between mb-5">
+                                                                    <span class="font-size-h4 text-primary font-weight-bolder">点击查看&nbsp;-->&nbsp;
+                                                                        <a href="/user/tutorial?os=Android&amp;client=Clash" style="color:#F00">详细教程</a>
+                                                                    </span>
+                                                                </div>
+
                                                                 {if !$c_w@last}
                                                                 <div class="separator separator-dashed mb-5"></div>
                                                                 {/if}
@@ -178,6 +213,22 @@
                                                                     </div>
                                                                     <button type="button" class="btn btn-primary font-weight-bold btn-pill mt-2 href="##" onclick="importSublink('clash')">添加线路</button>
                                                                 </div>
+
+                                                                <div class="d-flex align-items-center justify-content-between mb-5">
+                                                                    <span class="font-size-h4 text-primary font-weight-bolder">使用步驟&nbsp;:&nbsp;
+                                                                        <span class="font-size-h6">
+                                                                        1.&nbsp;点击下载&nbsp;&nbsp;2.&nbsp;添加线路&nbsp;&nbsp;
+                                                                        3.&nbsp;打开状态栏clash&nbsp;-&nbsp;设置为系统代理
+                                                                        </span>
+                                                                    </span>
+                                                                </div>
+
+                                                                <div class="d-flex align-items-center justify-content-between mb-5">
+                                                                    <span class="font-size-h4 text-primary font-weight-bolder">点击查看&nbsp;-->&nbsp;
+                                                                        <a href="/user/tutorial?os=MacOS&amp;client=Clash" style="color:#F00">详细教程</a>
+                                                                    </span>
+                                                                </div>
+
                                                                 {if !$c_w@last}
                                                                 <div class="separator separator-dashed mb-5"></div>
                                                                 {/if}
