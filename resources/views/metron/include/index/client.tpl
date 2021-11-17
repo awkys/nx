@@ -75,14 +75,15 @@
                                                                 </div>
 
                                                                 <!-- 开始 :: 分割线 -->
-{*                                                                <div class="separator separator-dashed separator-border-4 p-5"></div>*}
+{*                                                                <div class="separator separator-dashed separator-border-rder-4 p-5"></div>*}
                                                                 <!-- 结束 :: 分割线 -->
 
                                                                 <div class="d-flex align-items-center justify-content-between mb-5">
-                                                                    <span class="font-size-h4 text-primary font-weight-bolder">使用步驟&nbsp;:&nbsp;
+                                                                    <span class="font-size-h4 text-primary font-weight-bolder" >使用步驟&nbsp;:&nbsp;
                                                                         <span class="font-size-h6">
-                                                                        1.&nbsp;点击下载&nbsp;&nbsp;2.&nbsp;添加线路&nbsp;&nbsp;
-                                                                        3.&nbsp;打开clash&nbsp;点击System&nbsp;Proxy连接
+                                                                            1.&nbsp;点击下载&nbsp;
+                                                                            2.&nbsp;添加线路&nbsp;&nbsp;
+                                                                            3.&nbsp;打开clash&nbsp;点击System&nbsp;Proxy连接
                                                                         </span>
                                                                     </span>
                                                                 </div>
