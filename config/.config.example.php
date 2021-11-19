@@ -51,19 +51,19 @@ $_ENV['mailgun_sender'] = '';
 
 # smtp
 $_ENV['smtp_host'] = 'smtp.zoho.com';                          // SMTP 邮局服务器域名
-$_ENV['smtp_username'] = 'lingxi@oneky.xyz';                          // SMTP 账户名
-$_ENV['smtp_password'] = 'lingxi_Admin6688';                           // SMTP 账户密码
+$_ENV['smtp_username'] = 'hi@nxkys.com';                          // SMTP 账户名
+$_ENV['smtp_password'] = 'nx_Admin6688';                           // SMTP 账户密码
 $_ENV['smtp_port'] = 465;                         // SMTP 端口(常见端口 25, 587 465)
-$_ENV['smtp_name'] = 'oneky';                          // SMTP 发信名称
-$_ENV['smtp_sender'] = 'lingxi@oneky.xyz';                          // SMTP 账户发信地址
+$_ENV['smtp_name'] = '灵溪网络';                          // SMTP 发信名称
+$_ENV['smtp_sender'] = 'hi@nxkys.com';                          // SMTP 账户发信地址
 $_ENV['smtp_ssl'] = true;                        // 是否使用 TLS/SSL 发信
 $_ENV['smtp_reply_to'] = $_ENV['smtp_username'];      // 用户回复邮件的接受地址
 $_ENV['smtp_reply_to_name'] = $_ENV['smtp_sender'];        // 回复地址显示名
 
 # sendgrid
 $_ENV['sendgrid_key'] = '';
-$_ENV['sendgrid_sender'] = 'oneky.xyz';       //发件邮箱
-$_ENV['sendgrid_name'] = '万克网络';       //发件人名称
+$_ENV['sendgrid_sender'] = 'nxkys.com';       //发件邮箱
+$_ENV['sendgrid_name'] = '灵溪网络';       //发件人名称
 
 # 阿里云邮件推送 WEB API
 # 阿里云api发信参数以及域名查看地址 https://help.aliyun.com/document_detail/96856.html
@@ -312,8 +312,8 @@ $_ENV['f2fNotifyUrl'] = null;           //自定义当面付回调地址
 
 #THeadPay 平头哥支付
 $_ENV['theadpay_url'] = 'https://api.yuanser.xyz/v1/jk/orders';
-$_ENV['theadpay_mchid'] = 'uUy4JFiAKG7IYP3t';
-$_ENV['theadpay_key'] = 'x5JnPnwbsDFxCAYGTFNGFUZyGr4vTIDy';
+$_ENV['theadpay_mchid'] = 'vqz6V8RVsgAH9dhx';
+$_ENV['theadpay_key'] = '92fLqUb8YIchOwhVyHfP6AvOg8WIRgpf';
 
 #PaymentWall
 $_ENV['pmw_publickey'] = '';
