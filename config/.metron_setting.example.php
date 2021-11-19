@@ -70,9 +70,14 @@ $_MT['take_account_type']   = [ '支付宝', 'USDT-ERC20', 'USDT-TRC20'];  // �
 $_MT['user_level'] = [      // 等级 => 对应的名称显示
    -1 => '暂未激活',
     0 => '免费会员',
-    1 => '青铜会员',
-    2 => '白银会员',
-    3 => '钻石会员',
+    21 => '黄金月付会员',
+    22 => '黄金季度会员',
+    23 => '黄金半年会员',
+    24 => '黄金一年会员',
+    25 => '钻石月付会员',
+    26 => '钻石季度会员',
+    27 => '钻石半年会员',
+    28 => '钻石一年会员',
 ];
 #####  用户注册  --------------------------------------------------------------------------------------------
 $_MT['register_code']               = false;          // true: 注册必须邀请码, false: 邀请码可不填 (admin面板 - 用户注册 - 将注册模式改为 invite)
@@ -235,7 +240,7 @@ $_MT['shop_Experience_plan']   = [
  * 商品的支持特性 直接编辑套餐的 [服务支持] 中填写,格式为   true-全球节点分布;false-快速客服响应   减号左边 true:代表支持 false:代表不支持 右边为文字, 以英文分号;隔开
  */
 $_MT['shop_plan'] = array(
-    '青铜套餐' => array(                    //  对应商店显示的名称
+    '黄金套餐' => array(                    //  对应商店显示的名称
         '套餐详情' => array(  //  对应的商品描述, 目前取消了
             '月付' => 1,                   // 对应的商品ID
             '季度' => 2,
@@ -243,7 +248,7 @@ $_MT['shop_plan'] = array(
             '年付' => 4,
         ),
     ),
-    '白银套餐' => array(            // 需要多个套餐可以自己复制array增加到下面
+    '砖石套餐' => array(            // 需要多个套餐可以自己复制array增加到下面
         '套餐详情' => array(
             '月付' => 5,
             '季度' => 6,
@@ -292,7 +297,7 @@ $_MT['client_windows'] = [
         'name'  => 'Clash',      // 客户端名称
         'img'   => 'https://img-youpai.weixiaoi.com/tu/2021/0406/1617693954210406.png',        // 图标, 使用png透明文件
         'url'   => '/user/tutorial?os=Windows&client=Clash',      // 安装教程的url地址
-        'down'  => 'https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.15.4/Clash.for.Windows.Setup.0.15.4.exe',              // 教程页里的客户端下载地址
+        'down'  => 'https://down.oneky.xyz/down/clash.windows.exe',              // 教程页里的客户端下载地址
         'vs'    => 'v0.15.4',     // 版本号
     ),
 ];
@@ -305,7 +310,7 @@ $_MT['client_android'] = [
         'name'  => 'Clash',
         'img'   => 'https://img-youpai.weixiaoi.com/tu/2021/0406/1617693954210406.png',
         'url'   => '/user/tutorial?os=Android&client=Clash',
-        'down'  => 'https://github.com/Kr328/ClashForAndroid/releases/download/v2.3.18/app-universal-release.apk',
+        'down'  => 'https://down.oneky.xyz/down/clash.android.apk',
         'vs'    => 'v2.3.18',
     ),
 ];
@@ -319,7 +324,7 @@ $_MT['client_macos'] = [
         'name'  => 'ClashX',
         'img'   => 'https://img-youpai.weixiaoi.com/tu/2021/0406/1617693954210406.png',
         'url'   => '/user/tutorial?os=MacOS&client=Clash',
-        'down'  => 'https://github.com/yichengchen/clashX/releases/download/1.50.1/ClashX.dmg',
+        'down'  => 'https://down.oneky.xyz/down/clash.mac.dmg',
         'vs'    => 'v1.50.1',
     ),
 ];
