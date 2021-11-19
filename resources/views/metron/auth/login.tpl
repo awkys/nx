@@ -50,6 +50,12 @@
                                 <span class="opacity-70 mr-4">还没有账号 ?</span>
                                 <a href="/auth/register" class="text-white font-weight-bold">立即注册</a>
                             </div>
+                            <div class="mt-10">
+                                <span class="opacity-70 mr-4">支持 Android、iPhone/iPad、Windows、MacOS</span>
+                            </div>
+                            <div class="mt-10">
+                                <span class="opacity-70 mr-4">快速、稳定是我们一贯的品质</span>
+                            </div>
                         </div>
 
                         <div class="modal fade" id="telegram-login-modal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
