@@ -1,5 +1,6 @@
 {
     "require": {
+        "patchwork/utf8": "~1.2",
         "slim/slim": "~3.0",
         "smarty/smarty": "3.*",
         "mailgun/mailgun-php": "^2.6.0",
