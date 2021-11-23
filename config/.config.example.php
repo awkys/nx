@@ -127,8 +127,8 @@ $_ENV['account_expire_delete_days'] = -1;           //账户到期几天之后�
 $_ENV['enable_kill'] = true;         //是否允许用户注销账户
 
 #用户流量余量不足邮件提醒
-$_ENV['notify_limit_mode'] = false;         //false为关闭，per为按照百分比提醒，mb为按照固定剩余流量提醒
-$_ENV['notify_limit_value'] = 20;           //当上一项为per时，此处填写百分比；当上一项为mb时，此处填写流量
+$_ENV['notify_limit_mode'] = true;         //false为关闭，per为按照百分比提醒，mb为按照固定剩余流量提醒
+$_ENV['notify_limit_value'] = 10;           //当上一项为per时，此处填写百分比；当上一项为mb时，此处填写流量
 
 
 //订阅设置---------------------------------------------------------------------------------------
@@ -386,10 +386,10 @@ $_ENV['flag_regex'] = '/(香港|美国|日本|中国|俄罗斯|韩国|英国|新
 $_ENV['enable_donate'] = false;          //是否显示用户捐赠（所有收入将被公开）
 
 #iOS账户显示
-$_ENV['display_ios_class'] = -1;        //至少等级为多少的用户可以看见，小于0时关闭此功能
+$_ENV['display_ios_class'] = 1;        //至少等级为多少的用户可以看见，小于0时关闭此功能
 $_ENV['display_ios_topup'] = 0;         //满足等级要求后，累计充值高于多少的用户可以看见
-$_ENV['ios_account'] = '';        //iOS账户
-$_ENV['ios_password'] = '';        //iOS密码
+$_ENV['ios_account'] = 'bestvpn7@gmail.com';        //iOS账户
+$_ENV['ios_password'] = 'Bestvpn169';        //iOS密码
 
 #用户中心首页添加其他客户端的支持，可配合 subconverter 等 Api
 $_ENV['userCenterClient'] = [
