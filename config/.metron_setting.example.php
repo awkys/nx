@@ -290,7 +290,7 @@ $_MT['client_windows'] = [
         'name'  => 'Clash',      // 客户端名称
         'img'   => 'https://img-youpai.weixiaoi.com/tu/2021/0406/1617693954210406.png',        // 图标, 使用png透明文件
         'url'   => '/user/tutorial?os=Windows&client=Clash',      // 安装教程的url地址
-        'down'  => 'https://down.oneky.xyz/down/clash.windows.exe',              // 教程页里的客户端下载地址
+        'down'  => 'https://down.oneky.xyz/down/clash.windows.zip',              // 教程页里的客户端下载地址
         'vs'    => 'v0.15.4',     // 版本号
     ),
 ];

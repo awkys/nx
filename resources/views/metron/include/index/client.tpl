@@ -83,7 +83,7 @@
                                                                         <span class="font-size-h6">
                                                                             1.&nbsp;点击下载&nbsp;
                                                                             2.&nbsp;添加线路&nbsp;&nbsp;
-                                                                            3.&nbsp;打开clash&nbsp;点击System&nbsp;Proxy连接
+                                                                            3.&nbsp;解压&nbsp;->&nbsp;打开clash&nbsp;->&nbsp;常规&nbsp;->&nbsp;系统代理
                                                                         </span>
                                                                     </span>
                                                                 </div>
@@ -139,7 +139,7 @@
                                                                     <span class="font-size-h4 text-primary font-weight-bolder">使用步驟&nbsp;:&nbsp;
                                                                         <span class="font-size-h6">
                                                                         1.&nbsp;点击下载&nbsp;&nbsp;2.&nbsp;添加线路&nbsp;&nbsp;
-                                                                        3.&nbsp;右上角保存配置&nbsp;-&nbsp;点击启动
+                                                                        3.&nbsp;右上角保存配置&nbsp;->&nbsp;首页点此启动
                                                                         </span>
                                                                     </span>
                                                                 </div>
