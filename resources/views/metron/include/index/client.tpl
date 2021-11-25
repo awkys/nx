@@ -83,7 +83,13 @@
                                                                         <span class="font-size-h6">
                                                                             1.&nbsp;点击下载&nbsp;
                                                                             2.&nbsp;添加线路&nbsp;&nbsp;
-                                                                            3.&nbsp;解压&nbsp;->&nbsp;打开clash&nbsp;->&nbsp;常规&nbsp;->&nbsp;系统代理
+                                                                            3.&nbsp;点击Clash&nbsp;for&nbsp;Windows全部解压
+                                                                        </span>
+                                                                        <br />
+                                                                        <span class="font-size-h6">
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                            4.&nbsp;点击解压后文件夹&nbsp;Clash&nbsp;for&nbsp;Windows&nbsp;->&nbsp;常规&nbsp;->&nbsp;系统代理
                                                                         </span>
                                                                     </span>
                                                                 </div>
