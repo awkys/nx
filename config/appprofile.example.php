@@ -262,6 +262,15 @@ $_ENV['Clash_Profiles'] = [
                         '🚀直接连接'
                     ],
                 ]
+            ],
+            [
+                'name' => '🚀直接连接',
+                'type' => 'select',
+                'content' => [
+                    'left-proxies' => [
+                        'DIRECT'
+                    ]
+                ]
             ]
         ],
         'Rule' => [
