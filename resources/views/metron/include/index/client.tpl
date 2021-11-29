@@ -144,8 +144,13 @@
                                                                 <div class="d-flex align-items-center justify-content-between mb-5">
                                                                     <span class="font-size-h4 text-primary font-weight-bolder">使用步驟&nbsp;:&nbsp;
                                                                         <span class="font-size-h6">
-                                                                        1.&nbsp;点击下载&nbsp;&nbsp;2.&nbsp;添加线路&nbsp;&nbsp;
-                                                                        3.&nbsp;右上角保存配置&nbsp;->&nbsp;首页点此启动
+                                                                            1.&nbsp;点击下载&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.&nbsp;添加线路&nbsp;&nbsp;
+                                                                        </span>
+                                                                        <br />
+                                                                        <span class="font-size-h6">
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                            3.&nbsp;点击右上角保存配置&nbsp;->&nbsp;点击配置&nbsp;->&nbsp;勾选新配置&nbsp;->&nbsp;返回首页&nbsp;->&nbsp;点此启动
                                                                         </span>
                                                                     </span>
                                                                 </div>
