@@ -70,7 +70,7 @@
                                                                 <button class="btn btn-primary copy-text" type="button" data-clipboard-text="{$metron['ios_password']}">复制密码</button>
                                                             </div>
                                                         </div>
-                                                        <p class="mb-2">如果账号被锁定，可联系管理员等待解锁，也可自行从其他渠道获取</p>
+                                                        <p class="mb-2">如果账号被锁定，可联系管理员等待解锁，也可自行从其他渠道获取(Shadowrocket 需海外苹果账户下载)</p>
                                                         {else}
                                                         <div class="alert alert-primary" role="alert">
                                                             <div class="alert-text mt-3">
@@ -96,9 +96,10 @@
                                                         </div>
                                                         {/if}
                                                         <br />
-                                                        <p class="mb-2">打开手机<code>设置</code> -> <code>iTunes Store 与 App Store</code> ->使用 <code>非国区 Apple ID </code>登录</p>
+                                                        <p class="mb-2">打开手机<code>打开APP store</code> -&gt; <code>右上角点击你的头像然后下拉到最下方并退出。</code> -&gt;使用 <code>非国区 Apple ID </code>登录</p>                                                        <p class="mb-2">登录成功后 App Store 会切换对应的语言，在搜索框输入 <code>Shadowrocket</code> 进行安装</p>
+                                                        <p class="mb-2">图片教程中如果未出现apple ID安全请跳过 </p>
                                                         <p class="mb-2">登录成功后 App Store 会切换对应的语言，在搜索框输入 <code>Shadowrocket</code> 进行安装</p>
-                                                        <p class="mb-2">安装完成可正常打开app后 打开手机<code>设置</code> -> <code>iTunes Store 与 App Store</code> 退出共享账号，安装完成后不再需要Appe ID，所以请不要保留在手机登录。</p>
+                                                        <p class="mb-2">安装完成可正常打开app后 打开APP store<code>右上角点击你的头像</code> -&gt; <code>然后下拉到最下方并退出</code> 退出共享账号，安装完成后不再需要Appe ID，所以请不要保留在手机登录。</p>
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
                                                         <a class="image-popup-no-margins" href="/theme/metron/images/ios/shadowrocket-01.png" data-lightbox="images">
@@ -187,7 +188,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
 							</div>
 						</div>
 					</div>
