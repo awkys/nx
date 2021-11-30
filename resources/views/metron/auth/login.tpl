@@ -54,7 +54,7 @@
                                 <span class="opacity-70 mr-4">支持 Android、iPhone/iPad、Windows、MacOS</span>
                             </div>
                             <div class="mt-10">
-                                <span class="opacity-70 mr-4">快速、稳定是我们一贯的品质</span>
+                                <span class="opacity-70 mr-4">海外团队,&nbsp;&nbsp;安全稳定,&nbsp;&nbsp;操作简单,&nbsp;&nbsp;告别卡顿</span>
                             </div>
                         </div>
 
