@@ -34,22 +34,19 @@
                                             </div>
                                             <div class="card-body">
 
-{*                                                <div class="row p-5">*}
-{*                                                    <div class="col-sm-12 col-md-12 col-lg-7 pb-5">*}
-{*                                                        <p class="font-size-h1 pb-5"><strong>0. 简介</strong></p>*}
-{*                                                        <div class="example-preview">*}
-{*                                                            <p>Shadowrocket是一款基于规则的网络调试工具，具有性能高和稳定好、使用流畅，功能多样的特点，只占用最少的系统资源，全盘接管所有的连接，根据规则来进行处理，让你无忧无虑。独有的场景模式，方便根据不同需求自动切换配置及节点。</p>*}
-{*                                                            <p>由于App Store中国区禁止上架VPN类所有软件，所以该软件仅在美区、港区等非国区App Store可下载，并且该软件是收费软件，为开发者收取。*}
-{*                                                            {if $metron['ios_account'] != ''}*}
-{*                                                            <p>本站对符合要求的会员提供已购买该软件的Apple ID共享账号进行下载，有条件建议自行搜索相关教程注册非国区账号购买该软件以支持开发者。</p>*}
-{*                                                            {/if}</p>*}
-{*                                                        </div>*}
-{*                                                    </div>*}
-{*                                                    <div class="col-sm-12 col-md-12 col-lg-5">*}
-{*                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/ios/shadowrocket/shadowrocket.jpg" data-lightbox="images">*}
-{*                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/ios/shadowrocket/shadowrocket.jpg"/></a>*}
-{*                                                    </div>*}
-{*                                                </div>*}
+                                                <div class="row p-5">
+                                                    <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
+                                                        <p class="font-size-h1 pb-5"><strong>0. 简介</strong></p>
+                                                        <div class="example-preview">
+                                                            <p>由于App Store中国区禁止上架VPN类所有软件，所以需要登录海外苹果账户下载app(目前苹果唯一翻墙方法)，然后添加网站线路使用</p>
+                                                            <p>Shadowrocket是一款基于规则的网络调试工具，具有性能高和稳定好、使用流畅，功能多样的特点，只占用最少的系统资源，全盘接管所有的连接，根据规则来进行处理，让你无忧无虑。独有的场景模式，方便根据不同需求自动切换配置及节点。</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-12 col-lg-5">
+                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/ios/shadowrocket/shadowrocket.jpg" data-lightbox="images">
+                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/ios/shadowrocket/shadowrocket.jpg"/></a>
+                                                    </div>
+                                                </div>
 
                                                 <div class="separator separator-dashed separator-border-4"></div>
 

@@ -90,7 +90,7 @@
                                                                     <div class="font-size-h4 font-weight-bolder">{$shop->class_expire()} 天</div>
                                                                 </div>
                                                                 <div class="col pl-6 pt-6 pb-0">
-                                                                    <div class="font-size-sm text-muted font-weight-bold">套餐流量</div>
+                                                                    <div class="font-size-sm text-muted font-weight-bold">每月套餐流量</div>
                                                                     <div class="font-size-h4 font-weight-bolder">{$shop->bandwidth()} GB</div>
                                                                 </div>
                                                             </div>
@@ -207,7 +207,7 @@
                                                                     <div class="font-size-h4 font-weight-bolder">{$shop->class_expire()} 天</div>
                                                                 </div>
                                                                 <div class="col pl-6 pt-6 pb-0">
-                                                                    <div class="font-size-sm text-muted font-weight-bold">套餐流量</div>
+                                                                    <div class="font-size-sm text-muted font-weight-bold">每月套餐流量</div>
                                                                     <div class="font-size-h4 font-weight-bolder">{$shop->bandwidth()} GB</div>
                                                                 </div>
                                                             </div>
