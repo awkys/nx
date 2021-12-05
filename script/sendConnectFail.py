@@ -53,7 +53,7 @@ if __name__ == '__main__':
 FROM `user`
 where t = 0
 and reg_date > DATE_ADD(date(now()),INTERVAL -1 DAY)
-and reg_date < now()"""
+and reg_date < date(now())"""
 
     try:
        # 执行SQL语句
