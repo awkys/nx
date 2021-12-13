@@ -56,49 +56,49 @@
 {*                                                                            <button type="button" class="btn btn-primary font-weight-bold btn-pill mt-2 href="##" onclick="importSublink('clash')">添加线路</button>*}
 {*                                                                        </div>*}
                                                                     </div>
-                                                                    <a href="{$c_w['down']}" class="btn btn-primary font-weight-bold btn-pill">点击下载</a>
+                                                                    <a href="/user/tutorial?os=Windows&amp;client=Clash" class="btn btn-primary font-weight-bold btn-pill">安装教程</a>
 
                                                                 </div>
-                                                                <div class="d-flex align-items-center justify-content-between mb-5">
-                                                                    <div class="d-flex align-items-center">
-                                                                        <div class="symbol symbol-60 symbol-light mr-3 flex-shrink-0">
-                                                                            <div class="symbol-label">
-                                                                                <img src="/theme/metron/images/add.jpg" alt="" class="h-50">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="ml-3">
-                                                                            <span class="font-size-h5 text-primary font-weight-bolder">导入</span>
-                                                                            <div class="font-size-sm text-muted font-weight-bold mt-1">到clash</div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <button type="button" class="btn btn-primary font-weight-bold btn-pill mt-2 href="##" onclick="importSublink('clash')">添加线路</button>
-                                                                </div>
+{*                                                                <div class="d-flex align-items-center justify-content-between mb-5">*}
+{*                                                                    <div class="d-flex align-items-center">*}
+{*                                                                        <div class="symbol symbol-60 symbol-light mr-3 flex-shrink-0">*}
+{*                                                                            <div class="symbol-label">*}
+{*                                                                                <img src="/theme/metron/images/add.jpg" alt="" class="h-50">*}
+{*                                                                            </div>*}
+{*                                                                        </div>*}
+{*                                                                        <div class="ml-3">*}
+{*                                                                            <span class="font-size-h5 text-primary font-weight-bolder">导入</span>*}
+{*                                                                            <div class="font-size-sm text-muted font-weight-bold mt-1">到clash</div>*}
+{*                                                                        </div>*}
+{*                                                                    </div>*}
+{*                                                                    <button type="button" class="btn btn-primary font-weight-bold btn-pill mt-2 href="##" onclick="importSublink('clash')">添加线路</button>*}
+{*                                                                </div>*}
 
                                                                 <!-- 开始 :: 分割线 -->
 {*                                                                <div class="separator separator-dashed separator-border-rder-4 p-5"></div>*}
                                                                 <!-- 结束 :: 分割线 -->
 
-                                                                <div class="d-flex align-items-center justify-content-between mb-5">
-                                                                    <span class="font-size-h4 text-primary font-weight-bolder" >使用步驟&nbsp;:&nbsp;
-                                                                        <span class="font-size-h6">
-                                                                            1.&nbsp;点击下载&nbsp;
-                                                                            2.&nbsp;添加线路&nbsp;&nbsp;
-                                                                            3.&nbsp;点击Clash&nbsp;for&nbsp;Windows全部解压
-                                                                        </span>
-                                                                        <br />
-                                                                        <span class="font-size-h6">
-                                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                            4.&nbsp;点击解压后文件夹&nbsp;Clash&nbsp;for&nbsp;Windows&nbsp;->&nbsp;常规&nbsp;->&nbsp;系统代理
-                                                                        </span>
-                                                                    </span>
-                                                                </div>
+{*                                                                <div class="d-flex align-items-center justify-content-between mb-5">*}
+{*                                                                    <span class="font-size-h4 text-primary font-weight-bolder" >使用步驟&nbsp;:&nbsp;*}
+{*                                                                        <span class="font-size-h6">*}
+{*                                                                            1.&nbsp;点击下载&nbsp;*}
+{*                                                                            2.&nbsp;添加线路&nbsp;&nbsp;*}
+{*                                                                            3.&nbsp;点击Clash&nbsp;for&nbsp;Windows全部解压*}
+{*                                                                        </span>*}
+{*                                                                        <br />*}
+{*                                                                        <span class="font-size-h6">*}
+{*                                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*}
+{*                                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*}
+{*                                                                            4.&nbsp;点击解压后文件夹&nbsp;Clash&nbsp;for&nbsp;Windows&nbsp;->&nbsp;常规&nbsp;->&nbsp;系统代理*}
+{*                                                                        </span>*}
+{*                                                                    </span>*}
+{*                                                                </div>*}
 
-                                                                <div class="d-flex align-items-center justify-content-between mb-5">
-                                                                <span class="font-size-h4 text-primary font-weight-bolder">点击查看&nbsp;-->&nbsp;
-                                                                    <a href="/user/tutorial?os=Windows&amp;client=Clash" style="color:#F00">详细教程</a>
-                                                                </span>
-                                                                </div>
+{*                                                                <div class="d-flex align-items-center justify-content-between mb-5">*}
+{*                                                                <span class="font-size-h4 text-primary font-weight-bolder">点击查看&nbsp;-->&nbsp;*}
+{*                                                                    <a href="/user/tutorial?os=Windows&amp;client=Clash" style="color:#F00">详细教程</a>*}
+{*                                                                </span>*}
+{*                                                                </div>*}
 
                                                                 {if !$c_w@last}
                                                                 <div class="separator separator-dashed mb-5"></div>
@@ -124,42 +124,42 @@
                                                                             <div class="font-size-sm text-muted font-weight-bold mt-1">{$c_w['vs']}</div>
                                                                         </div>
                                                                     </div>
-                                                                    <a href="{$c_w['down']}" class="btn btn-primary font-weight-bold btn-pill" target="_blank">点击下载</a>
+                                                                    <a href="/user/tutorial?os=Android&amp;client=Clash" class="btn btn-primary font-weight-bold btn-pill" target="_blank">安装教程</a>
                                                                 </div>
-                                                                <div class="d-flex align-items-center justify-content-between mb-5">
-                                                                    <div class="d-flex align-items-center">
-                                                                        <div class="symbol symbol-60 symbol-light mr-3 flex-shrink-0">
-                                                                            <div class="symbol-label">
-                                                                                <img src="/theme/metron/images/add.jpg" alt="" class="h-50">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="ml-3">
-                                                                            <span class="font-size-h5 text-primary font-weight-bolder">导入</span>
-                                                                            <div class="font-size-sm text-muted font-weight-bold mt-1">到clash</div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <button type="button" class="btn btn-primary font-weight-bold btn-pill mt-2 href="##" onclick="importSublink('clash')">添加线路</button>
-                                                                </div>
+{*                                                                <div class="d-flex align-items-center justify-content-between mb-5">*}
+{*                                                                    <div class="d-flex align-items-center">*}
+{*                                                                        <div class="symbol symbol-60 symbol-light mr-3 flex-shrink-0">*}
+{*                                                                            <div class="symbol-label">*}
+{*                                                                                <img src="/theme/metron/images/add.jpg" alt="" class="h-50">*}
+{*                                                                            </div>*}
+{*                                                                        </div>*}
+{*                                                                        <div class="ml-3">*}
+{*                                                                            <span class="font-size-h5 text-primary font-weight-bolder">导入</span>*}
+{*                                                                            <div class="font-size-sm text-muted font-weight-bold mt-1">到clash</div>*}
+{*                                                                        </div>*}
+{*                                                                    </div>*}
+{*                                                                    <button type="button" class="btn btn-primary font-weight-bold btn-pill mt-2 href="##" onclick="importSublink('clash')">添加线路</button>*}
+{*                                                                </div>*}
 
-                                                                <div class="d-flex align-items-center justify-content-between mb-5">
-                                                                    <span class="font-size-h4 text-primary font-weight-bolder">使用步驟&nbsp;:&nbsp;
-                                                                        <span class="font-size-h6">
-                                                                            1.&nbsp;点击下载&nbsp;&nbsp;2.&nbsp;添加线路&nbsp;&nbsp;
-                                                                        </span>
-                                                                        <br />
-                                                                        <span class="font-size-h6">
-                                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                            3.&nbsp;点击右上角保存配置&nbsp;->&nbsp;点击配置&nbsp;->&nbsp;勾选新配置&nbsp;->&nbsp;返回首页&nbsp;->&nbsp;点此启动
-                                                                        </span>
-                                                                    </span>
-                                                                </div>
+{*                                                                <div class="d-flex align-items-center justify-content-between mb-5">*}
+{*                                                                    <span class="font-size-h4 text-primary font-weight-bolder">使用步驟&nbsp;:&nbsp;*}
+{*                                                                        <span class="font-size-h6">*}
+{*                                                                            1.&nbsp;点击下载&nbsp;&nbsp;2.&nbsp;添加线路&nbsp;&nbsp;*}
+{*                                                                        </span>*}
+{*                                                                        <br />*}
+{*                                                                        <span class="font-size-h6">*}
+{*                                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*}
+{*                                                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*}
+{*                                                                            3.&nbsp;点击右上角保存配置&nbsp;->&nbsp;点击配置&nbsp;->&nbsp;勾选新配置&nbsp;->&nbsp;返回首页&nbsp;->&nbsp;点此启动*}
+{*                                                                        </span>*}
+{*                                                                    </span>*}
+{*                                                                </div>*}
 
-                                                                <div class="d-flex align-items-center justify-content-between mb-5">
-                                                                    <span class="font-size-h4 text-primary font-weight-bolder">点击查看&nbsp;-->&nbsp;
-                                                                        <a href="/user/tutorial?os=Android&amp;client=Clash" style="color:#F00">详细教程</a>
-                                                                    </span>
-                                                                </div>
+{*                                                                <div class="d-flex align-items-center justify-content-between mb-5">*}
+{*                                                                    <span class="font-size-h4 text-primary font-weight-bolder">点击查看&nbsp;-->&nbsp;*}
+{*                                                                        <a href="/user/tutorial?os=Android&amp;client=Clash" style="color:#F00">详细教程</a>*}
+{*                                                                    </span>*}
+{*                                                                </div>*}
 
                                                                 {if !$c_w@last}
                                                                 <div class="separator separator-dashed mb-5"></div>
@@ -180,7 +180,8 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="ml-3">
-                                                                            <span class="font-size-h10 text-primary font-weight-bolder">{$c_w['name']}</span>
+{*                                                                            <span class="font-size-h10 text-primary font-weight-bolder">{$c_w['name']}</span>*}
+                                                                            <span class="font-size-h10 text-primary font-weight-bolder">小火箭</span>
                                                                             <div class="font-size-sm text-muted font-weight-bold mt-1">{$c_w['vs']}</div>
                                                                         </div>
                                                                     </div>
@@ -209,37 +210,38 @@
                                                                             <div class="font-size-sm text-muted font-weight-bold mt-1">{$c_w['vs']}</div>
                                                                         </div>
                                                                     </div>
-                                                                    <a href="{$c_w['down']}" class="btn btn-primary font-weight-bold btn-pill">点击下载</a>
+                                                                    <a href="/user/tutorial?os=MacOS&amp;client=Clash" class="btn btn-primary font-weight-bold btn-pill">安装教程</a>
                                                                 </div>
-                                                                <div class="d-flex align-items-center justify-content-between mb-5">
-                                                                    <div class="d-flex align-items-center">
-                                                                        <div class="symbol symbol-60 symbol-light mr-3 flex-shrink-0">
-                                                                            <div class="symbol-label">
-                                                                                <img src="/theme/metron/images/add.jpg" alt="" class="h-50">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="ml-3">
-                                                                            <span class="font-size-h5 text-primary font-weight-bolder">导入</span>
-                                                                            <div class="font-size-sm text-muted font-weight-bold mt-1">到clashX</div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <button type="button" class="btn btn-primary font-weight-bold btn-pill mt-2 href="##" onclick="importSublink('clash')">添加线路</button>
-                                                                </div>
+{*                                                                <div class="d-flex align-items-center justify-content-between mb-5">*}
+{*                                                                    <div class="d-flex align-items-center">*}
+{*                                                                        <div class="symbol symbol-60 symbol-light mr-3 flex-shrink-0">*}
+{*                                                                            <div class="symbol-label">*}
+{*                                                                                <img src="/theme/metron/images/add.jpg" alt="" class="h-50">*}
+{*                                                                            </div>*}
 
-                                                                <div class="d-flex align-items-center justify-content-between mb-5">
-                                                                    <span class="font-size-h4 text-primary font-weight-bolder">使用步驟&nbsp;:&nbsp;
-                                                                        <span class="font-size-h6">
-                                                                        1.&nbsp;点击下载&nbsp;&nbsp;2.&nbsp;添加线路&nbsp;&nbsp;
-                                                                        3.&nbsp;打开状态栏clash&nbsp;-&nbsp;设置为系统代理
-                                                                        </span>
-                                                                    </span>
-                                                                </div>
+{*                                                                        </div>*}
+{*                                                                        <div class="ml-3">*}
+{*                                                                            <span class="font-size-h5 text-primary font-weight-bolder">导入</span>*}
+{*                                                                            <div class="font-size-sm text-muted font-weight-bold mt-1">到clashX</div>*}
+{*                                                                        </div>*}
+{*                                                                    </div>*}
+{*                                                                    <button type="button" class="btn btn-primary font-weight-bold btn-pill mt-2 href="##" onclick="importSublink('clash')">添加线路</button>*}
+{*                                                                </div>*}
 
-                                                                <div class="d-flex align-items-center justify-content-between mb-5">
-                                                                    <span class="font-size-h4 text-primary font-weight-bolder">点击查看&nbsp;-->&nbsp;
-                                                                        <a href="/user/tutorial?os=MacOS&amp;client=Clash" style="color:#F00">详细教程</a>
-                                                                    </span>
-                                                                </div>
+{*                                                                <div class="d-flex align-items-center justify-content-between mb-5">*}
+{*                                                                    <span class="font-size-h4 text-primary font-weight-bolder">使用步驟&nbsp;:&nbsp;*}
+{*                                                                        <span class="font-size-h6">*}
+{*                                                                        1.&nbsp;点击下载&nbsp;&nbsp;2.&nbsp;添加线路&nbsp;&nbsp;*}
+{*                                                                        3.&nbsp;打开状态栏clash&nbsp;-&nbsp;设置为系统代理*}
+{*                                                                        </span>*}
+{*                                                                    </span>*}
+{*                                                                </div>*}
+
+{*                                                                <div class="d-flex align-items-center justify-content-between mb-5">*}
+{*                                                                    <span class="font-size-h4 text-primary font-weight-bolder">点击查看&nbsp;-->&nbsp;*}
+{*                                                                        <a href="/user/tutorial?os=MacOS&amp;client=Clash" style="color:#F00">详细教程</a>*}
+{*                                                                    </span>*}
+{*                                                                </div>*}
 
                                                                 {if !$c_w@last}
                                                                 <div class="separator separator-dashed mb-5"></div>

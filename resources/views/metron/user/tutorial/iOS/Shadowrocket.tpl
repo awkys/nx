@@ -38,8 +38,9 @@
                                                     <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
                                                         <p class="font-size-h1 pb-5"><strong>0. 简介</strong></p>
                                                         <div class="example-preview">
-                                                            <p>由于App Store中国区禁止上架VPN类所有软件，所以需要登录海外苹果账户下载app(目前苹果唯一翻墙方法)，然后添加网站线路使用</p>
-                                                            <p>Shadowrocket是一款基于规则的网络调试工具，具有性能高和稳定好、使用流畅，功能多样的特点，只占用最少的系统资源，全盘接管所有的连接，根据规则来进行处理，让你无忧无虑。独有的场景模式，方便根据不同需求自动切换配置及节点。</p>
+                                                            由于App Store中国区禁止上架VPN类所有软件，所以需要登录<span style="color: green; font-size: medium; ">海外苹果账户</span>下载app(<span style="color: red;">目前苹果唯一翻墙方法</span>)，
+                                                            然后<span style="color: blue; font-size: medium; ">导入线路</span>连接使用，详情请查看下方<span style="color: purple; font-size: medium; ">图片教程</span> !
+{*                                                            <p>Shadowrocket是一款基于规则的网络调试工具，具有性能高和稳定好、使用流畅，功能多样的特点，只占用最少的系统资源，全盘接管所有的连接，根据规则来进行处理，让你无忧无虑。独有的场景模式，方便根据不同需求自动切换配置及节点。</p>*}
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
@@ -93,8 +94,8 @@
                                                         </div>
                                                         {/if}
                                                         <br />
-                                                        <p class="mb-2">打开手机<code>打开APP store</code> -&gt; <code>右上角点击你的头像然后下拉到最下方并退出。</code> -&gt;使用 <code>非国区 Apple ID </code>登录</p>                                                        <p class="mb-2">登录成功后 App Store 会切换对应的语言，在搜索框输入 <code>Shadowrocket</code> 进行安装</p>
-                                                        <p class="mb-2">图片教程中如果未出现apple ID安全请跳过 </p>
+                                                        <p class="mb-2">打开手机<code>打开APP store</code> -&gt; <code>右上角点击你的头像然后下拉到最下方并退出。</code> -&gt;使用 <code>非国区 Apple ID </code>登录</p>
+                                                        <p class="mb-2">图片教程中如果未出现apple ID安全请跳过，切记<span style="color: red; font-size: medium; ">不要开启双重验证</span></p>
                                                         <p class="mb-2">登录成功后 App Store 会切换对应的语言，在搜索框输入 <code>Shadowrocket</code> 进行安装</p>
                                                         <p class="mb-2">安装完成可正常打开app后 打开APP store<code>右上角点击你的头像</code> -&gt; <code>然后下拉到最下方并退出</code> 退出共享账号，安装完成后不再需要Appe ID，所以请不要保留在手机登录。</p>
                                                     </div>
@@ -110,46 +111,58 @@
 
                                                 <div class="row p-5">
                                                     <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
-                                                        <p class="font-size-h1 pb-5"><strong>2. 设置订阅地址</strong></p>
+                                                        <p class="font-size-h1 pb-5"><strong>2. 添加线路</strong></p>
+{*                                                        <div class="btn-group mb-3 mr-3">*}
+{*                                                            <button type="button" class="btn btn-pill btn-shadowrocket dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;&nbsp;<i class="metron-shadowrocket text-white"></i>Shadowrocket 订阅&nbsp;&nbsp;</button>*}
+{*                                                            <div class="dropdown-menu">*}
+{*                                                                <button type="button" class="dropdown-item copy-text" data-clipboard-text="{$subInfo["shadowrocket"]}">复制 Shadowrocket 订阅</button>*}
+{*                                                                <div class="dropdown-divider"></div>*}
+{*                                                                <button type="button" class="dropdown-item" href="##" onclick="importSublink('shadowrocket')">一键导入 Shadowrocket</button>*}
+{*                                                            </div>*}
+{*                                                        </div>*}
+{*                                                        <p class="mb-2">点击</p>*}
+                                                        <p>请用苹果自带浏览器(Safari)登录网站</p>
                                                         <div class="btn-group mb-3 mr-3">
-                                                            <button type="button" class="btn btn-pill btn-shadowrocket dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;&nbsp;<i class="metron-shadowrocket text-white"></i>Shadowrocket 订阅&nbsp;&nbsp;</button>
-                                                            <div class="dropdown-menu">
-                                                                <button type="button" class="dropdown-item copy-text" data-clipboard-text="{$subInfo["shadowrocket"]}">复制 Shadowrocket 订阅</button>
-                                                                <div class="dropdown-divider"></div>
-                                                                <button type="button" class="dropdown-item" href="##" onclick="importSublink('shadowrocket')">一键导入 Shadowrocket</button>
-                                                            </div>
+                                                            <button type="button" class="btn btn-pill btn-shadowrocket dropdown-item" href="##" onclick="importSublink('shadowrocket')">&nbsp;&nbsp;<i class="metron-shadowrocket text-white"></i>点击一键导入 Shadowrocket&nbsp;&nbsp;</button>
+{*                                                            <div class="dropdown-menu">*}
+{*                                                                <button type="button" class="dropdown-item copy-text" data-clipboard-text="{$subInfo["shadowrocket"]}">复制 Shadowrocket 订阅</button>*}
+{*                                                                <div class="dropdown-divider"></div>*}
+{*                                                                <button type="button" class="dropdown-item" href="##" onclick="importSublink('shadowrocket')">一键导入 Shadowrocket</button>*}
+{*                                                            </div>*}
                                                         </div>
-                                                        <p class="mb-2">点击上方按钮一键导入节点配置到Shadowrocket</p>
-                                                        <p class="mb-2">如果导入后没有显示节点，请重启Shadowrocket</p>
-                                                        <p class="mb-2">点击底栏的 <code>设置</code> -> <code>服务器订阅</code> -> 启用 <code>打开时更新</code></p>
-                                                        <p class="mb-2">这样以后每次打开客户端都会自动更新最新节点</p>
-                                                        <br />
+{*                                                        <p class="mb-2">导入节点配置到Shadowrocket</p>*}
+{*                                                        <p class="mb-2">点击上方按钮一键导入节点配置到Shadowrocket</p>*}
+                                                        <p class="mb-2">注：如果导入后没有显示节点，请重启Shadowrocket，重新导入</p>
+                                                        <p class="mb-3">导入shadowrocket后，点击允许vpn验证，即可连接!</p>
+{*                                                        <p class="mb-2">点击底栏的 <code>设置</code> -> <code>服务器订阅</code> -> 启用 <code>打开时更新</code></p>*}
+{*                                                        <p class="mb-2">这样以后每次打开客户端都会自动更新最新节点</p>*}
+{*                                                        <br />*}
 
-                                                        <div class="alert alert-custom alert-outline-primary fade show mb-5" role="alert">
-                                                            <div class="alert-icon">
-                                                                <i class="flaticon-warning"></i>
-                                                            </div>
-                                                            <div class="alert-text">
-                                                                <p class="mb-2">无法一键导入? 试试手动设置订阅</p>
-                                                                <p class="mb-2">在APP首页点击右上角 + 号</p>
-                                                                <p class="mb-2">类型 选择 <code>Subscribe</code> , 并粘贴订阅地址到URL一栏, 备注填写 {$config["appName"]} - 点击完成</p>
-                                                            </div>
-                                                            <div class="alert-close">
-                                                                <button type="button" class="close" data-dismiss="alert" aria-label="关">
-                                                                    <span aria-hidden="true">
-                                                                        <i class="ki ki-close"></i>
-                                                                    </span>
-                                                                </button>
-                                                            </div>
-                                                        </div>
+{*                                                        <div class="alert alert-custom alert-outline-primary fade show mb-5" role="alert">*}
+{*                                                            <div class="alert-icon">*}
+{*                                                                <i class="flaticon-warning"></i>*}
+{*                                                            </div>*}
+{*                                                            <div class="alert-text">*}
+{*                                                                <p class="mb-2">无法一键导入? 试试手动设置订阅</p>*}
+{*                                                                <p class="mb-2">在APP首页点击右上角 + 号</p>*}
+{*                                                                <p class="mb-2">类型 选择 <code>Subscribe</code> , 并粘贴订阅地址到URL一栏, 备注填写 {$config["appName"]} - 点击完成</p>*}
+{*                                                            </div>*}
+{*                                                            <div class="alert-close">*}
+{*                                                                <button type="button" class="close" data-dismiss="alert" aria-label="关">*}
+{*                                                                    <span aria-hidden="true">*}
+{*                                                                        <i class="ki ki-close"></i>*}
+{*                                                                    </span>*}
+{*                                                                </button>*}
+{*                                                            </div>*}
+{*                                                        </div>*}
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="/theme/metron/images/ios/shadowrocket-03.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="/theme/metron/images/ios/shadowrocket-03.png"/></a>
+                                                        <a class="image-popup-no-margins" href="/theme/metron/images/ios/ios-2.png" data-lightbox="images">
+                                                        <img class="rounded-lg" style="width:100%" src="/theme/metron/images/ios/ios-2.png"/></a>
                                                     </div>
                                                 </div>
 
-                                                <div class="separator separator-dashed separator-border-4"></div>
+{*                                                <div class="separator separator-dashed separator-border-4"></div>*}
 
 {*                                                <div class="row p-5">*}
 {*                                                    <div class="col-sm-12 col-md-12 col-lg-7 pb-5">*}
@@ -167,19 +180,19 @@
 
 {*                                                <div class="separator separator-dashed separator-border-4"></div>*}
 
-                                                <div class="row p-5">
-                                                    <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
-                                                        <p class="font-size-h1 pb-5"><strong>3. 开启代理</strong></p>
-                                                        <p class="mb-2"><code>回到首页</code>，点击进入<code>全局路由</code>将其更改为 <code>配置</code></p>
-                                                        <p class="mb-2">在节点列表中选择节点，小黄点表示当前选择的节点</p>
-                                                        <p class="mb-2">点击最顶上的开关开启代理</p>
-                                                        <p class="mb-2">如果是首次开启会弹出VPN文件的应用，务必点击<code>Allow</code>并验证</p>
-                                                    </div>
-                                                    <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/ios/shadowrocket/04.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/ios/shadowrocket/04.png"/></a>
-                                                    </div>
-                                                </div>
+{*                                                <div class="row p-5">*}
+{*                                                    <div class="col-sm-12 col-md-12 col-lg-7 pb-5">*}
+{*                                                        <p class="font-size-h1 pb-5"><strong>3. 开启代理</strong></p>*}
+{*                                                        <p class="mb-2"><code>回到首页</code>，点击进入<code>全局路由</code>将其更改为 <code>配置</code></p>*}
+{*                                                        <p class="mb-2">在节点列表中选择节点，小黄点表示当前选择的节点</p>*}
+{*                                                        <p class="mb-2">点击最顶上的开关开启代理</p>*}
+{*                                                        <p class="mb-2">如果是首次开启会弹出VPN文件的应用，务必点击<code>Allow</code>并验证</p>*}
+{*                                                    </div>*}
+{*                                                    <div class="col-sm-12 col-md-12 col-lg-5">*}
+{*                                                        <a class="image-popup-no-margins" href="{$metron['assets_url']}/media/tutorial/ios/shadowrocket/04.png" data-lightbox="images">*}
+{*                                                        <img class="rounded-lg" style="width:100%" src="{$metron['assets_url']}/media/tutorial/ios/shadowrocket/04.png"/></a>*}
+{*                                                    </div>*}
+{*                                                </div>*}
 
                                             </div>
                                         </div>

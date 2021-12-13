@@ -79,7 +79,9 @@
                                                         <!-- 开始 :: 客户端下载按钮 -->
                                                         <a href="{$metron['client_windows']['clash']['down']}" class="btn btn-pill btn-clash mb-4" target="_blank">&nbsp;&nbsp;<i class="metron-clash text-white"></i>下载 Clash 客户端</a>&nbsp;&nbsp;&nbsp;
                                                         <!-- 结束 :: 客户端下载按钮 -->
-                                                        <div class="h6 pt-2">下载安装后从桌面打开<br />或在目录中打开 <code>Clash for Windows.exe</code></div>
+                                                        <br />
+                                                        <br />
+                                                        <div class="h6 pt-2">下载后<code>解压</code>，安装从桌面打开<br />或在目录中打开 <code>Clash for Windows.exe</code></div>
                                                     </div>
                                                     <!-- 开始 :: 图片 -->
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
@@ -103,13 +105,20 @@
                                                         <!-- 开始 :: 订阅按钮 -->
                                                         {if in_array('clash',$metron['index_sub'])}
                                                         <div class="btn-group mb-3 mr-3">
-                                                            <button type="button" class="btn btn-pill btn-clash dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;&nbsp;<i class="metron-clash text-white"></i>Clash 订阅配置&nbsp;&nbsp;</button>
-                                                            <div class="dropdown-menu">
-                                                                <button type="button" class="dropdown-item copy-text" data-clipboard-text="{$subInfo["clash"]}">复制 Clash 订阅</button>
-                                                                <div class="dropdown-divider">
-                                                                </div>
-                                                                <button type="button" class="dropdown-item" href="##" onclick="importSublink('clash')">一键导入 Clash</button>
-                                                            </div>
+{*                                                            <button type="button" class="btn btn-pill btn-clash dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;&nbsp;<i class="metron-clash text-white"></i>Clash 订阅配置&nbsp;&nbsp;</button>*}
+{*                                                            <div class="dropdown-menu">*}
+{*                                                                <button type="button" class="dropdown-item copy-text" data-clipboard-text="{$subInfo["clash"]}">复制 Clash 订阅</button>*}
+{*                                                                <div class="dropdown-divider">*}
+{*                                                                </div>*}
+{*                                                                <button type="button" class="dropdown-item" href="##" onclick="importSublink('clash')">一键导入 Clash</button>*}
+{*                                                            </div>*}
+                                                            <button type="button" class="btn btn-pill btn-clash dropdown-item" href="##" onclick="importSublink('clash')">&nbsp;&nbsp;<i class="metron-clash text-white"></i>一键导入 Clash&nbsp;&nbsp;</button>
+{*                                                            <div class="dropdown-menu">*}
+{*                                                                <button type="button" class="dropdown-item copy-text" data-clipboard-text="{$subInfo["clash"]}">复制 Clash 订阅</button>*}
+{*                                                                <div class="dropdown-divider">*}
+{*                                                                </div>*}
+{*                                                                <button type="button" class="dropdown-item" href="##" onclick="importSublink('clash')">一键导入 Clash</button>*}
+{*                                                            </div>*}
                                                         </div>
                                                         {/if}
                                                         {if in_array('clashr',$metron['index_sub'])}
@@ -124,58 +133,63 @@
                                                         </div>
                                                         {/if}
                                                         <!-- 结束 :: 订阅按钮 -->
-                                                        <div class="h6 pt-2">点击上方按钮一键导入节点配置到Clash/ClashR</div>
-                                                        <div class="h6 pt-2">导入成功后， <code>Profiles</code> 界面会多出一个配置选项卡</div>
-                                                        <div class="h6 pt-2">点击选中刚刚导入的配置选项卡</div>
-                                                        <div class="h6 pt-2">如果弹出配置错误提示，请重启客户端并重新选中刚刚导入的配置</div>
+                                                        <br />
+                                                        <br />
+                                                        <div class="h6 pt-2">点击上方按钮一键导入节点配置到&nbsp;&nbsp;Clash</div>
+                                                        <div class="h6 pt-2">导入成功后， <code>配置</code> 界面会多出一个配置选项卡</div>
+{*                                                        <div class="h6 pt-2">点击选中刚刚导入的配置选项卡</div>*}
+                                                        <div class="h5 pt-2">点击<code>常规</code>，启动<code>系统代理</code>，即可连接!</div>
+                                                        <br />
+                                                        <div class="h6 pt-2">点击&nbsp;代理栏&nbsp;->&nbsp;国外流量&nbsp;—>&nbsp;选择节点，可切换线路</div>
+                                                        <div class="h6 pt-2">注释&nbsp;:&nbsp;如果弹出配置错误提示，请重启客户端并重新选中刚刚导入的配置</div>
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="/theme/metron/images/win/clash-2.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="/theme/metron/images/win/clash-2.png"/></a>
+                                                        <a class="image-popup-no-margins" href="/theme/metron/images/win/clash-c-2.png" data-lightbox="images">
+                                                        <img class="rounded-lg" style="width:100%" src="/theme/metron/images/win/clash-c-2.png"/></a>
                                                     </div>
                                                 </div>
 <!-- 结束 :: 内容段落 3 -->
 
                                                 <!-- 开始 :: 分割线 -->
-                                                <div class="separator separator-dashed separator-border-4"></div>
+{*                                                <div class="separator separator-dashed separator-border-4"></div>*}
                                                 <!-- 结束 :: 分割线 -->
 
 <!-- 开始 :: 内容段落 4 -->
-                                                <div class="row p-5">
-                                                    <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
-                                                        <!-- 开始 :: 段落标题 -->
-                                                        <p class="font-size-h1 pb-5"><strong>3. 选择节点</strong></p>
-                                                        <!-- 结束 :: 段落标题 -->
-                                                        <div class="h6 pt-2">点击 <code>Profiles</code> 选项切换到代理节点界面</div>
-                                                        <div class="h6 pt-2">根据规则链路设置相应的节点</div>
-                                                    </div>
-                                                    <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="/theme/metron/images/win/clash-3.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="/theme/metron/images/win/clash-3.png"/></a>
-                                                    </div>
-                                                </div>
+{*                                                <div class="row p-5">*}
+{*                                                    <div class="col-sm-12 col-md-12 col-lg-7 pb-5">*}
+{*                                                        <!-- 开始 :: 段落标题 -->*}
+{*                                                        <p class="font-size-h1 pb-5"><strong>3. 选择节点</strong></p>*}
+{*                                                        <!-- 结束 :: 段落标题 -->*}
+{*                                                        <div class="h6 pt-2">点击 <code>Profiles</code> 选项切换到代理节点界面</div>*}
+{*                                                        <div class="h6 pt-2">根据规则链路设置相应的节点</div>*}
+{*                                                    </div>*}
+{*                                                    <div class="col-sm-12 col-md-12 col-lg-5">*}
+{*                                                        <a class="image-popup-no-margins" href="/theme/metron/images/win/clash-3.png" data-lightbox="images">*}
+{*                                                        <img class="rounded-lg" style="width:100%" src="/theme/metron/images/win/clash-3.png"/></a>*}
+{*                                                    </div>*}
+{*                                                </div>*}
 <!-- 结束 :: 内容段落 4 -->
 
                                                 <!-- 开始 :: 分割线 -->
-                                                <div class="separator separator-dashed separator-border-4"></div>
+{*                                                <div class="separator separator-dashed separator-border-4"></div>*}
                                                 <!-- 结束 :: 分割线 -->
 
 <!-- 开始 :: 内容段落 5 -->
-                                                <div class="row p-5">
-                                                    <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
-                                                        <!-- 开始 :: 段落标题 -->
-                                                        <p class="font-size-h1 pb-5"><strong>4. 开启代理</strong></p>
-                                                        <!-- 结束 :: 段落标题 -->
-                                                        <div class="h6 pt-2">点击 <code>General</code> 选项切换到通用界面</div>
-                                                        <div class="h6 pt-2">打开 <code>System Proxy</code> 开关；其他保持默认即可。</div>
-                                                        <div class="h6 pt-2">一切准备就绪~~~</div>
-                                                    </div>
-                                                    <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="/theme/metron/images/win/clash-4.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="/theme/metron/images/win/clash-4.png"/></a>
-                                                    </div>
-                                                </div>
-<!-- 结束 :: 内容段落 5 -->
+{*                                                <div class="row p-5">*}
+{*                                                    <div class="col-sm-12 col-md-12 col-lg-7 pb-5">*}
+{*                                                        <!-- 开始 :: 段落标题 -->*}
+{*                                                        <p class="font-size-h1 pb-5"><strong>4. 开启代理</strong></p>*}
+{*                                                        <!-- 结束 :: 段落标题 -->*}
+{*                                                        <div class="h6 pt-2">点击 <code>General</code> 选项切换到通用界面</div>*}
+{*                                                        <div class="h6 pt-2">打开 <code>System Proxy</code> 开关；其他保持默认即可。</div>*}
+{*                                                        <div class="h6 pt-2">一切准备就绪~~~</div>*}
+{*                                                    </div>*}
+{*                                                    <div class="col-sm-12 col-md-12 col-lg-5">*}
+{*                                                        <a class="image-popup-no-margins" href="/theme/metron/images/win/clash-4.png" data-lightbox="images">*}
+{*                                                        <img class="rounded-lg" style="width:100%" src="/theme/metron/images/win/clash-4.png"/></a>*}
+{*                                                    </div>*}
+{*                                                </div>*}
+{*<!-- 结束 :: 内容段落 5 -->*}
 
                                             </div>
                                         </div>

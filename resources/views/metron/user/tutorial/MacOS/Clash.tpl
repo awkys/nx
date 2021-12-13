@@ -58,6 +58,8 @@
                                                     <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
                                                         <p class="font-size-h1 pb-5"><strong>1. 下载安装客户端</strong></p>
                                                         <a href="{$metron['client_macos']['clash']['down']}" class="btn btn-pill btn-clash mb-4">&nbsp;&nbsp;<i class="metron-clash text-white"></i>下载 Clash 客户端</a>&nbsp;&nbsp;&nbsp;
+                                                        <br />
+                                                        <br />
                                                         <p class="mb-2">下载并进行拖动安装</p>
                                                         <p class="mb-2">在启动台开启应用,如有弹窗务必点确定,有密码就输入</p>
                                                     </div>
@@ -73,14 +75,23 @@
                                                     <div class="col-sm-12 col-md-12 col-lg-7 pb-5">
                                                         <p class="font-size-h1 pb-5"><strong>2. 设置订阅地址</strong></p>
                                                         {if in_array('clash',$metron['index_sub'])}
+{*                                                        <div class="btn-group mb-3 mr-3">*}
+{*                                                            <button type="button" class="btn btn-pill btn-clash dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;&nbsp;<i class="metron-clash text-white"></i>Clash 订阅配置&nbsp;&nbsp;</button>*}
+{*                                                            <div class="dropdown-menu">*}
+{*                                                                <button type="button" class="dropdown-item copy-text" data-clipboard-text="{$subInfo["clash"]}">复制 Clash 订阅</button>*}
+{*                                                                <div class="dropdown-divider">*}
+{*                                                                </div>*}
+{*                                                                <button type="button" class="dropdown-item" href="##" onclick="importSublink('clash')">一键导入 Clash</button>*}
+{*                                                            </div>*}
+{*                                                        </div>*}
                                                         <div class="btn-group mb-3 mr-3">
-                                                            <button type="button" class="btn btn-pill btn-clash dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp;&nbsp;<i class="metron-clash text-white"></i>Clash 订阅配置&nbsp;&nbsp;</button>
-                                                            <div class="dropdown-menu">
-                                                                <button type="button" class="dropdown-item copy-text" data-clipboard-text="{$subInfo["clash"]}">复制 Clash 订阅</button>
-                                                                <div class="dropdown-divider">
-                                                                </div>
-                                                                <button type="button" class="dropdown-item" href="##" onclick="importSublink('clash')">一键导入 Clash</button>
-                                                            </div>
+                                                            <button type="button" class="btn btn-pill btn-clash dropdown-item" href="##" onclick="importSublink('clash')">&nbsp;&nbsp;<i class="metron-clash text-white"></i>一键导入 Clash&nbsp;&nbsp;</button>
+{*                                                            <div class="dropdown-menu">*}
+{*                                                                <button type="button" class="dropdown-item copy-text" data-clipboard-text="{$subInfo["clash"]}">复制 Clash 订阅</button>*}
+{*                                                                <div class="dropdown-divider">*}
+{*                                                                </div>*}
+{*                                                                <button type="button" class="dropdown-item" href="##" onclick="importSublink('clash')">一键导入 Clash</button>*}
+{*                                                            </div>*}
                                                         </div>
                                                         {/if}
                                                         {if in_array('clashr',$metron['index_sub'])}
@@ -94,28 +105,31 @@
                                                             </div>
                                                         </div>
                                                         {/if}
+                                                        <br />
+                                                        <br />
                                                         <p class="mb-2">点击上方按钮一键导入节点配置到Clash</p>
                                                         <p class="mb-2">Config Name 填入 {$config["appName"]}</p>
                                                         <p class="mb-2">点击确定，如果弹出配置错误信息，请重启Clash 后重试。(请确保您已购买套餐)</p>
-                                                        <br />
+                                                        <p>请用苹果自带浏览器(Safari)登录网站</p>
+{*                                                        <br />*}
 
-                                                        <div class="alert alert-custom alert-outline-primary fade show mb-5" role="alert">
-                                                            <div class="alert-icon">
-                                                                <i class="flaticon-warning"></i>
-                                                            </div>
-                                                            <div class="alert-text">
-                                                                <p class="mb-2">无法一键导入? 试试手动设置订阅</p>
-                                                                <p class="mb-2">依次点击 <code>配置</code> - <code>托管配置</code> - <code>管理</code> - <code>添加</code></p>
-                                                                <p class="mb-2">将订阅地址粘贴到 URL 一栏, Config Name 填入 {$config["appName"]} - 确定</p>
-                                                            </div>
-                                                            <div class="alert-close">
-                                                                <button type="button" class="close" data-dismiss="alert" aria-label="关">
-                                                                    <span aria-hidden="true">
-                                                                        <i class="ki ki-close"></i>
-                                                                    </span>
-                                                                </button>
-                                                            </div>
-                                                        </div>
+{*                                                        <div class="alert alert-custom alert-outline-primary fade show mb-5" role="alert">*}
+{*                                                            <div class="alert-icon">*}
+{*                                                                <i class="flaticon-warning"></i>*}
+{*                                                            </div>*}
+{*                                                            <div class="alert-text">*}
+{*                                                                <p class="mb-2">无法一键导入? 试试手动设置订阅</p>*}
+{*                                                                <p class="mb-2">依次点击 <code>配置</code> - <code>托管配置</code> - <code>管理</code> - <code>添加</code></p>*}
+{*                                                                <p class="mb-2">将订阅地址粘贴到 URL 一栏, Config Name 填入 {$config["appName"]} - 确定</p>*}
+{*                                                            </div>*}
+{*                                                            <div class="alert-close">*}
+{*                                                                <button type="button" class="close" data-dismiss="alert" aria-label="关">*}
+{*                                                                    <span aria-hidden="true">*}
+{*                                                                        <i class="ki ki-close"></i>*}
+{*                                                                    </span>*}
+{*                                                                </button>*}
+{*                                                            </div>*}
+{*                                                        </div>*}
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
                                                         <a class="image-popup-no-margins" href="/theme/metron/images/mac/mac-2.png" data-lightbox="images">
