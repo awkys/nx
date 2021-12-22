@@ -41,6 +41,7 @@
                                                             由于App Store中国区禁止上架VPN类所有软件，所以需要登录<span style="color: green; font-size: medium; ">海外苹果账户</span>下载app(<span style="color: red;">目前苹果唯一翻墙方法</span>)，
                                                             然后<span style="color: blue; font-size: medium; ">导入线路</span>连接使用，详情请查看下方<span style="color: purple; font-size: medium; ">图片教程</span> !
 {*                                                            <p>Shadowrocket是一款基于规则的网络调试工具，具有性能高和稳定好、使用流畅，功能多样的特点，只占用最少的系统资源，全盘接管所有的连接，根据规则来进行处理，让你无忧无虑。独有的场景模式，方便根据不同需求自动切换配置及节点。</p>*}
+                                                            <code>连接失败，请联系网站右下角在线客服</code>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
@@ -134,32 +135,40 @@
 {*                                                        <p class="mb-2">点击上方按钮一键导入节点配置到Shadowrocket</p>*}
                                                         <p class="mb-2">注：如果导入后没有显示节点，请重启Shadowrocket，重新导入</p>
                                                         <p class="mb-3">导入shadowrocket后，点击允许vpn验证，即可连接!</p>
-{*                                                        <p class="mb-2">点击底栏的 <code>设置</code> -> <code>服务器订阅</code> -> 启用 <code>打开时更新</code></p>*}
-{*                                                        <p class="mb-2">这样以后每次打开客户端都会自动更新最新节点</p>*}
-{*                                                        <br />*}
+                                                        <p class="mb-2">点击底栏的 <code>设置</code> -> <code>订阅</code> -> 启用 <code>打开时更新</code></p>
+                                                        <p class="mb-2">这样以后每次打开客户端都会自动更新最新节点</p>
+                                                        <div class="col-sm-12 col-md-12 col-lg-5">
+                                                            <a class="image-popup-no-margins" href="/theme/metron/images/ios/ios-2.png" data-lightbox="images">
+                                                                <img class="rounded-lg" style="width:100%" src="/theme/metron/images/ios/ios-2.png"/></a>
+                                                        </div>
+                                                        <br />
+                                                        <div class="alert alert-custom alert-outline-primary fade show mb-5" role="alert">
+                                                            <div class="alert-icon">
+                                                                <i class="flaticon-warning"></i>
+                                                            </div>
+                                                            <div class="alert-text">
+                                                                <p class="mb-2">无法一键导入? 试试手动设置订阅</p>
+                                                                <div class="btn-group mb-3 mr-3">
+                                                                    <button type="button" class="btn btn-pill btn-shadowrocket dropdown-item copy-text" href="##" data-clipboard-text="{$subInfo["shadowrocket"]}">&nbsp;&nbsp;<i class="metron-shadowrocket text-white"></i>复制 Shadowrocket 订阅&nbsp;&nbsp;</button>
+                                                                    {*                                                                    <div class="dropdown-menu">*}
+                                                                    {*                                                                        <button type="button" class="dropdown-item copy-text" data-clipboard-text="{$subInfo["shadowrocket"]}">复制 Shadowrocket 订阅</button>*}
+                                                                    {*                                                                        <div class="dropdown-divider"></div>*}
+                                                                    {*                                                                        <button type="button" class="dropdown-item" href="##" onclick="importSublink('shadowrocket')">一键导入 Shadowrocket</button>*}
+                                                                    {*                                                                    </div>*}
+                                                                </div>
+                                                                <p class="mb-2">在APP首页点击右上角 + 号</p>
+                                                                <p class="mb-2">类型 选择 <code>Subscribe</code> , 并粘贴订阅地址到URL一栏, 备注填写 {$config["appName"]} - 点击完成</p>
+                                                            </div>
+                                                            <div class="alert-close">
+                                                                <button type="button" class="close" data-dismiss="alert" aria-label="关">
+                                                                    <span aria-hidden="true">
+                                                                        <i class="ki ki-close"></i>
+                                                                    </span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
-{*                                                        <div class="alert alert-custom alert-outline-primary fade show mb-5" role="alert">*}
-{*                                                            <div class="alert-icon">*}
-{*                                                                <i class="flaticon-warning"></i>*}
-{*                                                            </div>*}
-{*                                                            <div class="alert-text">*}
-{*                                                                <p class="mb-2">无法一键导入? 试试手动设置订阅</p>*}
-{*                                                                <p class="mb-2">在APP首页点击右上角 + 号</p>*}
-{*                                                                <p class="mb-2">类型 选择 <code>Subscribe</code> , 并粘贴订阅地址到URL一栏, 备注填写 {$config["appName"]} - 点击完成</p>*}
-{*                                                            </div>*}
-{*                                                            <div class="alert-close">*}
-{*                                                                <button type="button" class="close" data-dismiss="alert" aria-label="关">*}
-{*                                                                    <span aria-hidden="true">*}
-{*                                                                        <i class="ki ki-close"></i>*}
-{*                                                                    </span>*}
-{*                                                                </button>*}
-{*                                                            </div>*}
-{*                                                        </div>*}
-                                                    </div>
-                                                    <div class="col-sm-12 col-md-12 col-lg-5">
-                                                        <a class="image-popup-no-margins" href="/theme/metron/images/ios/ios-2.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="/theme/metron/images/ios/ios-2.png"/></a>
-                                                    </div>
                                                 </div>
 
 {*                                                <div class="separator separator-dashed separator-border-4"></div>*}
