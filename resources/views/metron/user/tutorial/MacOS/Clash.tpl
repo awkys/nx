@@ -112,31 +112,34 @@
                                                         <p class="mb-2">点击上方按钮一键导入节点配置到Clash</p>
                                                         <p class="mb-2">Config Name 填入 {$config["appName"]}</p>
                                                         <p class="mb-2">点击确定，如果弹出配置错误信息，请重启Clash 后重试。(请确保您已购买套餐)</p>
-                                                        <p>请用苹果自带浏览器(Safari)登录网站</p>
-{*                                                        <br />*}
-
-{*                                                        <div class="alert alert-custom alert-outline-primary fade show mb-5" role="alert">*}
-{*                                                            <div class="alert-icon">*}
-{*                                                                <i class="flaticon-warning"></i>*}
-{*                                                            </div>*}
-{*                                                            <div class="alert-text">*}
-{*                                                                <p class="mb-2">无法一键导入? 试试手动设置订阅</p>*}
-{*                                                                <p class="mb-2">依次点击 <code>配置</code> - <code>托管配置</code> - <code>管理</code> - <code>添加</code></p>*}
-{*                                                                <p class="mb-2">将订阅地址粘贴到 URL 一栏, Config Name 填入 {$config["appName"]} - 确定</p>*}
-{*                                                            </div>*}
-{*                                                            <div class="alert-close">*}
-{*                                                                <button type="button" class="close" data-dismiss="alert" aria-label="关">*}
-{*                                                                    <span aria-hidden="true">*}
-{*                                                                        <i class="ki ki-close"></i>*}
-{*                                                                    </span>*}
-{*                                                                </button>*}
-{*                                                            </div>*}
-{*                                                        </div>*}
+                                                        <code>请用苹果自带浏览器(Safari)登录网站</code>
+                                                        <br />
+                                                        <div class="alert alert-custom alert-outline-primary fade show mb-5" role="alert">
+                                                            <div class="alert-icon">
+                                                                <i class="flaticon-warning"></i>
+                                                            </div>
+                                                            <div class="alert-text">
+                                                                <p class="mb-2">无法一键导入? 试试手动设置订阅</p>
+                                                                <div class="btn-group mb-3 mr-3">
+                                                                    <button type="button" class="btn btn-pill btn-clash dropdown-item copy-text" href="##" data-clipboard-text="{$subInfo["clash"]}">&nbsp;&nbsp;<i class="metron-clash text-white"></i>复制 Clash 订阅&nbsp;&nbsp;</button>
+                                                                </div>
+                                                                <p class="mb-2">依次点击 <code>配置</code> - <code>托管配置</code> - <code>管理</code> - <code>添加</code></p>
+                                                                <p class="mb-2">将订阅地址粘贴到 URL 一栏, Config Name 填入 {$config["appName"]} - 确定</p>
+                                                            </div>
+                                                            <div class="alert-close">
+                                                                <button type="button" class="close" data-dismiss="alert" aria-label="关">
+                                                                    <span aria-hidden="true">
+                                                                        <i class="ki ki-close"></i>
+                                                                    </span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
                                                         <a class="image-popup-no-margins" href="/theme/metron/images/mac/mac-2.png" data-lightbox="images">
-                                                        <img class="rounded-lg" style="width:100%" src="/theme/metron/images/mac/mac-2.png"/></a>
+                                                            <img class="rounded-lg" style="width:100%" src="/theme/metron/images/mac/mac-2.png"/></a>
                                                     </div>
+
                                                 </div>
 
                                                 <div class="separator separator-dashed separator-border-4"></div>

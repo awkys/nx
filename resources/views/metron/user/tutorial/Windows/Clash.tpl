@@ -137,14 +137,33 @@
                                                         {/if}
                                                         <!-- 结束 :: 订阅按钮 -->
                                                         <br />
-                                                        <br />
                                                         <div class="h6 pt-2">点击上方按钮一键导入节点配置到&nbsp;&nbsp;Clash</div>
                                                         <div class="h6 pt-2">导入成功后， <code>配置</code> 界面会多出一个配置选项卡</div>
-{*                                                        <div class="h6 pt-2">点击选中刚刚导入的配置选项卡</div>*}
+                                                        <div class="h6 pt-2">点击选中刚刚导入的配置选项卡(重要)</div>
                                                         <div class="h5 pt-2">点击<code>常规</code>，启动<code>系统代理</code>，即可连接!</div>
                                                         <br />
                                                         <div class="h6 pt-2">点击&nbsp;代理栏&nbsp;->&nbsp;国外流量&nbsp;—>&nbsp;选择节点，可切换线路</div>
                                                         <div class="h6 pt-2">注释&nbsp;:&nbsp;如果弹出配置错误提示，请重启客户端并重新选中刚刚导入的配置</div>
+                                                        <br />
+                                                        <div class="alert alert-custom alert-outline-primary fade show mb-5" role="alert">
+                                                            <div class="alert-icon">
+                                                                <i class="flaticon-warning"></i>
+                                                            </div>
+                                                            <div class="alert-text">
+                                                                <p class="mb-2">无法一键导入? 试试手动设置订阅</p>
+                                                                <div class="btn-group mb-3 mr-3">
+                                                                    <button type="button" class="btn btn-pill btn-clash dropdown-item copy-text" href="##" data-clipboard-text="{$subInfo["clash"]}">&nbsp;&nbsp;<i class="metron-clash text-white"></i>复制 Clash 订阅&nbsp;&nbsp;</button>
+                                                                </div>
+                                                                <p class="mb-2">依次点击 <code>配置</code> - <code>将订阅地址粘贴到填入配置地址栏</code> - <code>下载</code> - <code>常规</code> - <code>开启系统代理</code></p>
+                                                            </div>
+                                                            <div class="alert-close">
+                                                                <button type="button" class="close" data-dismiss="alert" aria-label="关">
+                                                                    <span aria-hidden="true">
+                                                                        <i class="ki ki-close"></i>
+                                                                    </span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="col-sm-12 col-md-12 col-lg-5">
                                                         <a class="image-popup-no-margins" href="/theme/metron/images/win/clash-c-2.png" data-lightbox="images">
