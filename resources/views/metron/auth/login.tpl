@@ -11,7 +11,7 @@
                             <form class="form" id="login_form">
                                 <div id="login_form_1">
                                     <div class="form-group mt-5">
-                                        <input class="form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8" type="text" placeholder="邮箱地址" name="email" id="email" autocomplete="new-password" required />
+                                        <input class="form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8" type="text" placeholder="邮箱" name="email" id="email" autocomplete="new-password" required />
                                     </div>
                                     <div class="form-group mt-5">
                                         <input class="form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8" type="password" placeholder="密码" name="password" id="password" autocomplete="new-password" required/>

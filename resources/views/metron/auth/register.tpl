@@ -49,7 +49,7 @@
                                     {if $metron['register_restricted_email'] === true}
                                     <div class="form-group mb-0" style="white-space:nowrap;">
                                         <div class="input-group mt-5">
-                                            <input class="form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-l-50 border-0 py-4 px-8 pr-0" type="text" placeholder="邮箱地址" name="email" id="email" autocomplete="new-password" />
+                                            <input class="form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-l-50 border-0 py-4 px-8 pr-0" type="text" placeholder="邮箱" name="email" id="email" autocomplete="new-password" />
                                             <select class="btn btn-pill btn-outline-code font-weight-bold rounded-l-0 pr-5 opacity-70 bg-dark-o-70" id="email_postfix" style="-webkit-appearance: none;">
                                                 {foreach $metron['list_of_available_mailboxes'] as $email}
                                                 <option value="{$email}" {if $email@index === 0}selected=""{/if}>{$email}</option>
@@ -59,7 +59,7 @@
                                     </div>
                                     {else}
                                     <div class="form-group mb-0" style="white-space:nowrap;">
-                                        <input class="form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mt-5" type="text" placeholder="邮箱地址" name="email" id="email" autocomplete="new-password" />
+                                        <input class="form-control h-auto text-white placeholder-white opacity-70 bg-dark-o-70 rounded-pill border-0 py-4 px-8 mt-5" type="text" placeholder="邮箱" name="email" id="email" autocomplete="new-password" />
                                     </div>
                                     {/if}
 
