@@ -290,8 +290,8 @@ $_MT['client_windows'] = [
         'name'  => 'Clash',      // 客户端名称
         'img'   => 'https://img-youpai.weixiaoi.com/tu/2021/0406/1617693954210406.png',        // 图标, 使用png透明文件
         'url'   => '/user/tutorial?os=Windows&client=Clash',      // 安装教程的url地址
-        'down'  => 'https://down.oneky.xyz/down/clash.windows.zip',              // 教程页里的客户端下载地址
-        'vs'    => 'v0.15.4',     // 版本号
+        'down'  => 'https://cloud.06dn.com/s/AOxqFg',              // 教程页里的客户端下载地址
+        'vs'    => 'v0.18.0',     // 版本号
     ),
 ];
 
@@ -303,7 +303,7 @@ $_MT['client_android'] = [
         'name'  => 'Clash',
         'img'   => 'https://img-youpai.weixiaoi.com/tu/2021/0406/1617693954210406.png',
         'url'   => '/user/tutorial?os=Android&client=Clash',
-        'down'  => 'https://down.oneky.xyz/down/clash.android.apk',
+        'down'  => 'https://cloud.06dn.com/s/KV4JiO',
         'vs'    => 'v2.3.18',
     ),
 ];
@@ -317,7 +317,7 @@ $_MT['client_macos'] = [
         'name'  => 'ClashX',
         'img'   => 'https://img-youpai.weixiaoi.com/tu/2021/0406/1617693954210406.png',
         'url'   => '/user/tutorial?os=MacOS&client=Clash',
-        'down'  => 'https://down.oneky.xyz/down/clash.mac.dmg',
+        'down'  => 'https://cloud.06dn.com/s/1RDbTk',
         'vs'    => 'v1.50.1',
     ),
 ];
