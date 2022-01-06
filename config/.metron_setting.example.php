@@ -118,7 +118,7 @@ $_MT['index_sub'] = [
 //    'v2ray',
     'clash',
     'shadowrocket',
-    'surge',
+//    'surge',
 //    'clashr',
 //    'surfboard',
 //    'kitsunebi',
@@ -248,6 +248,12 @@ $_MT['shop_plan'] = array(
             '季度' => 6,
             '半年' => 7,
             '年付' => 8,
+        ),
+    ),
+    '企业套餐' => array(            // 需要多个套餐可以自己复制array增加到下面
+        '套餐详情' => array(
+            '月付' => 9,
+            '季度' => 10,
         ),
     ),
 );

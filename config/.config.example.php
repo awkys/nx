@@ -87,7 +87,7 @@ $_ENV['backup_notify'] = false;                            //备份通知到TG�
 //用户注册设置-----------------------------------------------------------------------------------------
 $_ENV['reg_auto_reset_day'] = 0;                         //注册时的流量重置日，0为不重置
 $_ENV['reg_auto_reset_bandwidth'] = 0;                         //需要重置的流量，0为不重置
-$_ENV['random_group'] = '1';                       //注册时随机分组，注册时随机分配到的分组，多个分组请用英文半角逗号分隔
+$_ENV['random_group'] = '2';                       //注册时随机分组，注册时随机分配到的分组，多个分组请用英文半角逗号分隔
 
 $_ENV['reg_forbidden_ip'] = '127.0.0.0/8,::1/128';     //注册时默认禁止访问IP列表，半角英文逗号分割
 $_ENV['min_port'] = 10000;                     //用户端口池最小值
@@ -122,7 +122,7 @@ $_ENV['port_price_specify'] = -1;           //用户指明钦定端口所需要�
 
 #高级
 $_ENV['class_expire_reset_traffic'] = 0;            //等级到期时重置为的流量值，单位GB，小于0时不重置
-$_ENV['account_expire_delete_days'] = -1;           //账户到期几天之后会删除账户，小于0时不删除
+$_ENV['account_expire_delete_days'] = 60;           //账户到期几天之后会删除账户，小于0时不删除
 
 $_ENV['enable_kill'] = true;         //是否允许用户注销账户
 
