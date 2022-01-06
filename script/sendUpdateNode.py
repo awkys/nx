@@ -18,16 +18,17 @@ def send_email(receiver,expireTime):
         <font color="green">安卓用户</font>：打开App -> 配置 -> 最新配置右边三个点 -> 更新 -> 点此启动<br>
         <font color="green">苹果用户</font>：打开小火箭 -> 点击灵溪网络右边感叹号 -> 右上角完成 —> 连接<br>
         <br>
-        请先断开连接，再更新订阅！
+        请先断开连接，再更新订阅！<br>
 		<br>
-		如果连接失败：参考网站第二步教程，重新导入线路进客户端，删除本地配置文件
+		如果连接失败：参考网站第二步教程，重新导入线路进客户端，删除本地配置文件<br>
 		<br>
 		有疑问，请联系网站右下角在线客服 <br>
 		<br>
-		官方网址： <a href="https://www.nxkys.com" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.nxkys.com&amp;source=gmail&amp;ust=1638599219094000&amp;usg=AOvVaw2ZcvjoZ_OBnw_4TE1vJZHf">https://www.nxkys.com</a><div class="yj6qo"></div><div class="adL"> <br> <br>
-        ﻿<font color="Blue" size=4>灵溪网络 - 专业海外网站加速器，稳定运行六年，海外团队运营 !</font>
+		官方网址： <a href="https://nxkys.com" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://nxkys.com&amp;source=gmail&amp;ust=1638599219094000&amp;usg=AOvVaw2ZcvjoZ_OBnw_4TE1vJZHf">https://nxkys.com</a><div class="yj6qo"></div><div class="adL"> <br> <br>
         <br>
-        您账号已过期，过期时间是：<font color="darkred">%s</font>
+        您账号已过期，过期时间是：<font color="darkred">%s</font><br>
+        <br>
+        ﻿<font color="Blue" size=4>灵溪网络 - 专业海外网站加速器，稳定运行六年，海外团队运营 !</font>
 		<br><br>
 		<font color="Purple" size=4>畅游Google, Youtube, Facebook, Twitter, Instagram, 谷歌学术等海外网站</font
         </div></div>"""%(str(expireTime))

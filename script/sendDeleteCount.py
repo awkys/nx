@@ -17,8 +17,8 @@ def send_email(receiver,expireTime):
 		<br>
 		删除原来配置，重新添加线路使用（参考网站第二步教程）<br>
 		<br>
-		邀请注册链接： <a href="https://nxkys.com/auth/register?code=OaIe" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.nxkys.com&amp;source=gmail&amp;ust=1638599219094000&amp;usg=AOvVaw2ZcvjoZ_OBnw_4TE1vJZHf">https://nxkys.com/auth/register?code=OaIe</a><div class="yj6qo"></div><div class="adL"> <br> <br>
-		官方网址： <a href="https://www.nxkys.com" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.nxkys.com&amp;source=gmail&amp;ust=1638599219094000&amp;usg=AOvVaw2ZcvjoZ_OBnw_4TE1vJZHf">https://www.nxkys.com</a><div class="yj6qo"></div><div class="adL"> <br> <br>
+		邀请注册链接： <a href="https://nxkys.com/auth/register?code=OaIe" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://nxkys.com&amp;source=gmail&amp;ust=1638599219094000&amp;usg=AOvVaw2ZcvjoZ_OBnw_4TE1vJZHf">https://nxkys.com/auth/register?code=OaIe</a><div class="yj6qo"></div><div class="adL"> <br> <br>
+		官方网址： <a href="https://nxkys.com" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://nxkys.com&amp;source=gmail&amp;ust=1638599219094000&amp;usg=AOvVaw2ZcvjoZ_OBnw_4TE1vJZHf">https://nxkys.com</a><div class="yj6qo"></div><div class="adL"> <br> <br>
         有疑问，请联系网站右下角在线客服 <br>
         <br>
         ﻿<font color="Blue" size=4>灵溪网络 - 专业海外网站加速器，稳定运行六年，海外团队运营 !</font>
