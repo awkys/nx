@@ -62,13 +62,13 @@ if __name__ == '__main__':
        cursor.execute(sql)
        # 获取所有记录列表
        results = cursor.fetchall()
-       for row in results:
+       for row in results[1:]:
           email = row[0]
           expireTime = row[1]
           send_email(email, expireTime)
           time.sleep(5 * 60)
     except:
-       print ("send member expire mail fail : unable to fetch data")
+       print ("send delete count mail fail : unable to fetch data")
 
     # 关闭数据库连接
     db.close()

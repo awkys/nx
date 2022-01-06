@@ -72,7 +72,7 @@ if __name__ == '__main__':
        cursor.execute(sql)
        # 获取所有记录列表
        results = cursor.fetchall()
-       for row in results:
+       for row in results[1:]:
           email = row[0]
           expireTime = row[1]
           send_email(email, expireTime)
