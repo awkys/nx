@@ -7,10 +7,10 @@ from email.mime.text import MIMEText
 
 def send_email(receiver,expireTime):
     # 接收方／发送方，接收方是一个list，可以接受多个数值
-    sender = 'lingxi@oneky.xyz'
+    sender = 'znxkys@zohomail.com'
 
     contant = """<div dir="ltr">
-        亲亲，本站线路全部更新完毕，请按照以下方法更新本地线路，才能不影响您的正常使用！！！
+        亲亲，本站线路全部更新完毕，如果连接失败，请按照以下方法更新本地线路，才能不影响您的正常使用！！！
 		<br><br>
 		<font color="red">更新本地线路方法：</font><br>
 		<br>
@@ -43,7 +43,7 @@ def send_email(receiver,expireTime):
     server = smtplib.SMTP_SSL('smtp.zoho.com', 465)
     try:
         # 登陆邮箱，发送邮件退出登陆
-        server.login('lingxi@oneky.xyz', 'lingxi_Admin6688')
+        server.login('znxkys@zohomail.com', 'nx_Admin6688')
         server.sendmail(sender, [receiver], message.as_string())
         server.quit()
     except smtplib.SMTPException:
@@ -64,8 +64,6 @@ if __name__ == '__main__':
             LEFT JOIN(
                 select id,email,expire_in
                 from `user`
-                where u = 0
-                        and expire_in > date(now())
             ) c2
             on c1.userid=c2.id"""
     try:
