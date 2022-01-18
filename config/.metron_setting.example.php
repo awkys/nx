@@ -294,10 +294,17 @@ $_MT['Telegram_Payment'] = true;    // 用户充值提醒
 $_MT['client_windows'] = [
     'clash' => array(           // 一个array为一个客户端, 可以自行增加或删除
         'name'  => 'Clash',      // 客户端名称
-        'img'   => 'https://img-youpai.weixiaoi.com/tu/2021/0406/1617693954210406.png',        // 图标, 使用png透明文件
+        'img'   => '/theme/metron/images/clashr-ico.png',        // 图标, 使用png透明文件
         'url'   => '/user/tutorial?os=Windows&client=Clash',      // 安装教程的url地址
         'down'  => 'https://cloud.06dn.com/s/AOxqFg',              // 教程页里的客户端下载地址
         'vs'    => 'v0.18.0',     // 版本号
+    ),
+    'V2rayN' => array(           // 一个array为一个客户端, 可以自行增加或删除
+        'name'  => 'V2rayN',      // 客户端名称
+        'img'   => '/theme/metron/images/v2rayn-ico.png',        // 图标, 使用png透明文件
+        'url'   => '/user/tutorial?os=Windows&client=V2rayN',      // 安装教程的url地址
+        'down'  => 'https://cloud.06dn.com/s/3xE4FO',              // 教程页里的客户端下载地址
+        'vs'    => 'v4.20',     // 版本号
     ),
 ];
 
@@ -307,7 +314,7 @@ $_MT['client_windows'] = [
 $_MT['client_android'] = [
     'clash' => array(
         'name'  => 'Clash',
-        'img'   => 'https://img-youpai.weixiaoi.com/tu/2021/0406/1617693954210406.png',
+        'img'   => '/theme/metron/images/clashr-ico.png',
         'url'   => '/user/tutorial?os=Android&client=Clash',
         'down'  => 'https://cloud.06dn.com/s/KV4JiO',
         'vs'    => 'v2.3.18',
@@ -321,7 +328,7 @@ $_MT['client_android'] = [
 $_MT['client_macos'] = [
     'clash' => array(
         'name'  => 'ClashX',
-        'img'   => 'https://img-youpai.weixiaoi.com/tu/2021/0406/1617693954210406.png',
+        'img'   => '/theme/metron/images/clashr-ico.png',
         'url'   => '/user/tutorial?os=MacOS&client=Clash',
         'down'  => 'https://cloud.06dn.com/s/1RDbTk',
         'vs'    => 'v1.50.1',

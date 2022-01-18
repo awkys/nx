@@ -44,7 +44,7 @@
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="symbol symbol-60 symbol-light mr-3 flex-shrink-0">
                                                                             <div class="symbol-label">
-                                                                                <img src="/theme/metron/images/clashr-ico.png" alt="" class="h-50">
+                                                                                <img src="{$c_w['img']}" alt="" class="h-75">
                                                                             </div>
                                                                         </div>
                                                                         <div class="ml-3">
@@ -56,7 +56,7 @@
 {*                                                                            <button type="button" class="btn btn-primary font-weight-bold btn-pill mt-2 href="##" onclick="importSublink('clash')">添加线路</button>*}
 {*                                                                        </div>*}
                                                                     </div>
-                                                                    <a href="/user/tutorial?os=Windows&amp;client=Clash" class="btn btn-primary font-weight-bold btn-pill">安装教程</a>
+                                                                    <a href="{$c_w['url']}" class="btn btn-primary font-weight-bold btn-pill">安装教程</a>
 
                                                                 </div>
 {*                                                                <div class="d-flex align-items-center justify-content-between mb-5">*}
