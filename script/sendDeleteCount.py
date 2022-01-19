@@ -56,7 +56,7 @@ if __name__ == '__main__':
     # SQL 查询语句
     sql = """SELECT email,expire_in
             from `user`
-            where expire_in < DATE_SUB(curdate(),INTERVAL 60 DAY) ;"""
+            where expire_in < DATE_SUB(curdate(),INTERVAL 30 DAY) ;"""
     try:
        # 执行SQL语句
        cursor.execute(sql)

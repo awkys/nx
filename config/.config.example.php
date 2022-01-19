@@ -16,7 +16,7 @@ $_ENV['version'] = 2;    //仅当涉及【需要修改config以外的文件】�
 //基本设置--------------------------------------------------------------------------------------------
 $_ENV['key'] = '1145141919810';                //!!! 瞎 jb 修改此key为随机字符串确保网站安全 !!!
 $_ENV['debug'] = false;                          //正式环境请确保为 false
-$_ENV['appName'] = '灵溪网络';                      //站点名称
+$_ENV['appName'] = '灵溪加速器';                      //站点名称
 $_ENV['baseUrl'] = 'https://nxkys.com';               //站点地址
 $_ENV['muKey'] = 'nx_mukey_Admin';               //用于校验魔改后端请求，可以随意修改，但请保持前后端一致，否则节点不能工作！
 
@@ -54,7 +54,7 @@ $_ENV['smtp_host'] = 'smtp.zoho.com';                          // SMTP 邮局服
 $_ENV['smtp_username'] = 'hi@nxkys.com';                          // SMTP 账户名
 $_ENV['smtp_password'] = 'nx_Admin6688';                           // SMTP 账户密码
 $_ENV['smtp_port'] = 465;                         // SMTP 端口(常见端口 25, 587 465)
-$_ENV['smtp_name'] = '灵溪网络';                          // SMTP 发信名称
+$_ENV['smtp_name'] = '灵溪加速器';                          // SMTP 发信名称
 $_ENV['smtp_sender'] = 'hi@nxkys.com';                          // SMTP 账户发信地址
 $_ENV['smtp_ssl'] = true;                        // 是否使用 TLS/SSL 发信
 $_ENV['smtp_reply_to'] = $_ENV['smtp_username'];      // 用户回复邮件的接受地址
@@ -63,7 +63,7 @@ $_ENV['smtp_reply_to_name'] = $_ENV['smtp_sender'];        // 回复地址显示
 # sendgrid
 $_ENV['sendgrid_key'] = '';
 $_ENV['sendgrid_sender'] = 'nxkys.com';       //发件邮箱
-$_ENV['sendgrid_name'] = '灵溪网络';       //发件人名称
+$_ENV['sendgrid_name'] = '灵溪加速器';       //发件人名称
 
 # 阿里云邮件推送 WEB API
 # 阿里云api发信参数以及域名查看地址 https://help.aliyun.com/document_detail/96856.html
@@ -122,7 +122,7 @@ $_ENV['port_price_specify'] = -1;           //用户指明钦定端口所需要�
 
 #高级
 $_ENV['class_expire_reset_traffic'] = 0;            //等级到期时重置为的流量值，单位GB，小于0时不重置
-$_ENV['account_expire_delete_days'] = 60;           //账户到期几天之后会删除账户，小于0时不删除
+$_ENV['account_expire_delete_days'] = 30;           //账户到期几天之后会删除账户，小于0时不删除
 
 $_ENV['enable_kill'] = true;         //是否允许用户注销账户
 
