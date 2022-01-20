@@ -26,7 +26,7 @@
                             <a href="/">
                                 <img src="/theme/metron/images/authlogo.jpg" class="max-h-100px bg-white shadow-light rounded-circle shadow" alt="" />
                             </a>
-                            <div class="title big-title" style="font-size:4rem;"> &nbsp;
+                            <div class="title big-title" style="font-size:3rem;"> &nbsp;
                                 {$config["appName"]}
                             </div>
                         </div>

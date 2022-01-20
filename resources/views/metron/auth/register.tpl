@@ -17,8 +17,8 @@
 {*                                </div>*}
 {*                            </div>*}
                             <div class="mb-10">
-                                <h3>新用户注册</h3>
-                                <span class="opacity-70 mr-4">收不到验证码请检查邮箱垃圾邮件</span>
+                                <h3>注册&nbsp;-&nbsp;查看连接教程</h3>
+{*                                <span class="opacity-70 mr-4">畅游ins,youtube,google,twitter,netflix 等海外网站</span>*}
                             </div>
                             <form class="form" id="register_form">
                                 <div id="register_form_1">
@@ -113,6 +113,12 @@
                             <div class="mt-10">
                                 <span class="opacity-70 mr-4">已经有账号 ?</span>
                                 <a href="/auth/login" class="text-white font-weight-bold">立即登录</a>
+                            </div>
+                            <div class="mt-10">
+                                <span class="opacity-70 mr-4">支持 Android、iPhone/iPad、Windows、MacOS</span>
+                            </div>
+                            <div class="mt-10">
+                                <span class="opacity-70 mr-4">海外团队,&nbsp;&nbsp;安全稳定,&nbsp;&nbsp;操作简单,&nbsp;&nbsp;告别卡顿,&nbsp;&nbsp;畅游海外网站</span>
                             </div>
                         </div>
 
