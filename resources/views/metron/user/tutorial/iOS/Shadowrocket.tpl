@@ -57,6 +57,8 @@
                                                         <p class="font-size-h1 pb-5"><strong>1. 通过 App Store 安装客户端</strong></p>
                                                         {if $metron['ios_account'] != ''}
                                                         {if $user->class >= $metron['ios_class'] && $user->class != 10}
+                                                        <p class="mb-2"><span style="color: red; font-size: medium; ">不要开启双重验证(不安全，容易泄露本地数据)</span></p>
+                                                        <p class="mb-2"><span style="color: red; font-size: medium; ">跳过双重验证方法：</span><code>苹果商店(登录下面账号)</code> -&gt; <code>其他选项</code> -&gt; <code>不升级</code></p>
                                                         <div class="input-group mb-3 col-md-8 col-lg-8">
                                                             <input type="text" class="form-control" value="{$metron['ios_account']}" disabled="disabled">
                                                             <div class="input-group-append">
@@ -96,7 +98,7 @@
                                                         {/if}
                                                         <br />
                                                         <p class="mb-2">打开手机<code>打开APP store</code> -&gt; <code>右上角点击你的头像然后下拉到最下方并退出。</code> -&gt;使用 <code>非国区 Apple ID </code>登录</p>
-                                                        <p class="mb-2">图片教程中如果未出现apple ID安全请跳过，切记<span style="color: red; font-size: medium; ">不要开启双重验证</span></p>
+                                                        <p class="mb-2">图片教程中如果未出现apple ID安全请跳过，切记不要开启双重验证(不安全)</p>
                                                         <p class="mb-2">登录成功后 App Store 会切换对应的语言，在搜索框输入 <code>Shadowrocket</code> 进行安装</p>
                                                         <p class="mb-2">安装完成可正常打开app后 打开APP store<code>右上角点击你的头像</code> -&gt; <code>然后下拉到最下方并退出</code> 退出共享账号，安装完成后不再需要Appe ID，所以请不要保留在手机登录。</p>
                                                     </div>
