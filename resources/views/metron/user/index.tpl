@@ -3,6 +3,7 @@
 <head>
     <title>用户中心 &mdash; {$config["appName"]}</title>
     <link href="{$metron['assets_url']}/css/client/metron-icon.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/components.css" rel="stylesheet" type="text/css"/>
     {include file='include/global/head.tpl'}
     <div class="d-flex flex-column flex-root">
         <div class="d-flex flex-row flex-column-fluid page">
@@ -11,33 +12,34 @@
                 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
                     <div class="subheader min-h-lg-175px pt-5 pb-7 subheader-transparent" id="kt_subheader">
                         <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
-{*                            <div class="d-flex align-items-center flex-wrap mr-2">*}
-{*                                <div class="d-flex flex-column">*}
-{*                                    <h2 class="text-white font-weight-bold my-2 mr-5">用户中心</h2>*}
-{*                                </div>*}
-{*                            </div>*}
-{*                            <div class="d-flex align-items-center">*}
-{*                                {if $user->isAbleToCheckin()}*}
-{*                                    <a href="javascript:;"*}
-{*                                       class="btn {$style[$theme_style]['global']['btn_subheader']} font-weight-bold py-3 px-6"*}
-{*                                       id="checkin" onclick="index.checkin();">每日签到</a>*}
-{*                                {else}*}
-{*                                    <a href="javascript:;"*}
-{*                                       class="btn btn-transparent-white font-weight-bold py-3 px-6 mr-2 disabled"*}
-{*                                       disabled="disabled">已签到</a>*}
-{*                                {/if}*}
-{*                            </div>*}
+                            {*                            <div class="d-flex align-items-center flex-wrap mr-2">*}
+                            {*                                <div class="d-flex flex-column">*}
+                            {*                                    <h2 class="text-white font-weight-bold my-2 mr-5">用户中心</h2>*}
+                            {*                                </div>*}
+                            {*                            </div>*}
+                            {*                            <div class="d-flex align-items-center">*}
+                            {*                                {if $user->isAbleToCheckin()}*}
+                            {*                                    <a href="javascript:;"*}
+                            {*                                       class="btn {$style[$theme_style]['global']['btn_subheader']} font-weight-bold py-3 px-6"*}
+                            {*                                       id="checkin" onclick="index.checkin();">每日签到</a>*}
+                            {*                                {else}*}
+                            {*                                    <a href="javascript:;"*}
+                            {*                                       class="btn btn-transparent-white font-weight-bold py-3 px-6 mr-2 disabled"*}
+                            {*                                       disabled="disabled">已签到</a>*}
+                            {*                                {/if}*}
+                            {*                            </div>*}
                         </div>
                     </div>
-                    <div class="d-flex flex-column-fluid">
-                        <div class="container">
-                            <div id="index-alert">
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-6 col-lg-6 col-xl-3 ">
-                                    <div class="card card-custom mb-8 {$metron['style_shadow']}" style="background:#aae4de;">
-                                        <div class="card-body pt-6 pl-4 pb-0">
-                                            <div class="d-flex pt-4 pl-4 pr-4 pb-0 justify-content-between mb-0">
+                    {if $user->class != -1}
+                        <div class="d-flex flex-column-fluid">
+                            <div class="container">
+                                <div id="index-alert">
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 col-lg-6 col-xl-3 ">
+                                        <div class="card card-custom mb-8 {$style[$theme_style]['index']['dash1']['bg']} {$metron['style_shadow']}">
+                                            <div class="card-body pt-6 pl-4 pb-0">
+                                                <div class="d-flex pt-4 pl-4 pr-4 pb-0">
                                                     <span class="svg-icon svg-icon-4x {$style[$theme_style]['index']['dash1']['svg']}">
                                                         <svg xmlns="http://www.w3.org/2000/svg"
                                                              xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
@@ -54,40 +56,41 @@
                                                             </g>
                                                         </svg>
                                                     </span>
-                                                <div class="d-flex flex-column ml-3 mr-5">
-                                                    <div class="font-size-h4 {$style[$theme_style]['index']['text']} mb-2">
-                                                        <strong>{if $user->class_expire!="1989-06-04 00:05:00" && $user->class >= 1}
-                                                                <span class="counter">{$class_left_days}</span> 天{elseif $user->class <= 0}
-                                                                <span class="counter">已过期</span>
-                                                            {else}未知{/if}</strong></div>
-                                                    <p class="text-dark-50">会员时长</p>
-                                                </div>
-                                                <div class="d-flex flex-column">
-                                                    <a href="/user/shop" class="btn btn-primary font-weight-bold btn-pill">购买套餐</a>
+                                                    <div class="d-flex flex-column ml-3 mr-5">
+                                                        <div class="font-size-h4 {$style[$theme_style]['index']['text']} mb-2">
+                                                            <strong>{if $user->class_expire!="1989-06-04 00:05:00" && $user->class >= 1}
+                                                                    <span class="counter">{$class_left_days}</span>
+                                                                    天{elseif $user->class <= 0}
+                                                                    <span class="counter">已过期</span>
+                                                                {else}未知{/if}</strong></div>
+                                                        <p class="text-dark-50">会员时长</p>
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <a href="/user/shop" class="btn btn-primary font-weight-bold btn-pill">购买套餐</a>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="card-body pt-2 pl-5 pr-3 pb-1">
-                                            <p class="text-dark-50">
-                                                {foreach $metron['user_level'] as $user_level_class => $user_level_name}
-                                                    {if $user->class == $user_level_class}{$user_level_name}{/if}
-                                                {/foreach}
-                                                :
-                                                {if $user->class_expire != "1989-06-04 00:05:00" && $user->class >= 1}
-                                                    {substr($user->class_expire, 0, 10)} 到期
-                                                {elseif $user->class == 0}
-                                                    已过期
-                                                {elseif $user->class == -1}
-                                                    请购买套餐激活账号
-                                                {else}永久{/if}
-                                            </p>
+                                            <div class="card-body pt-2 pl-5 pr-3 pb-1">
+                                                <p class="text-dark-50">
+                                                    {foreach $metron['user_level'] as $user_level_class => $user_level_name}
+                                                        {if $user->class == $user_level_class}{$user_level_name}{/if}
+                                                    {/foreach}
+                                                    :
+                                                    {if $user->class_expire != "1989-06-04 00:05:00" && $user->class >= 1}
+                                                        {substr($user->class_expire, 0, 10)} 到期
+                                                    {elseif $user->class == 0}
+                                                        已过期
+                                                    {elseif $user->class == -1}
+                                                        请购买套餐激活账号
+                                                    {else}永久{/if}
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-sm-6 col-lg-6 col-xl-3 ">
-                                    <div class="card card-custom mb-8 {$metron['style_shadow']}" style="background:#d1d7eb;">
-                                        <div class="card-body pt-6 pl-4 pb-0">
-                                            <div class="d-flex pt-4 pl-4 pr-4 pb-0 justify-content-between mb-0">
+                                    <div class="col-sm-6 col-lg-6 col-xl-3 ">
+                                        <div class="card card-custom mb-8 {$style[$theme_style]['index']['dash2']['bg']} {$metron['style_shadow']}">
+                                            <div class="card-body pt-6 pl-4 pb-0">
+                                                <div class="d-flex pt-4 pl-4 pr-4 pb-0">
                                                     <span class="svg-icon svg-icon-4x {$style[$theme_style]['index']['dash2']['svg']}">
                                                         <svg xmlns="http://www.w3.org/2000/svg"
                                                              xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
@@ -104,64 +107,31 @@
                                                             </g>
                                                         </svg>
                                                     </span>
-                                                <div class="d-flex flex-column ml-3 mr-5">
-                                                    <div class="font-size-h4 {$style[$theme_style]['index']['text']} mb-2">
-                                                        <strong>{$user->unusedTraffic()}</strong></div>
-                                                    <p class="text-dark-50">剩余流量</p>
-                                                </div>
-                                                <div class="d-flex flex-column">
-                                                    <a href="/user/node" class="btn btn-primary font-weight-bold btn-pill">节点列表</a>
+                                                    <div class="d-flex flex-column ml-3 mr-5">
+                                                        <div class="font-size-h4 {$style[$theme_style]['index']['text']} mb-2">
+                                                            <strong>{$user->unusedTraffic()}</strong></div>
+                                                        <p class="text-dark-50">剩余流量</p>
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <a href="/user/node" class="btn btn-primary font-weight-bold btn-pill">节点列表</a>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="card-body pt-2 pl-5 pr-3 pb-1">
-                                            <p class="text-dark-50">下次重置：{$user->valid_use_loop()}
-                                                {if $metron['advanceResetFlow'] === true}
-                                                    <span id="advance_reset_flow_onclick"
-                                                          class="label {$style[$theme_style]['index']['dash2']['btn']} label-inline font-weight-lighter ml-1 mr-2 cursor_onclick"
-                                                          onclick="index.advanceResetFlow('get');">提前重置</span>
-                                                {/if}
-                                            </p>
+                                            <div class="card-body pt-2 pl-5 pr-3 pb-1">
+                                                <p class="text-dark-50">下次重置：{$user->valid_use_loop()}
+                                                    {if $metron['advanceResetFlow'] === true}
+                                                        <span id="advance_reset_flow_onclick"
+                                                              class="label {$style[$theme_style]['index']['dash2']['btn']} label-inline font-weight-lighter ml-1 mr-2 cursor_onclick"
+                                                              onclick="index.advanceResetFlow('get');">提前重置</span>
+                                                    {/if}
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-{*                                <div class="col-sm-6 col-lg-6 col-xl-3 ">*}
-{*                                    <div class="card card-custom mb-8 {$style[$theme_style]['index']['dash3']['bg']} {$metron['style_shadow']}">*}
-{*                                        <div class="card-body pt-6 pl-4 pb-0">*}
-{*                                            <div class="d-flex pt-4 pl-4 pr-4 pb-0">*}
-{*                                                    <span class="svg-icon svg-icon-4x {$style[$theme_style]['index']['dash3']['svg']}">*}
-{*                                                        <svg xmlns="http://www.w3.org/2000/svg"*}
-{*                                                             xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"*}
-{*                                                             height="24px" viewBox="0 0 24 24" version="1.1">*}
-{*                                                            <g stroke="none" stroke-width="1" fill="none"*}
-{*                                                               fill-rule="evenodd">*}
-{*                                                                <rect x="0" y="0" width="24" height="24"/>*}
-{*                                                                <path d="M8,2.5 C7.30964406,2.5 6.75,3.05964406 6.75,3.75 L6.75,20.25 C6.75,20.9403559 7.30964406,21.5 8,21.5 L16,21.5 C16.6903559,21.5 17.25,20.9403559 17.25,20.25 L17.25,3.75 C17.25,3.05964406 16.6903559,2.5 16,2.5 L8,2.5 Z"*}
-{*                                                                      fill="#000000" opacity="0.3"/>*}
-{*                                                                <path d="M8,2.5 C7.30964406,2.5 6.75,3.05964406 6.75,3.75 L6.75,20.25 C6.75,20.9403559 7.30964406,21.5 8,21.5 L16,21.5 C16.6903559,21.5 17.25,20.9403559 17.25,20.25 L17.25,3.75 C17.25,3.05964406 16.6903559,2.5 16,2.5 L8,2.5 Z M8,1 L16,1 C17.5187831,1 18.75,2.23121694 18.75,3.75 L18.75,20.25 C18.75,21.7687831 17.5187831,23 16,23 L8,23 C6.48121694,23 5.25,21.7687831 5.25,20.25 L5.25,3.75 C5.25,2.23121694 6.48121694,1 8,1 Z M9.5,1.75 L14.5,1.75 C14.7761424,1.75 15,1.97385763 15,2.25 L15,3.25 C15,3.52614237 14.7761424,3.75 14.5,3.75 L9.5,3.75 C9.22385763,3.75 9,3.52614237 9,3.25 L9,2.25 C9,1.97385763 9.22385763,1.75 9.5,1.75 Z"*}
-{*                                                                      fill="#000000" fill-rule="nonzero"/>*}
-{*                                                            </g>*}
-{*                                                        </svg>*}
-{*                                                    </span>*}
-{*                                                <div class="d-flex flex-column ml-3 mr-5">*}
-{*                                                    <div class="font-size-h4 {$style[$theme_style]['index']['text']} mb-2">*}
-{*                                                        <strong>{$user->online_ip_count()}*}
-{*                                                            / {if $user->node_connector == 0}无限制{else}{$user->node_connector}{/if}</strong>*}
-{*                                                    </div>*}
-{*                                                    <p class="text-dark-50">在线设备</p>*}
-{*                                                </div>*}
-{*                                            </div>*}
-{*                                        </div>*}
-{*                                        <div class="card-body pt-2 pl-5 pr-3 pb-1">*}
-{*                                            <p class="text-dark-50">*}
-{*                                                上次使用: {if $user->lastSsTime() == '从未使用喵'}从未使用过{else}{substr($user->lastSsTime(), 5)}{/if}</p>*}
-{*                                        </div>*}
-{*                                    </div>*}
-{*                                </div>*}
-                                <div class="col-sm-6 col-lg-6 col-xl-3 ">
-                                    <div class="card card-custom mb-8 {$metron['style_shadow']}" style="background:#ebdcd1;">
-                                        <div class="card-body pt-6 pl-4 pb-0">
-                                            <div class="d-flex pt-4 pl-4 pr-4 pb-0  justify-content-between mb-0">
+                                    <div class="col-sm-6 col-lg-6 col-xl-3 ">
+                                        <div class="card card-custom mb-8 {$style[$theme_style]['index']['dash4']['bg']} {$metron['style_shadow']}">
+                                            <div class="card-body pt-6 pl-4 pb-0">
+                                                <div class="d-flex pt-4 pl-4 pr-4 pb-0">
                                                     <span class="svg-icon svg-icon-4x {$style[$theme_style]['index']['dash4']['svg']}">
                                                         <svg xmlns="http://www.w3.org/2000/svg"
                                                              xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
@@ -179,55 +149,109 @@
                                                             </g>
                                                         </svg>
                                                     </span>
-                                                <div class="d-flex flex-column ml-3 mr-5">
-                                                    <div class="font-size-h4 {$style[$theme_style]['index']['text']} mb-2">
-                                                        <strong>¥ {$user->money}</strong></div>
-                                                    <p class="text-dark-50">钱包余额</p>
+                                                    <div class="d-flex flex-column ml-3 mr-5">
+                                                        <div class="font-size-h4 {$style[$theme_style]['index']['text']} mb-2">
+                                                            <strong>¥ {$user->money}</strong></div>
+                                                        <p class="text-dark-50">钱包余额</p>
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <a href="/user/code" class="btn btn-primary font-weight-bold btn-pill">余额充值</a>
+                                                    </div>
                                                 </div>
-                                                <div class="d-flex flex-column">
-                                                    <a href="/user/code" class="btn btn-primary font-weight-bold btn-pill">余额充值</a>
+                                            </div>
+                                            <div class="card-body pt-2 pl-5 pr-3 pb-1">
+                                                <p class="text-dark-50">返利累计: ¥ {$paybacks_sum}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {*                                    <div class="col-sm-6 col-lg-6 col-xl-3 ">*}
+                                    {*                                        <div class="card card-custom mb-8 {$style[$theme_style]['index']['dash3']['bg']} {$metron['style_shadow']}">*}
+                                    {*                                            <div class="card-body pt-6 pl-4 pb-0">*}
+                                    {*                                                <div class="d-flex pt-4 pl-4 pr-4 pb-0">*}
+                                    {*                                                    <span class="svg-icon svg-icon-4x {$style[$theme_style]['index']['dash3']['svg']}">*}
+                                    {*                                                        <svg xmlns="http://www.w3.org/2000/svg"*}
+                                    {*                                                             xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"*}
+                                    {*                                                             height="24px" viewBox="0 0 24 24" version="1.1">*}
+                                    {*                                                            <g stroke="none" stroke-width="1" fill="none"*}
+                                    {*                                                               fill-rule="evenodd">*}
+                                    {*                                                                <rect x="0" y="0" width="24" height="24"/>*}
+                                    {*                                                                <path d="M8,2.5 C7.30964406,2.5 6.75,3.05964406 6.75,3.75 L6.75,20.25 C6.75,20.9403559 7.30964406,21.5 8,21.5 L16,21.5 C16.6903559,21.5 17.25,20.9403559 17.25,20.25 L17.25,3.75 C17.25,3.05964406 16.6903559,2.5 16,2.5 L8,2.5 Z"*}
+                                    {*                                                                      fill="#000000" opacity="0.3"/>*}
+                                    {*                                                                <path d="M8,2.5 C7.30964406,2.5 6.75,3.05964406 6.75,3.75 L6.75,20.25 C6.75,20.9403559 7.30964406,21.5 8,21.5 L16,21.5 C16.6903559,21.5 17.25,20.9403559 17.25,20.25 L17.25,3.75 C17.25,3.05964406 16.6903559,2.5 16,2.5 L8,2.5 Z M8,1 L16,1 C17.5187831,1 18.75,2.23121694 18.75,3.75 L18.75,20.25 C18.75,21.7687831 17.5187831,23 16,23 L8,23 C6.48121694,23 5.25,21.7687831 5.25,20.25 L5.25,3.75 C5.25,2.23121694 6.48121694,1 8,1 Z M9.5,1.75 L14.5,1.75 C14.7761424,1.75 15,1.97385763 15,2.25 L15,3.25 C15,3.52614237 14.7761424,3.75 14.5,3.75 L9.5,3.75 C9.22385763,3.75 9,3.52614237 9,3.25 L9,2.25 C9,1.97385763 9.22385763,1.75 9.5,1.75 Z"*}
+                                    {*                                                                      fill="#000000" fill-rule="nonzero"/>*}
+                                    {*                                                            </g>*}
+                                    {*                                                        </svg>*}
+                                    {*                                                    </span>*}
+                                    {*                                                    <div class="d-flex flex-column ml-3 mr-5">*}
+                                    {*                                                        <div class="font-size-h4 {$style[$theme_style]['index']['text']} mb-2">*}
+                                    {*                                                            <strong>{$user->online_ip_count()}*}
+                                    {*                                                                / {if $user->node_connector == 0}无限制{else}{$user->node_connector}{/if}</strong>*}
+                                    {*                                                        </div>*}
+                                    {*                                                        <p class="text-dark-50">在线设备</p>*}
+                                    {*                                                    </div>*}
+                                    {*                                                </div>*}
+                                    {*                                            </div>*}
+                                    {*                                            <div class="card-body pt-2 pl-5 pr-3 pb-1">*}
+                                    {*                                                <p class="text-dark-50">*}
+                                    {*                                                    上次使用: {if $user->lastSsTime() == '从未使用喵'}从未使用过{else}{substr($user->lastSsTime(), 5)}{/if}</p>*}
+                                    {*                                            </div>*}
+                                    {*                                        </div>*}
+                                    {*                                    </div>*}
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-7">
+                                        <!-- 客户端下载 -->
+                                        {include file='include/index/client.tpl'}
+                                        <!-- 订阅地址 -->
+                                        <div class="card card-custom gutter-b {$metron['style_shadow']}">
+                                            <div class="card-header border-0 pt-5">
+                                                <div class="card-title font-weight-bolder">
+                                                    <div class="card-label {$style[$theme_style]['global']['title']} font-weight-bold font-size-h3">
+                                                        <i class="fa fa-magic icon-md {$style[$theme_style]['global']['title']}"></i><strong>
+                                                            订阅地址</strong>
+                                                        <div class="font-size-sm text-muted mt-2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        {include file='include/index/sub_button.tpl'}
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body pt-2 pl-5 pr-3 pb-1">
-                                            <p class="text-dark-50">返利累计: ¥ {$paybacks_sum}</p>
-                                        </div>
+                                        <!-- 公告-->
+                                        {*                                        <div class="card card-custom bgi-no-repeat gutter-b {$metron['style_shadow']}"*}
+                                        {*                                             {if $theme_style !== 'dark'}style="background-position: right top; background-size: 30% auto; background-image: url({$metron['assets_url']}/media/svg/shapes/abstract-2.svg)" {/if}>*}
+                                        {*                                            <div class="card-header border-0 pt-5">*}
+                                        {*                                                <div class="card-title font-weight-bolder">*}
+                                        {*                                                    <div class="card-label {$style[$theme_style]['global']['title']} font-weight-bold font-size-h3">*}
+                                        {*                                                        <i class="fas fa-bullhorn icon-md {$style[$theme_style]['global']['title']}"></i><strong>*}
+                                        {*                                                            最新公告</strong>*}
+                                        {*                                                        <div class="font-size-sm text-muted mt-2">*}
+                                        {*                                                            更新日期：{$ann->date}</div>*}
+                                        {*                                                    </div>*}
+                                        {*                                                </div>*}
+                                        {*                                            </div>*}
+                                        {*                                            <div class="card-body">*}
+                                        {*                                                <div class="text-dark-50 font-weight-normal font-size-lg-h4 font-size-h5">{$ann->content}</div>*}
+                                        {*                                            </div>*}
+                                        {*                                        </div>*}
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-7">
-                                    <!-- 客户端下载 -->
-                                    {include file='include/index/client.tpl'}
-                                    <!-- 公告-->
-{*                                    <div class="card card-custom bgi-no-repeat gutter-b {$metron['style_shadow']}"*}
-{*                                         {if $theme_style !== 'dark'}style="background-position: right top; background-size: 30% auto; background-image: url({$metron['assets_url']}/media/svg/shapes/abstract-2.svg)" {/if}>*}
-{*                                        <div class="card-header border-0 pt-5">*}
-{*                                            <div class="card-title font-weight-bolder">*}
-{*                                                <div class="card-label {$style[$theme_style]['global']['title']} font-weight-bold font-size-h3">*}
-{*                                                    <i class="fas fa-bullhorn icon-md {$style[$theme_style]['global']['title']}"></i><strong>*}
-{*                                                        最新公告</strong>*}
-{*                                                    <div class="font-size-sm text-muted mt-2">更新日期：{$ann->date}</div>*}
-{*                                                </div>*}
-{*                                            </div>*}
-{*                                        </div>*}
-{*                                        <div class="card-body">*}
-{*                                            <div class="text-dark-50 font-weight-normal font-size-lg-h4 font-size-h5">{$ann->content}</div>*}
-{*                                        </div>*}
-{*                                    </div>*}
-                                </div>
 
-                                <div class="col-lg-5">
-                                    <!-- 公告-->
-                                    <div class="card card-custom bgi-no-repeat gutter-b {$metron['style_shadow']}"
-                                         {if $theme_style !== 'dark'}style="background-position: right top; background-size: 30% auto; background-image: url({$metron['assets_url']}/media/svg/shapes/abstract-2.svg)" {/if}>
-                                        <div class="card-header border-2 pt-5">
-                                            <div class="card-title font-weight-bolder">
-                                                <div class="card-label {$style[$theme_style]['global']['title']} font-weight-bold font-size-h2">
-                                                    <i class="fas fa-bullhorn icon-md {$style[$theme_style]['global']['title']}"></i><strong>
-                                                        公告栏</strong>
-{*                                                    <div class="font-size-sm text-muted mt-2">更新日期：{$ann->date}</div>*}
-                                                    <p class="font-size-h3">
+
+                                    <div class="col-lg-5">
+                                        <!-- 公告-->
+                                        <div class="card card-custom bgi-no-repeat gutter-b {$metron['style_shadow']}"
+                                             {if $theme_style !== 'dark'}style="background-position: right top; background-size: 30% auto; background-image: url({$metron['assets_url']}/media/svg/shapes/abstract-2.svg)" {/if}>
+                                            <div class="card-header border-2 pt-5">
+                                                <div class="card-title font-weight-bolder">
+                                                    <div class="card-label {$style[$theme_style]['global']['title']} font-weight-bold font-size-h2">
+                                                        <i class="fas fa-bullhorn icon-md {$style[$theme_style]['global']['title']}"></i><strong>
+                                                            公告栏</strong>
+                                                        {*                                                    <div class="font-size-sm text-muted mt-2">更新日期：{$ann->date}</div>*}
+                                                        <p class="font-size-h3">
                                                             <span>
                                                             <a href="/user/shop" target=""><span class="svg-icon menu-icon">
                                                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -238,7 +262,7 @@
                                                                         </g>
                                                                     </svg></span>套餐购买</a>
                                                             </span>
-                                                        <span>&nbsp;
+                                                            <span>&nbsp;
                                                         <span>&nbsp;
                                                         <span>&nbsp;
                                                             <a href="/user/setting/invite" target=""><span class="svg-icon menu-icon">
@@ -250,63 +274,103 @@
                                                                         </g>
                                                                     </svg></span>邀请返利</a>
 {*                                                        <span>&nbsp;*}
-{*                                                            <a href="/user/setting/telegram" target=""><span class="svg-icon menu-icon">*}
-{*                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">*}
-{*                                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">*}
-{*                                                                            <rect x="0" y="0" width="24" height="24"></rect>*}
-{*                                                                            <path d="M3,13.5 L19,12 L3,10.5 L3,3.7732928 C3,3.70255344 3.01501031,3.63261921 3.04403925,3.56811047 C3.15735832,3.3162903 3.45336217,3.20401298 3.70518234,3.31733205 L21.9867539,11.5440392 C22.098181,11.5941815 22.1873901,11.6833905 22.2375323,11.7948177 C22.3508514,12.0466378 22.2385741,12.3426417 21.9867539,12.4559608 L3.70518234,20.6826679 C3.64067359,20.7116969 3.57073936,20.7267072 3.5,20.7267072 C3.22385763,20.7267072 3,20.5028496 3,20.2267072 L3,13.5 Z" fill="#000000"></path>*}
-{*                                                                        </g>*}
-{*                                                                    </svg></span></a></span><a href="/user/setting/telegram" target="">绑定Telgegram</a>*}
-                                                    </p>
+                                                            {*                                                            <a href="/user/setting/telegram" target=""><span class="svg-icon menu-icon">*}
+                                                            {*                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">*}
+                                                            {*                                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">*}
+                                                            {*                                                                            <rect x="0" y="0" width="24" height="24"></rect>*}
+                                                            {*                                                                            <path d="M3,13.5 L19,12 L3,10.5 L3,3.7732928 C3,3.70255344 3.01501031,3.63261921 3.04403925,3.56811047 C3.15735832,3.3162903 3.45336217,3.20401298 3.70518234,3.31733205 L21.9867539,11.5440392 C22.098181,11.5941815 22.1873901,11.6833905 22.2375323,11.7948177 C22.3508514,12.0466378 22.2385741,12.3426417 21.9867539,12.4559608 L3.70518234,20.6826679 C3.64067359,20.7116969 3.57073936,20.7267072 3.5,20.7267072 C3.22385763,20.7267072 3,20.5028496 3,20.2267072 L3,13.5 Z" fill="#000000"></path>*}
+                                                            {*                                                                        </g>*}
+                                                            {*                                                                    </svg></span></a></span><a href="/user/setting/telegram" target="">绑定Telgegram</a>*}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="text-dark-50 font-weight-normal font-size-lg-h4 font-size-h5">{$ann->content}</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 节点流量统计 -->
+                                        <div class="card card-custom gutter-b {$metron['style_shadow']}"
+                                             id="index-NodeTrafficChart-card">
+                                            <div class="card-header border-0 pt-5">
+                                                <div class="card-title font-weight-bolder">
+                                                    <div class="card-label {$style[$theme_style]['global']['title']} font-weight-bold font-size-h3">
+                                                        <i class="fa fa-fill-drip icon-md {$style[$theme_style]['global']['title']}"></i><strong>
+                                                            流量统计</strong>
+                                                        <div class="font-size-sm text-muted mt-2">72小时内产生流量超过 10 MB
+                                                            的节点统计
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body pt-0">
+                                                <div id="NodeTrafficChart"></div>
+                                                <div id="NodeTrafficChart_null" class="text-center p-10"
+                                                     style="display: none;">
+                                                    <h3 class="display-5 text-muted">暂无记录</h3>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card-body">
-                                            <div class="text-dark-50 font-weight-normal font-size-lg-h4 font-size-h5">{$ann->content}</div>
-                                        </div>
+
                                     </div>
-                                    <!-- 订阅地址 -->
-                                    <div class="card card-custom gutter-b {$metron['style_shadow']}">
-                                        <div class="card-header border-0 pt-5">
-                                            <div class="card-title font-weight-bolder">
-                                                <div class="card-label {$style[$theme_style]['global']['title']} font-weight-bold font-size-h3">
-                                                    <i class="fa fa-magic icon-md {$style[$theme_style]['global']['title']}"></i><strong>
-                                                        订阅地址</strong>
-                                                    <div class="font-size-sm text-muted mt-2"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="col">
-                                                    {include file='include/index/sub_button.tpl'}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 节点流量统计 -->
-{*                                    <div class="card card-custom gutter-b {$metron['style_shadow']}" id="index-NodeTrafficChart-card">*}
-{*                                        <div class="card-header border-0 pt-5">*}
-{*                                            <div class="card-title font-weight-bolder">*}
-{*                                                <div class="card-label {$style[$theme_style]['global']['title']} font-weight-bold font-size-h3">*}
-{*                                                    <i class="fa fa-fill-drip icon-md {$style[$theme_style]['global']['title']}"></i><strong> 流量统计</strong>*}
-{*                                                    <div class="font-size-sm text-muted mt-2">72小时内产生流量超过 10 MB 的节点统计</div>*}
-{*                                                </div>*}
-{*                                            </div>*}
-{*                                        </div>*}
-{*                                        <div class="card-body pt-0">*}
-{*                                            <div id="NodeTrafficChart"></div>*}
-{*                                            <div id="NodeTrafficChart_null" class="text-center p-10" style="display: none;">*}
-{*                                                <h3 class="display-5 text-muted">暂无记录</h3>*}
-{*                                            </div>*}
-{*                                        </div>*}
-{*                                    </div>*}
 
                                 </div>
-
                             </div>
                         </div>
-                    </div>
+                    {else}
+                        <div class="d-flex flex-column-fluid">
+                            <div class="container">
+                                <div id="index-alert">
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h3 class="animated tada mt-5 text-center" style="color:#191d21;font-size: 2rem;">👋
+                                                    Hi, {$user->user_name}</h3>
+                                                <h5 class="mb-5 mt-2 text-center"
+                                                    style="color:#191d21d5">按照下面步骤开始使用吧!</h5>
+                                                <div class="row mt-4">
+                                                    <div class="col-12 col-lg-8 offset-lg-2">
+                                                        <div class="wizard-steps">
+                                                            <div class="wizard-step wizard-step-active"
+                                                                 onclick="location='/user/shop'">
+                                                                <div class="wizard-step-icon">
+                                                                    <i class="fas fa-shopping-cart" style="color: #fff;"></i>
+                                                                </div>
+                                                                <div class="wizard-step-label">
+                                                                    前往商店购买会员订阅计划或免费试用
+                                                                </div>
+                                                            </div>
+                                                            <div class="wizard-step wizard-step-active"
+                                                                 onclick="location='/user/tutorial'">
+                                                                <div class="wizard-step-icon">
+                                                                    <i class="fas fa-download" style="color: #fff;"></i>
+                                                                </div>
+                                                                <div class="wizard-step-label">
+                                                                    下载客户端并按照教程安装
+                                                                </div>
+                                                            </div>
+                                                            <div class="wizard-step wizard-step-success">
+                                                                <div class="wizard-step-icon">
+                                                                    <i class="fas fa-grin-squint" style="color: #fff;"></i>
+                                                                </div>
+                                                                <div class="wizard-step-label">
+                                                                    开开心心看世界
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </section>
+                            </div>
+                        </div>
+                    {/if}
                 </div>
                 {include file='include/global/footer.tpl'}
             </div>
@@ -372,25 +436,17 @@
         {include file='include/index/pop.tpl'}
         <script> mt.pop('{$metron['pop_time']}') </script>
     {/if}
-
     <script>
-        document.cookie = 'mtauth=5e2ceba40a7bb123052965a882244271';
-        jQuery(document).ready(function () {
-            index.flowTiaoChart('{$user->unusedTrafficPercent()}');
-        });
-    </script>
-
-    <script>
-{*        {if $user->class > 0 && substr($user->unusedTraffic(),0,-2) > 0 && ((substr($user->unusedTraffic(),0,-2) <= 5 && substr($user->unusedTraffic(),-2) == 'GB') || (substr($user->unusedTraffic(),0,-2) <= 1024 && substr($user->unusedTraffic(),-2) == 'MB'))}*}
-{*        $('#index-alert').append('\*}
-{*                <div class="alert alert-custom alert-white alert-shadow fade mb-8 show {$metron['style_shadow']}" role="alert">\*}
-{*                    <div class="alert-icon">\*}
-{*                        <i class="flaticon-warning"></i>\*}
-{*                    </div>\*}
-{*                    <div class="alert-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您的流量已不足 5GB, 请注意使用! </font></font></div>\*}
-{*                </div>\*}
-{*            ');*}
-{*        {/if}*}
+        {if $user->class > 0 && substr($user->unusedTraffic(),0,-2) > 0 && ((substr($user->unusedTraffic(),0,-2) <= 5 && substr($user->unusedTraffic(),-2) == 'GB') || (substr($user->unusedTraffic(),0,-2) <= 1024 && substr($user->unusedTraffic(),-2) == 'MB'))}
+        $('#index-alert').append('\
+                <div class="alert alert-custom alert-white alert-shadow fade mb-8 show {$metron['style_shadow']}" role="alert">\
+                    <div class="alert-icon">\
+                        <i class="flaticon-warning"></i>\
+                    </div>\
+                    <div class="alert-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您的流量已不足 5GB, 请注意使用! </font></font></div>\
+                </div>\
+            ');
+        {/if}
         {if $user->class === -1}
         $('#index-alert').append('\
                 <div class="alert alert-custom alert-danger alert-shadow fade mb-8 show {$metron['style_shadow']}" role="alert">\
@@ -402,6 +458,5 @@
             ');
         {/if}
     </script>
-
     </body>
 </html>
