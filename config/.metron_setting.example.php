@@ -212,8 +212,9 @@ $_MT['resetFlow_maxValue']     = 5;                     // 用户流量低于多
 
 $_MT['shop_pop_enable']         = true;                 // 商店套餐顶部显示信息, 可用于显示给用户促销,优惠等
 $_MT['shop_pop_info']           = '
-<p>本站售卖的是网络加速服务，新用户请购买后使用</p>
-';                   // 套餐顶部显示的内容 使用 html 编写
+<p>本站提供网络加速服务，科学上网，专业加速<font color="green" size=5> TikTok</font>,<font color="#8b0000" size=5> Instagram</font>,
+<font color="#2f4f4f" size=5> YouTube</font>,<font color="purple" size=5> Google</font> ,<font color="#2f4f4f" size=5> Twitter</font> 等海外网站</p>
+';
 
 $_MT['shop_activity_true']     = false;                     //是否显示活动套餐
 $_MT['shop_activity_name']     = '活动限定';                 //活动套餐商品名称
