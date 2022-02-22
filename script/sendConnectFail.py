@@ -16,15 +16,15 @@ def send_email(receiver,regTime):
 		<br><br>
 		<font color="red">支持苹果，安卓， 电脑等客户端</font>
 		<br><br>
-		连接问题请 <a href="https://www.nxkys.com" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.nxkys.com&amp;source=gmail&amp;ust=1638599219093000&amp;usg=AOvVaw1_o00JKGkAtJHfAIdy040a">登录官网</a>
+		连接问题请 <a href="https://nxkys.com" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://nxkys.com&amp;source=gmail&amp;ust=1638599219093000&amp;usg=AOvVaw1_o00JKGkAtJHfAIdy040a">登录官网</a>
 		<br> <br>
 		有疑问，请联系网站右下角在线客服 <br> <br>
-		官方网址： <a href="https://www.nxkys.com" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.nxkys.com&amp;source=gmail&amp;ust=1638599219094000&amp;usg=AOvVaw2ZcvjoZ_OBnw_4TE1vJZHf">https://www.nxkys.com</a><div class="yj6qo"></div><div class="adL"> <br> <br>
+		官方网址： <a href="https://nxkys.com" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://nxkys.com&amp;source=gmail&amp;ust=1638599219094000&amp;usg=AOvVaw2ZcvjoZ_OBnw_4TE1vJZHf">https://nxkys.com</a><div class="yj6qo"></div><div class="adL"> <br> <br>
         </div></div>"""%(str(regTime))
 
     # 拼接邮件内容
     message = MIMEText(contant, "html", "utf-8")
-    message['Subject'] = "灵溪网络 - 连接失败，请联系网站右下角在线客服!"
+    message['Subject'] = "灵溪加速器 - 连接失败，请联系网站右下角在线客服!"
     message['From'] = sender
     message['To'] = receiver
 

@@ -21,7 +21,7 @@ def send_email(receiver,expireTime):
 
     # 拼接邮件内容
     message = MIMEText(contant, "html", "utf-8")
-    message['Subject'] = "灵溪网络 - 账户过期提醒!"
+    message['Subject'] = "灵溪加速器 - 账户过期提醒!"
     message['From'] = sender
     message['To'] = receiver
 

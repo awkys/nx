@@ -28,7 +28,7 @@ def send_email(receiver,expireTime):
         <br>
         您账号已过期，过期时间是：<font color="darkred">%s</font><br>
         <br>
-        ﻿<font color="Blue" size=4>灵溪网络 - 专业海外网站加速器，稳定运行六年，海外团队运营 !</font>
+        ﻿<font color="Blue" size=4>灵溪加速器 - 专业海外网站加速器，稳定运行六年，海外团队运营 !</font>
 		<br><br>
 		<font color="Purple" size=4>畅游Google, Youtube, Facebook, Twitter, Instagram, 谷歌学术等海外网站</font
         </div></div>"""%(str(expireTime))
@@ -36,7 +36,7 @@ def send_email(receiver,expireTime):
 
     # 拼接邮件内容
     message = MIMEText(contant, "html", "utf-8")
-    message['Subject'] = "灵溪网络 - 更新线路通知（重要）!"
+    message['Subject'] = "灵溪加速器 - 更新线路通知（重要）!"
     message['From'] = sender
     message['To'] = receiver
 
@@ -44,7 +44,7 @@ def send_email(receiver,expireTime):
     server = smtplib.SMTP_SSL('smtp.zoho.com', 465)
     try:
         # 登陆邮箱，发送邮件退出登陆
-        server.login('znxkys@zohomail.com', 'nx_Admin6688')
+        server.login('hi@nxkys.com', 'nx_Admin6688')
         server.sendmail(sender, [receiver], message.as_string())
         server.quit()
     except smtplib.SMTPException:

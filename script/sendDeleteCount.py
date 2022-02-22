@@ -7,7 +7,7 @@ from email.mime.text import MIMEText
 
 def send_email(receiver,expireTime):
     # 接收方／发送方，接收方是一个list，可以接受多个数值
-    sender = 'lingxi@oneky.xyz'
+    sender = 'hi@nxkys.com'
 
     contant = """<div dir="ltr">
         亲亲，您账号已过期，过期时间是：<font color="darkred">%s</font>
@@ -21,7 +21,7 @@ def send_email(receiver,expireTime):
 		官方网址： <a href="https://nxkys.com" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://nxkys.com&amp;source=gmail&amp;ust=1638599219094000&amp;usg=AOvVaw2ZcvjoZ_OBnw_4TE1vJZHf">https://nxkys.com</a><div class="yj6qo"></div><div class="adL"> <br> <br>
         有疑问，请联系网站右下角在线客服 <br>
         <br>
-        ﻿<font color="Blue" size=4>灵溪网络 - 专业海外网站加速器，稳定运行六年，海外团队运营 !</font>
+        ﻿<font color="Blue" size=4>灵溪加速器 - 专业海外网站加速器，稳定运行六年，海外团队运营 !</font>
 		<br><br>
 		<font color="Purple" size=4>畅游Google, Youtube, Facebook, Twitter, Instagram, 谷歌学术等海外网站</font
         </div></div>"""%(str(expireTime))
@@ -29,7 +29,7 @@ def send_email(receiver,expireTime):
 
     # 拼接邮件内容
     message = MIMEText(contant, "html", "utf-8")
-    message['Subject'] = "灵溪网络 - 账户删除通知!"
+    message['Subject'] = "灵溪加速器 - 账户删除通知!"
     message['From'] = sender
     message['To'] = receiver
 
@@ -37,7 +37,7 @@ def send_email(receiver,expireTime):
     server = smtplib.SMTP_SSL('smtp.zoho.com', 465)
     try:
         # 登陆邮箱，发送邮件退出登陆
-        server.login('lingxi@oneky.xyz', 'lingxi_Admin6688')
+        server.login('hi@nxkys.com', 'nx_Admin6688')
         server.sendmail(sender, [receiver], message.as_string())
         server.quit()
     except smtplib.SMTPException:
