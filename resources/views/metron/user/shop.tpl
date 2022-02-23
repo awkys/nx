@@ -317,7 +317,7 @@
                                 </a>
                             </li>
                             {/if}
-                         {*   {if $metron['pay_wxpay'] != 'none' && $metron['pay_wxpay'] != ''}
+                            {if $metron['pay_wxpay'] != 'none' && $metron['pay_wxpay'] != ''}
                             <li class="nav-wxpay nav-item d-flex col flex-grow-1 flex-shrink-0 mr-3 mb-3 mb-lg-0 cursor_onclick">
                                 <a class="nav-link border py-10 d-flex flex-grow-1 rounded flex-column align-items-center {if $metron['pay_alipay'] == 'none' || $metron['pay_alipay'] == ''}active{/if}" data-toggle="pill" data-name="wxpay">
                                     <span class="nav-icon py-2 w-auto">
@@ -326,7 +326,7 @@
                                     <span class="nav-text font-size-lg py-2 font-weight-bold text-center">微信支付</span>
                                 </a>
                             </li>
-                            {/if}*}
+                            {/if}
                             {if $metron['pay_qqpay'] != 'none' && $metron['pay_qqpay'] != ''}
                             <li class="nav-qqpay nav-item d-flex col flex-grow-1 flex-shrink-0 mr-3 mb-3 mb-lg-0 cursor_onclick">
                                 <a class="nav-link border py-10 d-flex flex-grow-1 rounded flex-column align-items-center {if ($metron['pay_alipay'] == 'none' || $metron['pay_alipay'] == '') && ($metron['pay_wxpay'] == 'none' || $metron['pay_wxpay'] == '')}active{/if}" data-toggle="pill" data-name="qqpay">

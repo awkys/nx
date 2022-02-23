@@ -298,6 +298,18 @@ $_ENV['enable_checkin_captcha'] = false;        //启用签到验证码
 # Metron主题支持的支付方式都在 metron_setting.php 设置, 不要修改这里的支付方式， 只需要修改支付系统的参数
 $_ENV['payment_system'] = 'metronpay';    # 不要动!!!
 
+$_ENV['SPEEDPay']=[
+    'partner' => "1309", //商户号
+    'key' => "MWVE7lkG95EV5WO7Ii9lGKL9WmlxVemX", //商户key
+    'sign_type' => strtoupper('MD5'),
+    'input_charset' => strtolower('utf-8'),
+    'subjects' => "灵溪套餐",                  //商品名称，目前无意义
+    'transport' => 'https',                   //访问模式,根据自己的服务器是否支持ssl访问，若支持请选择https；若不支持请选择http
+    'appname' => $_ENV['appName'],           //网站英文名
+    'min_price' => '1'                       //最小支付金额(请填正数)
+];
+
+
 #codepay码支付
 #wiki地址:https://goo.gl/dRwRDi  http://t.cn/RnsWjtB
 $_ENV['codepay_id'] = '';          //码支付ID
