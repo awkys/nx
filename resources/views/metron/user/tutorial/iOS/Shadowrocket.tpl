@@ -77,11 +77,11 @@
                                                         {else}
                                                         <div class="alert alert-primary" role="alert">
                                                             <div class="alert-text mt-3">
-                                                                <h4 class="alert-heading">您的等级不支持查看共享账号</h4>
+                                                                <h4 class="alert-heading">您的等级不支持查看海外苹果账号,请返回首页点击购买套餐</h4>
                                                                 <hr>
                                                                 <p class="mb-2">Shadowrocket为App Store商店付费软件，为防止频繁登录而导致被封号，共享账号仅对 <code>Lv.{$metron['ios_class']}及以上会员</code> 提供。<br>
-                                                                当您成为 <code>Lv.{$metron['ios_class']}及以上会员</code> 时(不包括试用会员)，该页面会自动显示共享账号。<br>
-                                                                您可通过其他渠道进行安装下载Shadowrocket，具体可至搜索引擎搜索资源。</p>
+                                                                当您成为 <code>Lv.{$metron['ios_class']}及以上会员</code> 时，该页面会自动显示海外苹果账号。<br>
+                                                                请前往套餐商店购买套餐后刷新本页，即可查看海外苹果账户，下载app</p>
                                                             </div>
                                                         </div>
                                                         {/if}
