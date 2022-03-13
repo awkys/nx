@@ -79,7 +79,7 @@ $_ENV['aliyun_TagName'] = '';    // 标签
 $_ENV['aliyun_ReplyToAddress'] = true;  // 使用管理控制台中配置的回信地址
 
 //备份设置--------------------------------------------------------------------------------------------
-$_ENV['auto_backup_email'] = 'lingxinet@protonmail.com';                               //接收备份的邮箱
+$_ENV['auto_backup_email'] = 'awkys96@gmail.com';                               //接收备份的邮箱
 $_ENV['auto_backup_password'] = 'nx_Admin';                               //备份的压缩密码
 $_ENV['backup_notify'] = false;                            //备份通知到TG群中
 
