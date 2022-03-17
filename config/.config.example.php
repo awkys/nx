@@ -32,7 +32,7 @@ $_ENV['db_host'] = '';
 $_ENV['db_socket'] = '';
 $_ENV['db_database'] = 'sspanel';           //数据库名
 $_ENV['db_username'] = 'root';              //数据库用户名
-$_ENV['db_password'] = 'nx_mysql_Admin6688';           //用户名对应的密码
+$_ENV['db_password'] = '123456';           //用户名对应的密码
 #高级
 $_ENV['db_charset'] = 'utf8';
 $_ENV['db_collation'] = 'utf8_general_ci';
@@ -108,8 +108,8 @@ $_ENV['checkinMin'] = 1;            //用户签到最少流量 单位MB
 $_ENV['checkinMax'] = 50;           //用户签到最多流量
 
 $_ENV['auto_clean_uncheck_days'] = -1;           //自动清理多少天没签到的0级用户，小于等于0时关闭
-$_ENV['auto_clean_unused_days'] = 30;           //自动清理多少天没使用的0级用户，小于等于0时关闭
-$_ENV['auto_clean_min_money'] = 3;            //余额低于多少的0级用户可以被清理
+$_ENV['auto_clean_unused_days'] = 0;           //自动清理多少天没使用的0级用户，小于等于0时关闭
+$_ENV['auto_clean_min_money'] = 2;            //余额低于多少的0级用户可以被清理
 
 $_ENV['code_payback'] = 20;           //充值返利百分比
 $_ENV['invite_gift'] = 2;            //邀请新用户获得流量奖励，单位G
