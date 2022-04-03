@@ -7,7 +7,7 @@ from email.mime.text import MIMEText
 
 def send_email(receiver,expireTime):
     # 接收方／发送方，接收方是一个list，可以接受多个数值
-    sender = 'nxkys01@zoho.com.cn'
+    sender = 'oneky2@zohomail.cn'
 
     contant = """<div dir="ltr">
         ﻿亲亲，您账号的过期时间是：<font color="darkred">%s</font>
@@ -26,10 +26,10 @@ def send_email(receiver,expireTime):
     message['To'] = receiver
 
     # 关于ssl
-    server = smtplib.SMTP_SSL('smtp.zoho.com', 465)
+    server = smtplib.SMTP_SSL('smtp.zoho.com.cn', 465)
     try:
         # 登陆邮箱，发送邮件退出登陆
-        server.login('nxkys01@zoho.com.cn', 'fVz3eH6vBj3u')
+        server.login('oneky2@zohomail.cn', 'u32Z2ajs4Yut')
         server.sendmail(sender, [receiver], message.as_string())
         server.quit()
     except smtplib.SMTPException:
