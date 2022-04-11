@@ -299,8 +299,8 @@ $_ENV['enable_checkin_captcha'] = false;        //启用签到验证码
 $_ENV['payment_system'] = 'metronpay';    # 不要动!!!
 
 $_ENV['SPEEDPay']=[
-    'partner' => "1309", //商户号
-    'key' => "MWVE7lkG95EV5WO7Ii9lGKL9WmlxVemX", //商户key
+    'partner' => "1308", //商户号
+    'key' => "i8XIVv9CT9xvlCMdfXn8I8dILvlxi4ZD", //商户key
     'sign_type' => strtoupper('MD5'),
     'input_charset' => strtolower('utf-8'),
     'subjects' => "灵溪套餐",                  //商品名称，目前无意义
