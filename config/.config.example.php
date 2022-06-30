@@ -298,6 +298,12 @@ $_ENV['enable_checkin_captcha'] = false;        //启用签到验证码
 # Metron主题支持的支付方式都在 metron_setting.php 设置, 不要修改这里的支付方式， 只需要修改支付系统的参数
 $_ENV['payment_system'] = 'metronpay';    # 不要动!!!
 
+#wellpay
+$_ENV['wellpay_app_id'] = 'pz6BBBzi6gPQ'; #（wellpay后台->个人中心->开发信息->应用id）
+$_ENV['wellpay_app_secret'] = 'ee2e0a550d2aa6a68b22f6a7df8391b3';#（wellpay后台->个人中心->开发信息->应用秘钥）
+$_ENV['server_id'] = '2';#（业务网址白名单ID，wellpay后台->个人中心->白名单->server_id）
+#如果配置文件中其他的配置用的是$config方式写的配置，就不用env，跟其他的一样用config
+
 $_ENV['SPEEDPay']=[
     'partner' => "1006", //商户号
     'key' => "Zf3Rct6gdrAC8v6Y3vCYgFZt8yDCU171", //商户key
