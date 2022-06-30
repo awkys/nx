@@ -21,9 +21,9 @@ class WellPay extends AbstractPayment
 
     public function __construct($appSecret)
     {
-        $this->appid = $_ENV['wellpay_app_id'];
-        $this->appSecret = $_ENV['wellpay_app_secret'];
-        $this->serverID = $_ENV['server_id'];
+        $this->appid = Config::get('wellpay_app_id');
+        $this->appSecret = Config::get('wellpay_app_secret');
+        $this->serverID = Config::get('server_id');
         $this->gatewayUri = 'https://api.crossz.pro/v1/service/payment';
     }
 

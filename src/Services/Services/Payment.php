@@ -39,7 +39,7 @@ class Payment
             case("metronpay"):
                 return new MetronPay();
             case ("wellpay"):
-                return new WellPay($_ENV['wellpay_app_secret']);
+                return new WellPay(Config::get('wellpay_app_secret'));
             default:
                 return null;
         }
@@ -75,7 +75,6 @@ class Payment
 
     public static function purchase($request, $response, $args)
     {
-        
         return self::getClient($request, $response, $args)->purchase($request, $response, $args);
     }
 }
