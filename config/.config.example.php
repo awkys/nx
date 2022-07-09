@@ -35,8 +35,6 @@ $_ENV['db_username'] = 'root';              //数据库用户名
 $_ENV['db_password'] = 'nx_mysql_Admin6688';           //用户名对应的密码
 
 
-
-
 #高级
 $_ENV['db_charset'] = 'utf8';
 $_ENV['db_collation'] = 'utf8_general_ci';
@@ -308,16 +306,6 @@ $_ENV['wellpay_app_secret'] = 'ee2e0a550d2aa6a68b22f6a7df8391b3';#（wellpay后�
 $_ENV['server_id'] = '2';#（业务网址白名单ID，wellpay后台->个人中心->白名单->server_id）
 #如果配置文件中其他的配置用的是$config方式写的配置，就不用env，跟其他的一样用config
 
-//$_ENV['SPEEDPay']=[
-//    'partner' => "1009", //商户号
-//    'key' => "3kn5ON5VO3RnOBE1e17NlU5n7b3us2vm", //商户key
-//    'sign_type' => strtoupper('MD5'),
-//    'input_charset' => strtolower('utf-8'),
-//    'subjects' => "灵溪套餐",                  //商品名称，目前无意义
-//    'transport' => 'https',                   //访问模式,根据自己的服务器是否支持ssl访问，若支持请选择https；若不支持请选择http
-//    'appname' => $_ENV['appName'],           //网站英文名
-//    'min_price' => '1'                       //最小支付金额(请填正数)
-//];
 
 $_ENV['SPEEDPay']=[
     'partner' => "1009", //商户号
