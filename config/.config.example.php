@@ -91,7 +91,7 @@ $_ENV['reg_auto_reset_day'] = 0;                         //注册时的流量重
 $_ENV['reg_auto_reset_bandwidth'] = 0;                         //需要重置的流量，0为不重置
 $_ENV['random_group'] = '2';                       //注册时随机分组，注册时随机分配到的分组，多个分组请用英文半角逗号分隔
 
-$_ENV['reg_forbidden_ip'] = '127.0.0.0/8,::1/128';     //注册时默认禁止访问IP列表，半角英文逗号分割
+$_ENV['reg_forbidden_ip'] = '127.0.0.0/8,::1/128,61.152.208.233,54.180.94.1';     //注册时默认禁止访问IP列表，半角英文逗号分割
 $_ENV['min_port'] = 10000;                     //用户端口池最小值
 $_ENV['max_port'] = 65535;                     //用户端口池最大值
 $_ENV['reg_forbidden_port'] = '';                        //注册时默认禁止访问端口列表，半角英文逗号分割，支持端口段
@@ -113,7 +113,7 @@ $_ENV['auto_clean_uncheck_days'] = -1;           //自动清理多少天没签�
 $_ENV['auto_clean_unused_days'] = 0;           //自动清理多少天没使用的0级用户，小于等于0时关闭
 $_ENV['auto_clean_min_money'] = 2;            //余额低于多少的0级用户可以被清理
 
-$_ENV['code_payback'] = 20;           //充值返利百分比
+$_ENV['code_payback'] = 30;           //充值返利百分比
 $_ENV['invite_gift'] = 2;            //邀请新用户获得流量奖励，单位G
 
 $_ENV['enable_bought_reset'] = true;         //购买时是否重置流量
