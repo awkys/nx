@@ -308,8 +308,8 @@ $_ENV['server_id'] = '2';#（业务网址白名单ID，wellpay后台->个人中�
 
 
 $_ENV['SPEEDPay']=[
-    'partner' => "1009", //商户号
-    'key' => "3kn5ON5VO3RnOBE1e17NlU5n7b3us2vm", //商户key
+    'partner' => "1006", //商户号
+    'key' => "Zf3Rct6gdrAC8v6Y3vCYgFZt8yDCU171", //商户key
     'sign_type' => strtoupper('MD5'),
     'input_charset' => strtolower('utf-8'),
     'subjects' => "在线支付",                  //商品名称，目前无意义
