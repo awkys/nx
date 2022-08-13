@@ -29,6 +29,8 @@ return function (SlimApp $app) {
     $app->post('/telegram_callback',    App\Controllers\HomeController::class . ':telegram');
     $app->post('/user/authcode',        App\Controllers\VueController::class . ':authcode');
 
+    // crisp
+    $app->post('/api/crisp/callback',         App\Controllers\VueController::class . ':crispCallback');
 
     // User Center
     $app->group('/user', function () {

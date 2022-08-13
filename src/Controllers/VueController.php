@@ -20,11 +20,8 @@ use App\Utils\Check;
 use App\Utils\GA;
 use App\Utils\Hash;
 use App\Utils\Radius;
-use App\Utils\{QQWry, URL, Tools, Geetest, TelegramSessionManager, Cookie};
-use App\Services\{
-    Auth,
-    Config
-};
+use App\Utils\{QQWry, Telegram, URL, Tools, Geetest, TelegramSessionManager, Cookie};
+use App\Services\{Auth, Config, CrispService};
 use Slim\Http\{Request, Response};
 use Psr\Http\Message\ResponseInterface;
 use voku\helper\AntiXSS;
@@ -1052,5 +1049,47 @@ class VueController extends BaseController
         $res['max_port'] = $_ENV['max_port'];
 
         return $response->withJson($res);
+    }
+
+    public function crispCallback($request, $response, $args)
+    {
+        $inputJSON = file_get_contents('php://input');
+        $data = json_decode($inputJSON, TRUE);
+        $msg = $data['data'];
+        $crisp = new CrispService();
+        if($data['event'] == 'message:send'){
+            $text = 'Crisp新消息通知: '. PHP_EOL;
+            $text .= '消息ID：`['.$msg['session_id'].']`'. PHP_EOL;
+            $text .= '用户：`'.$msg['user']['nickname'].'`'. PHP_EOL;
+            $text .= '邮箱：`'.isset($msg['user']['email']) ? $msg['user']['email'] : "未知".'`'. PHP_EOL;
+            $text .= '内容：'. PHP_EOL.'*'.$msg['content'].'*';
+            $keyboard = [
+                [
+                    [
+                        'text'       => '用户信息',
+                        'callback_data' => "crisp.user_info." . $msg['session_id']
+                    ],
+                    [
+                        'text'       => '查看消息记录',
+                        'callback_data' => "crisp.logs." . $msg['session_id']
+                    ],
+                    [
+                        'text'          => '标记完成',
+                        'callback_data' => "crisp.success." . $msg['session_id']
+                    ]
+                ]
+            ];
+            Telegram::SendMarkdown($text, $_ENV['telegram_admin_id'], $keyboard);
+            $crisp->setReadMessage($msg['session_id'], $msg['fingerprint']);
+            if ($_ENV['crisp']['holiday_message']['open']){
+                $crisp->sendMessage($msg['session_id'], $_ENV['crisp']['holiday_message']['message']);
+            }
+            $keys = array_keys($_ENV['crisp']['auth_send_message']);
+            foreach ($keys as $key){
+                if (mb_strpos($msg['content'], $key) !== false){
+                    $crisp->sendMessage($msg['session_id'], $_ENV['crisp']['auth_send_message'][$key]);
+                }
+            }
+        }
     }
 }

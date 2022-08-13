@@ -54,7 +54,7 @@ class Telegram
      * @param string $messageText
      * @param int    $chat_id
      */
-    public static function SendMarkdown(string $messageText, int $chat_id = 0): void
+    public static function SendMarkdown(string $messageText, int $chat_id = 0, array $reply_markup = []): void
     {
         if ($chat_id === 0) {
             $chat_id = $_ENV['telegram_chatid'];
@@ -70,7 +70,7 @@ class Telegram
                     'parse_mode'                => 'Markdown',
                     'disable_web_page_preview'  => false,
                     'reply_to_message_id'       => null,
-                    'reply_markup'              => null
+                    'reply_markup'              => json_encode(['inline_keyboard' => $reply_markup])
                 ];
                 try {
                     $bot->sendMessage($sendMessage);
