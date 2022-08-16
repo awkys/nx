@@ -1062,7 +1062,11 @@ class VueController extends BaseController
             $text .= '消息ID：`['.$msg['session_id'].']`'. PHP_EOL;
             $text .= '用户：`'.$msg['user']['nickname'].'`'. PHP_EOL;
             $text .= '邮箱：`'.isset($msg['user']['email']) ? $msg['user']['email'] : "未知".'`'. PHP_EOL;
-            $text .= '内容：'. PHP_EOL.'*'.$msg['content'].'*';
+            if (is_string($msg['content'])){
+                $text .= '内容：'. PHP_EOL.'*'.$msg['content'].'*';
+            } else {
+                $text .= '内容：'. PHP_EOL.'*'.$msg['content']['url'].'*';
+            }
             $keyboard = [
                 [
                     [
@@ -1086,7 +1090,7 @@ class VueController extends BaseController
             }
             $keys = array_keys($_ENV['crisp']['auth_send_message']);
             foreach ($keys as $key){
-                if (mb_strpos($msg['content'], $key) !== false){
+                if (is_string($msg['content']) && mb_strpos($msg['content'], $key) !== false){
                     $crisp->sendMessage($msg['session_id'], $_ENV['crisp']['auth_send_message'][$key]);
                 }
             }
