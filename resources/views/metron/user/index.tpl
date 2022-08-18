@@ -112,9 +112,9 @@
                                                             <strong>{$user->unusedTraffic()}</strong></div>
                                                         <p class="text-dark-50">剩余流量</p>
                                                     </div>
-{*                                                    <div class="d-flex flex-column">*}
-{*                                                        <a href="/user/node" class="btn btn-primary font-weight-bold btn-pill">节点列表</a>*}
-{*                                                    </div>*}
+                                                    <div class="d-flex flex-column">
+                                                        <a href="/user/node" class="btn btn-primary font-weight-bold btn-pill">节点列表</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="card-body pt-2 pl-5 pr-3 pb-1">
