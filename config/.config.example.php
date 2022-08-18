@@ -257,13 +257,13 @@ $_ENV['auto_detect_ban'] = [
 
 //Bot 设置--------------------------------------------------------------------------------------------
 # Telegram BOT
-$_ENV['enable_telegram'] = false;        //是否开启Telegram bot
+$_ENV['enable_telegram'] = true;        //是否开启Telegram bot
 $_ENV['use_new_telegram_bot'] = true;         //是否使用新的 Telegram Bot
-$_ENV['telegram_token'] = '';           //Telegram bot,bot 的 token ，跟 father bot 申请
-$_ENV['telegram_chatid'] = '';           //Telegram bot,群组会话 ID,把机器人拉进群里之后跟他 /ping 一下即可得到
-$_ENV['telegram_bot'] = '_bot';       //Telegram 机器人账号
-$_ENV['telegram_group_quiet'] = false;        //Telegram 机器人在群组中不回应
-$_ENV['telegram_request_token'] = '';           //Telegram 机器人请求Key，随意设置，由大小写英文和数字组成，更新这个参数之后请 php xcat Tool setTelegram
+$_ENV['telegram_token'] = '5705223425:AAEy6Px-CKXE2ba6JH-tdMF0mtl9aivHCfY';           //Telegram bot,bot 的 token ，跟 father bot 申请
+$_ENV['telegram_chatid'] = '2111482452';           //Telegram bot,群组会话 ID,把机器人拉进群里之后跟他 /ping 一下即可得到
+$_ENV['telegram_bot'] = 'cknys_bot';       //Telegram 机器人账号
+$_ENV['telegram_group_quiet'] = true;        //Telegram 机器人在群组中不回应
+$_ENV['telegram_request_token'] = 'ARFeuaieau332fn';           //Telegram 机器人请求Key，随意设置，由大小写英文和数字组成，更新这个参数之后请 php xcat Tool setTelegram
 
 # 通用
 $_ENV['finance_public'] = true;         //财务报告是否向群公开
