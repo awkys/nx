@@ -193,13 +193,13 @@ class SPEEDPay extends AbstractPayment
                     $this->postPayment($_GET['out_trade_no'], $type);
                     $success = 1;
 
-					//橘子支付 - 通知机器人，修改为自己的chatID
+					//配置机器人，暂时不用管
 					$_old_total_amount = $_GET['money'];
                     $_out_trade_no = $pid;
 
                     $msg = "🧧 成功收款：".$_old_total_amount."元 💸%0A--------------------------------------------%0A" . "🍊 支付渠道：JUZI-PAY-JZ 微信/支付宝" . "%0A" . "💝 商户订单：" . $_out_trade_no;
 
-                    $url='https://bot.za8.xyz/bot1966194584:AAEQvYTR6QBp3Qm7HjBcavX0jMW2B0eSwLI/sendmessage?chat_id=748387836&text='.$msg;
+                    $url='https://baidu.com'.$msg;
                     file_get_contents($url);
 
 
