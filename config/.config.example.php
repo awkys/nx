@@ -55,7 +55,7 @@ $_ENV['mailgun_sender'] = '';
 # smtp
 $_ENV['smtp_host'] = 'smtp.zoho.com.cn';                          // SMTP 邮局服务器域名
 $_ENV['smtp_username'] = 'hello@nxbest.men';                          // SMTP 账户名
-$_ENV['smtp_password'] = 'nx_Admin321';                           // SMTP 账户密码
+$_ENV['smtp_password'] = 'nx_Admin123';                           // SMTP 账户密码
 $_ENV['smtp_port'] = 465;                         // SMTP 端口(常见端口 25, 587 465)
 $_ENV['smtp_name'] = '灵溪加速器';                          // SMTP 发信名称
 $_ENV['smtp_sender'] = 'hello@nxbest.men';                          // SMTP 账户发信地址
