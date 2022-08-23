@@ -366,7 +366,19 @@ $_ENV['wellpay_app_secret'] = 'ee2e0a550d2aa6a68b22f6a7df8391b3';#（wellpay后�
 $_ENV['server_id'] = '2';#（业务网址白名单ID，wellpay后台->个人中心->白名单->server_id）
 #如果配置文件中其他的配置用的是$config方式写的配置，就不用env，跟其他的一样用config
 
+#云小朵
+//$_ENV['SPEEDPay']=[
+//    'partner' => "1120", //商户号
+//    'key' => "GVH3snk4U30v40UQsVgoq4DhklQmnKod", //商户key
+//    'sign_type' => strtoupper('MD5'),
+//    'input_charset' => strtolower('utf-8'),
+//    'subjects' => "在线支付",                  //商品名称，目前无意义
+//    'transport' => 'https',                   //访问模式,根据自己的服务器是否支持ssl访问，若支持请选择https；若不支持请选择http
+//    'appname' => $_ENV['appName'],           //网站英文名
+//    'min_price' => '1'                       //最小支付金额(请填正数)
+//];
 
+#风行支付
 $_ENV['SPEEDPay']=[
     'partner' => "1006", //商户号
     'key' => "Zf3Rct6gdrAC8v6Y3vCYgFZt8yDCU171", //商户key

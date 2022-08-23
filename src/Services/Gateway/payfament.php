@@ -7,9 +7,9 @@ use App\Models\Paylist;
 use App\Services\Config;
 use App\Services\View;
 
-require_once("SPEEDPay/epay_submit.class.php");
-require_once("SPEEDPay/epay_notify.class.php");
-class SPEEDPay extends AbstractPayment
+require_once("payfament/epay_submit.class.php");
+require_once("payfament/epay_notify.class.php");
+class payfament extends AbstractPayment
 {
 	function isHTTPS()
     {
@@ -47,18 +47,18 @@ class SPEEDPay extends AbstractPayment
                 return ['errcode' => -1, 'errmsg' => "该订单已交易完成"];
             }
         }
-        $settings = Config::get("SPEEDPay");
+        $settings = Config::get("payfament");
         $alipay_config = array(
             'partner' => $settings['partner'],
             'key' => $settings['key'],
             'sign_type' => $settings['sign_type'],
             'input_charset' => $settings['input_charset'],
             'transport' => $settings['transport'],
-            'apiurl' => 'https://pay.ssfxyun.com/'
+            'apiurl' => $settings['apiurl'],
         );
-		$url_notify = Config::get("baseUrl") . '/payment/notify/SPEEDPay';
+		$url_notify = Config::get("baseUrl") . '/payment/notify/payfament';  
         $url_return = (self::isHTTPS() ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'];
-
+		
         /**************************请求参数**************************/
         //商户订单号
         $out_trade_no = $pl->tradeno;
@@ -89,39 +89,39 @@ class SPEEDPay extends AbstractPayment
         $return['pid'] = $pl->tradeno;
         $return['type'] = $type;
         return $return;
-
+        
     }
     public function purchase($request, $response, $args)
     {
-
+    	
 		$user = Auth::getUser();
 		$type = $request->getParsedBodyParam('type');
         $price = $request->getParam('price');
-        $settings = Config::get("SPEEDPay");
+        $settings = Config::get("payfament");
         if ($price < $settings['min_price']) {
 			$return['ret'] = 0;
 			$return['msg'] = "金额低于".$settings['min_price'].'元';
             return json_encode($return);
         }
-
+		
         $pl = new Paylist();
         $pl->userid = $user->id;
         $pl->total = $price;
         $pl->tradeno = self::generateGuid();
         $pl->datetime = time(); // date("Y-m-d H:i:s");
         $pl->save();
-
+        
         $alipay_config = array(
             'partner' => $settings['partner'],
             'key' => $settings['key'],
             'sign_type' => $settings['sign_type'],
             'input_charset' => $settings['input_charset'],
             'transport' => $settings['transport'],
-            'apiurl' => 'https://pay.ssfxyun.com/'
+            'apiurl' => $settings['apiurl'],
         );
-		$url_notify = Config::get("baseUrl") . '/payment/notify';
+		$url_notify = Config::get("baseUrl") . '/payment/notify';  
         $url_return = (self::isHTTPS() ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'];
-
+		
         /**************************请求参数**************************/
         //商户订单号
         $out_trade_no = $pl->tradeno;
@@ -152,27 +152,27 @@ class SPEEDPay extends AbstractPayment
         $return['pid'] = $pl->tradeno;
         $return['type'] = $type;
         return json_encode($return);
-
+		
     }
-
+	
     public function notify($request, $response, $args)
     {
         $pid = $_GET['out_trade_no'];
         unset($_GET['s']);
         $p = Paylist::where('tradeno', '=', $pid)->first();
-
+        
         if ($p->status == 1) {
-
+        	
             $success = 1;
         } else {
-            $settings = Config::get("SPEEDPay");
+            $settings = Config::get("payfament");
             $alipay_config = array(
                 'partner' => $settings['partner'],
                 'key' => $settings['key'],
                 'sign_type' => $settings['sign_type'],
                 'input_charset' => $settings['input_charset'],
                 'transport' => $settings['transport'],
-                'apiurl' => 'https://pay.ssfxyun.com/'
+                'apiurl' => $settings['apiurl'],
             );
 		if ($_GET['type'] == "alipay") {
             $type = "支付宝";
@@ -181,7 +181,7 @@ class SPEEDPay extends AbstractPayment
         }elseif($_GET['type'] == "qqpay") {
         	$type = "QQ支付";
         }else{
-        	$type = "SPEEDPay";
+        	$type = "payfamnet";
         }
             //计算得出通知验证结果
             $alipayNotify = new AlipayNotify($alipay_config);
@@ -192,19 +192,6 @@ class SPEEDPay extends AbstractPayment
                 if ($_GET['trade_status'] == 'TRADE_SUCCESS') {
                     $this->postPayment($_GET['out_trade_no'], $type);
                     $success = 1;
-
-					//橘子支付 - 通知机器人，修改为自己的chatID
-					$_old_total_amount = $_GET['money'];
-                    $_out_trade_no = $pid;
-
-                    $msg = "🧧 成功收款：".$_old_total_amount."元 💸%0A--------------------------------------------%0A" . "🍊 支付渠道：JUZI-PAY-JZ 微信/支付宝" . "%0A" . "💝 商户订单：" . $_out_trade_no;
-
-                    $url='https://bot.za8.xyz/bot1966194584:AAEQvYTR6QBp3Qm7HjBcavX0jMW2B0eSwLI/sendmessage?chat_id=748387836&text='.$msg;
-                    file_get_contents($url);
-
-
-
-
                 }
                 else {
                     $success = 0;
@@ -230,14 +217,14 @@ class SPEEDPay extends AbstractPayment
         if ($p->status == 1) {
             $success = 1;
         } else {
-            $settings = Config::get("SPEEDPay");
+            $settings = Config::get("payfament");
             $alipay_config = array(
                 'partner' => $settings['partner'],
                 'key' => $settings['key'],
                 'sign_type' => $settings['sign_type'],
                 'input_charset' => $settings['input_charset'],
                 'transport' => $settings['transport'],
-                'apiurl' => 'https://pay.ssfxyun.com/'
+                'apiurl' => $settings['apiurl'],
             );
 		if ($_GET['type'] == "alipay") {
             $type = "支付宝";
@@ -246,7 +233,7 @@ class SPEEDPay extends AbstractPayment
         }elseif($_GET['type'] == "qqpay") {
         	$type = "QQ支付";
         }else{
-        	$type = "SPEEDPay";
+        	$type = "payfament";
         }
             //计算得出通知验证结果
             $alipayNotify = new AlipayNotify($alipay_config);
@@ -276,22 +263,22 @@ class SPEEDPay extends AbstractPayment
     {
         return '
 									<div class="card-inner">
-
+  
                                         <br/>
                                         <nav class="tab-nav margin-top-no">
                                             <ul class="nav nav-pills nav-fill flex-column flex-md-row" role="tablist">
 											        <li class="nav-item">
                                                         <a class="nav-link waves-attach waves-effect type active" data-toggle="tab" data-pay="alipay"><img src="//lymbb.cn-bj.ufileos.com/images/alipay.png" height="50px"></img></a>
                                                     </li>
-
+                                            
                                                     <li class="nav-item">
                                                         <a class="nav-link waves-attach waves-effect type" data-toggle="tab" data-pay="wxpay"><img src="//lymbb.cn-bj.ufileos.com/images/wxpay.png" height="50px"></img></a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link waves-attach waves-effect type" data-toggle="tab" data-pay="qqpay"><img src="/images/qqpay.jpg" height="50px"></img></a>
                                                     </li>
-
-
+                                            
+                
                                             </ul>
                                             <div class="tab-nav-indicator"></div>
                                         </nav>
@@ -303,21 +290,21 @@ class SPEEDPay extends AbstractPayment
                                     </div>
                                     <div class="card-action">
                                         <div class="card-action-btn pull-left">
-                                            <button class="btn btn-primary submit-amounth" id="SPEEDPay" >充值</NOtton>
+                                            <button class="btn btn-primary submit-amounth" id="payfament" >充值</NOtton>
                                         </div>
                                     </div>
-
-
+                                    
+                        
 ';
     }
-
+	
     public function getStatus($request, $response, $args)
     {
         $return = [];
         $p = Paylist::where('tradeno', $_POST['pid'])->first();
         $return['ret'] = 1;
         $return['result'] = $p->status;
-
+        
         return json_encode($return);
     }
 }
