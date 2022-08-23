@@ -59,6 +59,23 @@ class MetronPay extends AbstractPayment
                 $payment_system = MetronSetting::get('max_alipay_pay');
             }
             switch ($payment_system) {
+                case ('SPEEDPay'):
+                    $SPEEDPay = new SPEEDPay();
+                    $result = $SPEEDPay->MetronPay($type, $price, $shopinfo, $paylist_id);
+                    if ($result['errcode'] === 0) {
+                        $return = array(
+                            'ret' => 1,
+                            'type' => 'url',
+                            'tradeno' => $result['pid'],
+                            'url' => $result['url']
+                        );
+                    } else {
+                        $return = array(
+                            'ret' => 0,
+                            'msg' => $result['errmsg']
+                        );
+                    }
+                    return json_encode($return);
                 case ('wolfpay_qr'):
                     $isqr = 'qr';
                     $wolfpay = new wolfpay();
