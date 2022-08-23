@@ -7,7 +7,6 @@ use App\Services\{
     Mail,
     Config,
     Payment,
-    BitPayment,
     MetronSetting
 };
 use App\Models\{
@@ -49,6 +48,7 @@ use App\Utils\{
     TelegramSessionManager
 };
 use App\Metron\{Metron, MtAuth, MtTelegram};
+use Ramsey\Uuid\Uuid;
 use voku\helper\AntiXSS;
 use Exception;
 
@@ -130,7 +130,10 @@ class UserController extends BaseController
         $pageNum = $request->getQueryParams()['page'] ?? 1;
         $codes = Code::where('type', '<>', '-2')->where('userid', '=', $this->user->id)->orderBy('id', 'desc')->paginate(15, ['*'], 'page', $pageNum);
         $codes->setPath('/user/code');
-        return $this->view()->assign('codes', $codes)->assign('pmw', Payment::purchaseHTML())->assign('bitpay', BitPayment::purchaseHTML())->display('user/code.tpl');
+        return $this->view()
+            ->assign('codes', $codes)
+            ->assign('pmw', Payment::purchaseHTML())
+            ->display('user/code.tpl');
     }
 
     public function orderDelete($request, $response, $args)
@@ -191,61 +194,6 @@ class UserController extends BaseController
 
         $res['ret'] = 0;
         return $response->getBody()->write(json_encode($res));
-    }
-
-    public function f2fpayget($request, $response, $args)
-    {
-        $time = $request->getQueryParams()['time'];
-        $res['ret'] = 1;
-        return $response->getBody()->write(json_encode($res));
-    }
-
-    public function f2fpay($request, $response, $args)
-    {
-        $amount = $request->getParam('amount');
-        if ($amount == '') {
-            $res['ret'] = 0;
-            $res['msg'] = '订单金额错误：' . $amount;
-            return $response->getBody()->write(json_encode($res));
-        }
-        $user = $this->user;
-
-        //生成二维码
-        $qrPayResult = Pay::alipay_get_qrcode($user, $amount, $qrPay);
-        //  根据状态值进行业务处理
-        switch ($qrPayResult->getTradeStatus()) {
-            case 'SUCCESS':
-                $aliresponse = $qrPayResult->getResponse();
-                $res['ret'] = 1;
-                $res['msg'] = '二维码生成成功';
-                $res['amount'] = $amount;
-                $res['qrcode'] = $qrPay->create_erweima($aliresponse->qr_code);
-
-                break;
-            case 'FAILED':
-                $res['ret'] = 0;
-                $res['msg'] = '支付宝创建订单二维码失败! 请使用其他方式付款。';
-
-                break;
-            case 'UNKNOWN':
-                $res['ret'] = 0;
-                $res['msg'] = '系统异常，状态未知! 请使用其他方式付款。';
-
-                break;
-            default:
-                $res['ret'] = 0;
-                $res['msg'] = '创建订单二维码返回异常! 请使用其他方式付款。';
-
-                break;
-        }
-
-        return $response->getBody()->write(json_encode($res));
-    }
-
-    public function alipay($request, $response, $args)
-    {
-        $amount = $request->getQueryParams()['amount'];
-        Pay::getGen($this->user, $amount);
     }
 
     public function codepost($request, $response, $args)
@@ -510,7 +458,7 @@ class UserController extends BaseController
                 ->assign('baseUrl', Config::get('baseUrl'))
                 ->display($url);
         } else {
-            return $this->view()->display('user/tutorial.tpl');
+            return $this->view()->display('user/help/home.tpl');
         }
     }
 
@@ -878,10 +826,6 @@ class UserController extends BaseController
             if ($coupon == null) {
                 $credit = 0;
             } else {
-                if ($coupon->onetime == 1) {
-                    $onetime = true;
-                }
-
                 $credit = $coupon->credit;
             }
 
@@ -945,11 +889,6 @@ class UserController extends BaseController
         }
 
         $bought->coupon = $code;
-
-
-        if (isset($onetime)) {
-            $price = $shop->price;
-        }
         $bought->price = $price;
         $bought->usedd = 1;
         $bought->save();
@@ -1169,22 +1108,30 @@ class UserController extends BaseController
 
     public function updateSsPwd($request, $response, $args)
     {
-        $user = Auth::getUser();
-        $pwd = $request->getParam('sspwd');
-        $pwd = trim($pwd);
+        $user = $this->user;
+        $pwd = Tools::genRandomChar(16);
+        $current_timestamp = time();
+        $new_uuid = Uuid::uuid3(Uuid::NAMESPACE_DNS, $user->email . '|' . $current_timestamp);
+        $otheruuid = User::where('uuid', $new_uuid)->first();
 
         if ($pwd == '') {
             $res['ret'] = 0;
             $res['msg'] = '密码不能为空';
-            return $response->getBody()->write(json_encode($res));
+            return $response->withJson($res);
         }
-
         if (!Tools::is_validate($pwd)) {
             $res['ret'] = 0;
             $res['msg'] = '密码无效';
-            return $response->getBody()->write(json_encode($res));
+            return $response->withJson($res);
+        }
+        if ($otheruuid != null) {
+            $res['ret'] = 0;
+            $res['msg'] = '目前出现一些问题，请稍后再试';
+            return $response->withJson($res);
         }
 
+        $user->uuid = $new_uuid;
+        $user->save();
         $user->updateSsPwd($pwd);
         $res['ret'] = 1;
 

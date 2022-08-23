@@ -1,5 +1,38 @@
 {include file='admin/main.tpl'}
-
+<style>
+    table {
+        width: 100%;
+        display: table;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    table, th, td {
+        border: none;
+    }
+    thead {
+        color: rgba(0,0,0,0.6);
+    }
+    tr {
+        border-bottom: 1px solid rgba(0,0,0,0.12);
+    }
+    td, th {
+        padding: 15px 10px;
+    }
+    td, th {
+        padding: 15px 5px;
+        display: table-cell;
+        text-align: left;
+        vertical-align: middle;
+        border-radius: 2px;
+        font-weight: 500;
+    }
+    table, th, td {
+        border: none;
+    }
+    tr {
+        border-bottom: 1px solid rgba(0,0,0,0.12);
+    }
+</style>
 <main class="content">
     <div class="content-header ui-content-header">
         <div class="container">
@@ -21,22 +54,90 @@
             </div>
             <div class="ui-card-wrap">
                 <div class="row">
-
-                    <div class="col-xx-12 col-sm-6">
-
-
+                    <div class="col-xx-12 col-sm-3">
                         <div class="card">
                             <div class="card-main">
                                 <div class="card-inner">
                                     <h5>收入情况</h5>
-                                    {foreach $days as $day}
-                                    <button class="mdl-button mdl-js-button mdl-button--raised" onclick="getIncome('{$day}')">{$day}</button>
-                                    {/foreach}
                                     <p id="income_text" style="margin-top: 10px;">loading</p>
                                 </div>
                             </div>
                         </div>
-
+                    </div>
+                    <div class="col-xx-12 col-sm-3">
+                        <div class="card">
+                            <div class="card-main">
+                                <div class="card-inner">
+                                    <h5>注册新用户</h5>
+                                    <p id="newusers_text" style="margin-top: 10px;">loading</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xx-12 col-sm-3">
+                        <div class="card">
+                            <div class="card-main">
+                                <div class="card-inner">
+                                    <h5>订单详细</h5>
+                                    <p id="order_text" style="margin-top: 10px;">loading</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xx-12 col-sm-3">
+                        <div class="card">
+                            <div class="card-main">
+                                <div class="card-inner">
+                                    <h5>工单详细</h5>
+                                    <p id="ticket_text" style="margin-top: 10px;">loading</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xx-12 col-sm-6">
+                        <div class="card">
+                            <div class="card-main">
+                                <div class="card-inner">
+                                    <h5>邀请人数</h5>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised" onclick="getRefUserCount('today')">今天</button>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised" onclick="getRefUserCount('yesterday')">昨天</button>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised" onclick="getRefUserCount('week')">本周</button>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised" onclick="getRefUserCount('month')">本月</button>
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th>用户ID</th>
+                                            <th>用户名</th>
+                                            <th>用户邮箱</th>
+                                            <th>邀请人数</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="ref_user_count">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-main">
+                                <div class="card-inner">
+                                    <h5>72小时节点流量使用排名</h5>
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th>节点ID</th>
+                                            <th>节点名称</th>
+                                            <th>使用流量</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="node_traffic_text">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                         <div class="card">
                             <div class="card-main">
                                 <div class="card-inner">
@@ -119,8 +220,6 @@
 
                             </div>
                         </div>
-
-
                         <div class="card">
                             <div class="card-main">
                                 <div class="card-inner">
@@ -189,31 +288,55 @@
 
                             </div>
                         </div>
-
-
                     </div>
-
-
                     <div class="col-xx-12 col-sm-6">
 
                         <div class="card">
                             <div class="card-main">
                                 <div class="card-inner">
-                                    <h5>注册新用户</h5>
-                                    {foreach $days as $day}
-                                    <button class="mdl-button mdl-js-button mdl-button--raised" onclick="getNewUsers('{$day}')">{$day}</button>
-                                    {/foreach}
-                                    <p id="newusers_text" style="margin-top: 10px;">loading</p>
+                                    <h5>邀请返利</h5>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised" onclick="getRefMoneyCount('today')">今天</button>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised" onclick="getRefMoneyCount('yesterday')">昨天</button>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised" onclick="getRefMoneyCount('week')">本周</button>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised" onclick="getRefMoneyCount('month')">本月</button>
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th>用户ID</th>
+                                            <th>用户名</th>
+                                            <th>用户邮箱</th>
+                                            <th>返利金额</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="ref_money_count">
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-
                         <div class="card">
                             <div class="card-main">
                                 <div class="card-inner">
-
+                                    <h5>72小时用户流量使用排名</h5>
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th>用户ID</th>
+                                            <th>用户名</th>
+                                            <th>邮箱</th>
+                                            <th>使用流量</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="user_traffic_text">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-main">
+                                <div class="card-inner">
                                     <div id="node_chart" style="height: 300px; width: 100%;"></div>
-
                                     <script src="//cdn.jsdelivr.net/gh/YihanH/canvasjs.js@v2.2/canvasjs.min.js"></script>
                                     <script type="text/javascript">
                                         var chart = new CanvasJS.Chart("node_chart",
@@ -258,19 +381,13 @@
 
                                         chart.render();
                                     </script>
-
                                 </div>
-
                             </div>
                         </div>
-
-
                         <div class="card">
                             <div class="card-main">
                                 <div class="card-inner">
-
                                     <div id="traffic_chart" style="height: 300px; width: 100%;"></div>
-
                                     <script src="//cdn.jsdelivr.net/gh/YihanH/canvasjs.js@v2.2/canvasjs.min.js"></script>
                                     <script type="text/javascript">
                                         var chart = new CanvasJS.Chart("traffic_chart",
@@ -328,10 +445,7 @@
 
                             </div>
                         </div>
-
-
                     </div>
-
                 </div>
             </div>
         </section>
@@ -352,11 +466,56 @@
                 date: date,
             },
             success: function (data) {
-                console.log(data.ret);
                 if (data.success) {
                     data = data.data;
-                    var html_text = `<h6>${data.date}的数据</h6>今日收入：${data.todayIncome}<br>昨日收入：${data.yesterdayIncome}<br>本周收入：${data.thisWeekIncome}<br>上周收入：${data.lastWeekIncome}<br>本月收入：${data.thisMonthIncome}<br>上月收入：${data.lastMonthIncome}`;
+                    var html_text = `今日收入：${data.todayIncome}<br>昨日收入：${data.yesterdayIncome}<br>本周收入：${data.thisWeekIncome}<br>上周收入：${data.lastWeekIncome}<br>本月收入：${data.thisMonthIncome}<br>上月收入：${data.lastMonthIncome}`;
                     $('#income_text').html(html_text);
+                } else {
+                    console.log(data.error)
+                }
+            }
+        })
+    }
+
+    function getNodeTraffic(date) {
+        $.ajax({
+            type: "GET",
+            url: "/admin/api/analytics/node",
+            dataType: "json",
+            data: {
+                date: date,
+            },
+            success: function (data) {
+                if (data.success) {
+                    data = data.data;
+                    var html_text = "";
+                    data.forEach(function (item) {
+                        html_text += `<tr><th>${item.node_id}</th><th>${item.node_name}</th><th>${item.traffic}</th></tr>`;
+                    })
+                    $('#node_traffic_text').html(html_text);
+                } else {
+                    console.log(data.error)
+                }
+            }
+        })
+    }
+
+    function getUserTraffic(date) {
+        $.ajax({
+            type: "GET",
+            url: "/admin/api/analytics/userTraffic",
+            dataType: "json",
+            data: {
+                date: date,
+            },
+            success: function (data) {
+                if (data.success) {
+                    data = data.data;
+                    var html_text = "";
+                    data.forEach(function (item) {
+                        html_text += `<tr><th>${item.user_id}</th><th>${item.user_name}</th><th>${item.email}</th><th>${item.traffic}</th></tr>`;
+                    })
+                    $('#user_traffic_text').html(html_text);
                 } else {
                     console.log(data.error)
                 }
@@ -367,7 +526,7 @@
     function getNewUsers(date) {
         $.ajax({
             type: "GET",
-            url: "/admin/api/analytics/new-users",
+            url: "/admin/api/analytics/new_users",
             dataType: "json",
             data: {
                 date: date,
@@ -376,8 +535,91 @@
                 console.log(data.ret);
                 if (data.success) {
                     data = data.data;
-                    var html_text = `<h6>${data.date}的数据</h6>今日新用户：${data.today}<br>昨日新用户：${data.yesterday}<br>本周新用户：${data.thisWeek}<br>上周新用户：${data.lastWeek}<br>本月新用户：${data.thisMonth}<br>上月新用户：${data.lastMonth}`;
+                    var html_text = `今日新用户：${data.today}<br>昨日新用户：${data.yesterday}<br>本周新用户：${data.thisWeek}<br>上周新用户：${data.lastWeek}<br>本月新用户：${data.thisMonth}<br>上月新用户：${data.lastMonth}`;
                     $('#newusers_text').html(html_text);
+                } else {
+                    console.log(data.error)
+                }
+            }
+        })
+    }
+
+    function getRefUserCount(type) {
+        $.ajax({
+            type: "GET",
+            url: "/admin/api/analytics/ref_user_count",
+            dataType: "json",
+            data: {
+                type: type,
+            },
+            success: function (data) {
+                if (data.success) {
+                    data = data.data;
+                    var html_text = "";
+                    data.forEach(function (item) {
+                        html_text += `<tr><th>${item.user_id}</th><th>${item.user_name}</th><th>${item.email}</th><th>${item.ref_buy_count}人</th></tr>`;
+                    })
+                    $('#ref_user_count').html(html_text);
+                } else {
+                    console.log(data.error)
+                }
+            }
+        })
+    }
+
+    function getRefMoneyCount(type) {
+        $.ajax({
+            type: "GET",
+            url: "/admin/api/analytics/ref_money_count",
+            dataType: "json",
+            data: {
+                type: type,
+            },
+            success: function (data) {
+                if (data.success) {
+                    data = data.data;
+                    var html_text = "";
+                    data.forEach(function (item) {
+                        html_text += `<tr><th>${item.user_id}</th><th>${item.user_name}</th><th>${item.email}</th><th>￥${item.ref_get_count}</th></tr>`;
+                    })
+                    $('#ref_money_count').html(html_text);
+                } else {
+                    console.log(data.error)
+                }
+            }
+        })
+    }
+
+    function getOrderDetail() {
+        $.ajax({
+            type: "GET",
+            url: "/admin/api/analytics/get_order_detail",
+            dataType: "json",
+            success: function (data) {
+                if (data.success) {
+                    data = data.data;
+                    var html_text = `今日总订单：${data.today_all}<br>今日成功订单：${data.today_success}<br>`+
+                        `昨日成功订单：${data.yesterday_success}<br>本周成功订单：${data.week_success}<br>`+
+                        `本月成功订单：${data.month_success}<br>上月成功订单：${data.last_month_success}`;
+                    $('#order_text').html(html_text);
+                } else {
+                    console.log(data.error)
+                }
+            }
+        })
+    }
+    function getTicketDetail() {
+        $.ajax({
+            type: "GET",
+            url: "/admin/api/analytics/get_ticket_detail",
+            dataType: "json",
+            success: function (data) {
+                if (data.success) {
+                    data = data.data;
+                    var html_text = `开启状态：${data.open}<br>今日工单：${data.today_success}<br>`+
+                        `昨日工单：${data.yesterday_success}<br>本周工单：${data.week_success}<br>`+
+                        `本月工单：${data.month_success}<br>上月工单：${data.last_month_success}`;
+                    $('#ticket_text').html(html_text);
                 } else {
                     console.log(data.error)
                 }
@@ -401,5 +643,11 @@
     date = date.replaceAll('/','-');
     getIncome(date);
     getNewUsers(date);
+    getNodeTraffic();
+    getUserTraffic();
+    getRefUserCount('today');
+    getRefMoneyCount('today');
+    getOrderDetail();
+    getTicketDetail();
 </script>
 {/literal}

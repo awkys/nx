@@ -2,11 +2,8 @@
 
 namespace App\Controllers;
 
-use App\Models\{
-    Node,
-    User,
-    Coupon
-};
+use Illuminate\Database\Capsule\Manager;
+use App\Models\{Node, Paylist, Ticket, TrafficLog, User, Coupon};
 use App\Utils\{
     Tools,
     DatatablesHelper
@@ -27,7 +24,7 @@ class AdminController extends UserController
 	// admin增加收入和用户统计
         $days = [];
 
-        for ($i = 1; $i <= 7; $i++) {
+        for ($i = 1; $i <= 5; $i++) {
             $date_expression = '-'.$i.' days';
             $day = strtotime($date_expression);
             $days[] = date("Y-m-d", $day);
@@ -256,7 +253,7 @@ class AdminController extends UserController
 
         $stats = new Analytics();
 
-        $today_income = $stats->getIncome($date_in_timestamp,  +86400);
+        $today_income = $stats->getIncome($date_in_timestamp,  $date_in_timestamp+86400);
         $yesterday_income = $stats->getIncome($date_in_timestamp-86400, $date_in_timestamp);
 
         $first_day_of_this_week_timestamp = strtotime("last monday midnight",$date_in_timestamp);
@@ -321,5 +318,151 @@ class AdminController extends UserController
             "lastMonth" => $last_moneth_users
         );
         return $response->getBody()->write(json_encode($res));
+    }
+
+    public function getNodeTraffic($request, $response, $args)
+    {
+        $logs = Manager::connection()->select('SELECT *,(SUM(u) + SUM(d)) as sum_ud FROM `user_traffic_log` GROUP BY node_id ORDER BY sum_ud DESC LIMIT 0,10');
+        foreach ($logs as &$log) {
+            $log->node_name = Node::query()->where('id', $log->node_id)->value('name');
+            $log->traffic = Tools::flowAutoShow($log->sum_ud);
+        }
+
+        $res['success'] = true;
+        $res['error'] = '';
+        $res['message'] = '';
+        $res['data'] = $logs;
+
+        return $response->getBody()->write(json_encode($res));
+    }
+
+    public function getUserTraffic($request, $response, $args)
+    {
+        $logs = Manager::connection()->select('SELECT *,(SUM(u) + SUM(d)) as sum_ud FROM `user_traffic_log` GROUP BY user_id ORDER BY sum_ud DESC LIMIT 0,10');
+        foreach ($logs as &$log) {
+            $user = User::query()->where('id', $log->user_id)->first();
+            $log->user_name = $user->user_name;
+            $log->email = $user->email;
+            $log->traffic = Tools::flowAutoShow($log->sum_ud);
+        }
+
+        $res['success'] = true;
+        $res['error'] = '';
+        $res['message'] = '';
+        $res['data'] = $logs;
+
+        return $response->getBody()->write(json_encode($res));
+    }
+
+    public function getRefUserCount($request, $response, $args)
+    {
+        $type = $request->getParam('type');
+        switch ($type){
+            case "today":
+                $date_in_timestamp = strtotime(date('Y-m-d', time()));
+                break;
+            case "yesterday":
+                $date_in_timestamp = strtotime("-1 day");
+                break;
+            case "week":
+                $date_in_timestamp = strtotime('Monday this week');
+                break;
+            case "month":
+                $date_in_timestamp = strtotime(date('Y-07-01 00:00:00'));
+                break;
+        }
+        $refs = Manager::connection()->select("SELECT ref_by,COUNT(`ref_by`) as ref_buy_count FROM `user` WHERE ref_by > 0 AND UNIX_TIMESTAMP(reg_date) >= {$date_in_timestamp} GROUP BY ref_by ORDER BY ref_buy_count DESC LIMIT 0,10");
+        $users = [];
+        foreach ($refs as $item) {
+            $user = User::query()->where('id', $item->ref_by)->first();
+            array_push($users, [
+                'user_id' => $user->id,
+                'user_name' => $user->user_name,
+                'email' => $user->email,
+                'ref_buy_count' => $item->ref_buy_count,
+            ]);
+        }
+
+        $res['success'] = true;
+        $res['error'] = '';
+        $res['message'] = '';
+        $res['data'] = $users;
+
+        return $response->getBody()->write(json_encode($res));
+    }
+
+    public function getRefMoneyCount($request, $response, $args)
+    {
+        $type = $request->getParam('type');
+        switch ($type){
+            case "today":
+                $date_in_timestamp = strtotime(date('Y-m-d', time()));
+                break;
+            case "yesterday":
+                $date_in_timestamp = strtotime("-1 day");
+                break;
+            case "week":
+                $date_in_timestamp = strtotime('Monday this week');
+                break;
+            case "month":
+                $date_in_timestamp = strtotime(date('Y-m-01 00:00:00'));
+                break;
+        }
+        $refs = Manager::connection()->select("SELECT ref_by,SUM(`ref_get`) as ref_get_count FROM `payback` WHERE datetime >= {$date_in_timestamp} GROUP BY ref_by ORDER BY ref_get_count DESC LIMIT 0,10");
+        $users = [];
+        foreach ($refs as $item) {
+            $user = User::query()->where('id', $item->ref_by)->first();
+            array_push($users, [
+                'user_id' => $user->id,
+                'user_name' => $user->user_name,
+                'email' => $user->email,
+                'ref_get_count' => $item->ref_get_count,
+            ]);
+        }
+
+        $res['success'] = true;
+        $res['error'] = '';
+        $res['message'] = '';
+        $res['data'] = $users;
+
+        return $response->getBody()->write(json_encode($res));
+    }
+
+    public function getOrderDetail($request, $response, $args)
+    {
+        $data = [];
+        $data['today_all'] = Paylist::query()->where('datetime', '>=', strtotime(date('Y-m-d', time())))->count();
+        $data['today_success'] = Paylist::query()->where('datetime', '>=', strtotime(date('Y-m-d', time())))
+            ->where('status', 1)->count();
+        $data['yesterday_success'] = Paylist::query()->where('datetime', '>=', strtotime("-1 day"))
+            ->where('status', 1)->count();
+        $data['week_success'] = Paylist::query()->where('datetime', '>=', strtotime('Monday this week'))
+            ->where('status', 1)->count();
+        $data['month_success'] = Paylist::query()->where('datetime', '>=', strtotime(date('Y-m-01 00:00:00')))
+            ->where('status', 1)->count();
+        $data['last_month_success'] = Paylist::query()->where('datetime', '>=', strtotime(date('Y-m-1',strtotime('last month'))))
+            ->where('datetime', '<', strtotime(date('Y-m-01 00:00:00')))
+            ->where('status', 1)->count();
+
+        return $response->getBody()->write(json_encode(['data' => $data, 'success' => true]));
+    }
+
+    public function getTicketDetail($request, $response, $args)
+    {
+        $data = [];
+        $data['open'] = Ticket::query()->where('status', 1)->where('rootid', 0)->count();
+        $data['today_success'] = Ticket::query()->where('datetime', '>=', strtotime(date('Y-m-d', time())))
+            ->where('status', 1)->where('rootid', 0)->count();
+        $data['yesterday_success'] = Ticket::query()->where('datetime', '>=', strtotime("-1 day"))
+            ->where('status', 1)->where('rootid', 0)->count();
+        $data['week_success'] = Ticket::query()->where('datetime', '>=', strtotime('Monday this week'))
+            ->where('status', 1)->where('rootid', 0)->count();
+        $data['month_success'] = Ticket::query()->where('datetime', '>=', strtotime(date('Y-m-01 00:00:00')))
+            ->where('status', 1)->where('rootid', 0)->count();
+        $data['last_month_success'] = Ticket::query()->where('datetime', '>=', strtotime(date('Y-m-1',strtotime('last month'))))
+            ->where('datetime', '<', strtotime(date('Y-m-01 00:00:00')))
+            ->where('status', 1)->where('rootid', 0)->count();
+
+        return $response->getBody()->write(json_encode(['data' => $data, 'success' => true]));
     }
 }

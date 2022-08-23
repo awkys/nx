@@ -35,6 +35,7 @@ $_ENV['db_username'] = 'root';              //数据库用户名
 $_ENV['db_password'] = 'nx_mysql_Admin6688';           //用户名对应的密码
 
 
+
 #高级
 $_ENV['db_charset'] = 'utf8';
 $_ENV['db_collation'] = 'utf8_general_ci';
@@ -150,9 +151,9 @@ $_ENV['reg_auto_reset_day'] = 0;                         //注册时的流量重
 $_ENV['reg_auto_reset_bandwidth'] = 0;                         //需要重置的流量，0为不重置
 $_ENV['random_group'] = '1';                       //注册时随机分组，注册时随机分配到的分组，多个分组请用英文半角逗号分隔
 
-$_ENV['reg_forbidden_ip'] = '127.0.0.0/8,::1/128,61.152.208.233,54.180.94.1';     //注册时默认禁止访问IP列表，半角英文逗号分割
-$_ENV['min_port'] = 10000;                     //用户端口池最小值
-$_ENV['max_port'] = 65535;                     //用户端口池最大值
+$_ENV['reg_forbidden_ip'] = '127.0.0.0/8,::1/128';     //注册时默认禁止访问IP列表，半角英文逗号分割
+$_ENV['min_port'] = 10000;                     //用户端口池最小值，如果该数值为0则用户在注册的时候不会被分配多用户端口，适合纯V2Ray/Trojan机场
+$_ENV['max_port'] = 65535;                     //用户端口池最大值，如果该数值为0则用户在注册的时候不会被分配多用户端口，适合纯V2Ray/Trojan机场
 $_ENV['reg_forbidden_port'] = '';                        //注册时默认禁止访问端口列表，半角英文逗号分割，支持端口段
 
 $_ENV['mu_suffix'] = 'microsoft.com';           //单端口多用户混淆参数后缀，可以随意修改，但请保持前后端一致
@@ -381,6 +382,10 @@ $_ENV['SPEEDPay']=[
 #wiki地址:https://goo.gl/dRwRDi  http://t.cn/RnsWjtB
 $_ENV['codepay_id'] = '';          //码支付ID
 $_ENV['codepay_key'] = '';          //码支付通信密钥
+#V免签
+$_ENV['vmq_secret']  = '';  // 通讯密钥
+$_ENV['vmq_url']  = '';     // 服务器地址
+$_ENV['vmq_param']  = 'bob666';  // (选填)传输参数
 
 #alipay,f2fpay
 $_ENV['f2fpay_app_id'] = '';
@@ -412,6 +417,12 @@ $_ENV['payjs_key'] = '';
 #paytaro http://v1.paytaro.com/#/dashboard
 $_ENV['paytaro_app_id'] = '';
 $_ENV['paytaro_app_secret'] = '';
+
+#bobpay @bob_pay_bot https://faka.bob1.xyz/buy/13
+$_ENV['tron_api_url'] = 'https://pay.bobu.me';
+$_ENV['tron_app_id'] = '';
+$_ENV['tron_app_secret'] = '';
+
 
 #wolfpay
 $_ENV['wolfpay'] = [
@@ -467,8 +478,8 @@ $_ENV['enable_donate'] = false;          //是否显示用户捐赠（所有收�
 #iOS账户显示
 $_ENV['display_ios_class'] = 1;        //至少等级为多少的用户可以看见，小于0时关闭此功能
 $_ENV['display_ios_topup'] = 0;         //满足等级要求后，累计充值高于多少的用户可以看见
-$_ENV['ios_account'] = 'bestvpn7@gmail.com';        //iOS账户
-$_ENV['ios_password'] = 'Bestvpn169';        //iOS密码
+$_ENV['ios_account'] = '';        //iOS账户
+$_ENV['ios_password'] = '';        //iOS密码
 
 #用户中心首页添加其他客户端的支持，可配合 subconverter 等 Api
 $_ENV['userCenterClient'] = [

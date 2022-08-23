@@ -1,6 +1,6 @@
 ## SSPanel-Metron主题，目前由@BobS9维护开发中。
 
-联系方式：[@BobS9](https://t.me/BobS9)
+交流群：[https://t.me/BobShareGroup](https://t.me/BobShareGroup)
 
 #### 1.连接 SSH 安装宝塔面板
 
@@ -16,7 +16,7 @@
 
 
 ```shell
-git config core.filemode false && wget https://getcomposer.org/installer -O composer.phar && php composer.phar && php composer.phar install
+wget https://getcomposer.org/installer -O composer.phar && php composer.phar && php composer.phar install
 ```
 
 
@@ -31,7 +31,7 @@ cp config/.metron_setting.example.php config/.metron_setting.php
 cp config/appprofile.example.php config/appprofile.php
 ```
 
-.config.php设置后执行`php xcat initQQWry` 下载IP解析库
+.config.php设置后执行`php xcat Tool initQQWry` 下载IP解析库
 
 #### 8.网站设置
 
@@ -59,7 +59,7 @@ chown -R www:www 你的文件夹名/
 
 #### 10.数据库操作
 
-首次迁移: 导入网站目录下的`sql/metron.sql` 文件
+首次迁移: 导入网站目录下的`sql/glzjin_all.sql` 文件
 
 将数据库user表里的全部用户的theme列改为metron，使用phpmyadmin执行这条sql语句:
 ```sql
@@ -85,6 +85,18 @@ UPDATE user SET theme='metron'
 任务名称：自行填写
 执行周期：每小时
 脚本内容：php /www/wwwroot/你的网站目录/xcat Job UserJob
+
+检查用户会员等级过期任务 (必须)
+任务类型：Shell 脚本
+任务名称：自行填写
+执行周期：每分钟
+脚本内容：php /www/wwwroot/你的网站目录/xcat Job CheckUserClassExpire
+
+检查账号过期任务 (必须)
+任务类型：Shell 脚本
+任务名称：自行填写
+执行周期：每小时
+脚本内容：php /www/wwwroot/你的网站目录/xcat Job CheckUserExpire
 
 定时检测邮件队列 (必须)
 任务类型：Shell 脚本

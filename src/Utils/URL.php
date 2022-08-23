@@ -191,7 +191,7 @@ class URL
             }
         }
 
-        $nodes = $query->where('type', '1')->orderBy('name')->get();
+        $nodes = $query->where('type', '1')->orderBy('node_sort', 'desc')->orderBy('name')->get();
 
         if (MetronSetting::get('nodes_filter') === true && MetronSetting::get('nodes_miniName') === true && $rules['nodefilter']['mininame'] === 1) {
             $regex = MetronSetting::get('nodes_regex');
@@ -398,15 +398,12 @@ class URL
 
         $items = URL::getNew_AllItems($user, $Rule);
         foreach ($items as $item) {
-            if ($Rule['type'] == 'vmess' || $item['type'] == 'vless') {
-                $out = LinkController::getListItem($item, 'v2rayn');
-            } else {
-                $out = LinkController::getListItem($item, $Rule['type']);
-            }
+            $out = LinkController::getListItem($item, $Rule['type']);
             if ($out !== null) {
                 $return_url .= $out . PHP_EOL;
             }
         }
+
         return $return_url;
     }
 

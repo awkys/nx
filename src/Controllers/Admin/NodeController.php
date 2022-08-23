@@ -41,6 +41,7 @@ class NodeController extends AdminController
             'traffic_rate'            => '流量比率',
             'node_group'              => '节点群组',
             'node_class'              => '节点等级',
+            'node_sort'               => '节点排序',
             'node_speedlimit'         => '节点限速/Mbps',
             'node_bandwidth'          => '已走流量/GB',
             'node_bandwidth_limit'    => '流量限制/GB',
@@ -48,7 +49,7 @@ class NodeController extends AdminController
             'node_heartbeat'          => '上一次活跃时间',
             'custom_method'           => '自定义加密',
             'custom_rss'              => '自定义协议以及混淆',
-            'mu_only'                 => '只启用单端口多用户'
+            'mu_only'                 => '只启用单端口多用户',
         );
         $table_config['default_show_column'] = array('op', 'id', 'name', 'sort');
         $table_config['ajax_url'] = 'node/ajax';
@@ -128,6 +129,7 @@ class NodeController extends AdminController
             Radius::AddNas($node->node_ip, $request->getParam('server'));
         }
         $node->node_class                 = $request->getParam('class');
+        $node->node_sort                  = (int)$request->getParam('node_sort');
         $node->node_bandwidth_limit       = $request->getParam('node_bandwidth_limit') * 1024 * 1024 * 1024;
         $node->bandwidthlimit_resetday    = $request->getParam('bandwidthlimit_resetday');
 
@@ -242,6 +244,7 @@ class NodeController extends AdminController
 
         $node->status                     = $request->getParam('status');
         $node->node_class                 = $request->getParam('class');
+        $node->node_sort                  = (int)$request->getParam('node_sort');
         $node->node_bandwidth_limit       = $request->getParam('node_bandwidth_limit') * 1024 * 1024 * 1024;
         $node->bandwidthlimit_resetday    = $request->getParam('bandwidthlimit_resetday');
 
@@ -305,6 +308,21 @@ class NodeController extends AdminController
         );
     }
 
+    public function copy($request, $response, $args)
+    {
+        $id = $request->getParam('id');
+        $res = Node::query()->find($id)->replicate()->save();
+        if (!$res) {
+            $rs['ret'] = 0;
+            $rs['msg'] = "复制失败";
+            return $response->getBody()->write(json_encode($rs));
+        }
+
+        $rs['ret'] = 1;
+        $rs['msg'] = "复制成功";
+        return $response->getBody()->write(json_encode($rs));
+    }
+
     /**
      * @param Request   $request
      * @param Response  $response
@@ -361,6 +379,7 @@ class NodeController extends AdminController
         foreach ($nodes as $node) {
             $tempdata = [];
             $tempdata['op']   = '<a class="btn btn-brand" ' . ($node->sort == 999 ? 'disabled' : 'href="/admin/node/' . $node->id . '/edit"') . '>编辑</a>
+                <a class="btn btn-subscription" ' . ($node->sort == 999 ? 'disabled' : 'id="copy_node" value="' . $node->id . '" href="javascript:void(0);" onClick="copy_node(\'' . $node->id . '\')"') . '>复制</a>
                 <a class="btn btn-brand-accent" ' . ($node->sort == 999 ? 'disabled' : 'id="delete" value="' . $node->id . '" href="javascript:void(0);" onClick="delete_modal_show(\'' . $node->id . '\')"') . '>删除</a>';
             $tempdata['id']   = $node->id;
             $tempdata['name'] = $node->name;
@@ -411,6 +430,7 @@ class NodeController extends AdminController
             $tempdata['traffic_rate']               = $node->traffic_rate;
             $tempdata['node_group']                 = $node->node_group;
             $tempdata['node_class']                 = $node->node_class;
+            $tempdata['node_sort']                  = $node->node_sort;
             $tempdata['node_speedlimit']            = $node->node_speedlimit;
             $tempdata['node_bandwidth']             = Tools::flowToGB($node->node_bandwidth);
             $tempdata['node_bandwidth_limit']       = Tools::flowToGB($node->node_bandwidth_limit);

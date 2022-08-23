@@ -2,11 +2,7 @@
 
 namespace App\Utils;
 
-use App\Models\{
-    User,
-    Node,
-    Relay
-};
+use App\Models\{InviteCode, User, Node, Relay};
 use App\Services\Config;
 use DateTime;
 
@@ -189,10 +185,15 @@ class Tools
     public static function getAvPort()
     {
         //检索User数据表现有port
-        $det = User::pluck('port')->toArray();
-        $port = array_diff(range($_ENV['min_port'], $_ENV['max_port']), $det);
-        shuffle($port);
-        return $port[0];
+        if ($_ENV['min_port'] > 65535 || $_ENV['min_port'] <= 0 || $_ENV['max_port'] > 65535 || $_ENV['max_port'] <= 0) {
+            return 0;
+        }
+        else {
+            $det = User::pluck('port')->toArray();
+            $port = array_diff(range($_ENV['min_port'], $_ENV['max_port']), $det);
+            shuffle($port);
+            return $port[0];
+        }
     }
 
     public static function base64_url_encode($input)
@@ -564,10 +565,9 @@ class Tools
             }else{
                 $item['enable_xtls'] = "";
             }
+            $item['vtype'] = 'vmess://';
             if (array_key_exists('enable_vless', $item)) {
                 $item['vtype'] = 'vless://';
-            } else {
-                $item['vtype'] = 'vmess://';
             }
             if (!array_key_exists('sni', $item)) {
                 $item['sni'] = $item['host'];
@@ -936,5 +936,20 @@ class Tools
         if ($maxid >= 2000000000) {
             $db->query('ALTER TABLE `' . $table . '` auto_increment = 1');
         }
+    }
+
+    /**
+     * 生成邀请码
+     *
+     * @return string
+     */
+    public static function generateInviteCode()
+    {
+        $temp_code = self::genRandomChar(4);
+        if(InviteCode::where('code', $temp_code)->first()){
+            self::generateInviteCode();
+        }
+
+        return $temp_code;
     }
 }

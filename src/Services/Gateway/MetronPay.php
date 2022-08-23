@@ -198,10 +198,10 @@ class MetronPay extends AbstractPayment
                     }
                     return json_encode($return);
                 case ('wellpay'):
-                   
+
                     $mgate = new WellPay($_ENV['wellpay_app_secret']);
                     $result = $mgate->MetronPay($type, $price, $shopinfo, $paylist_id);
-                    
+
                     if(((isset($result['code']) && $result['code'] === 0)||
                     isset($result['errcode']) && $result['errcode'] === 0))
                     {
@@ -691,7 +691,7 @@ class MetronPay extends AbstractPayment
 //同步回调
     public function getReturnHTML($request, $response, $args)
     {
-        
+
         $tradeno = $_GET['tradeno'];
        // var_dump('111'.$tradeno);exit;
         if ($tradeno == '' || $tradeno == null) {
@@ -704,9 +704,9 @@ class MetronPay extends AbstractPayment
         //var_dump(json_encode($p));exit;
         $result = array();
         $status = $_GET['status'];
-       
+
         //file_put_contents(BASE_PATH . '/storage/easypay.log', '555'.'---'.$tradeno.'---555', FILE_APPEND);
-       if ($p->status === 1) { 
+       if ($p->status === 1) {
             $result['status'] = 1;
             if ($p['shop']) {
                 $shopinfo = json_decode($p['shop'], true);                                        # shop 字段转数组
@@ -753,7 +753,7 @@ class MetronPay extends AbstractPayment
             } else {
                 $result['money'] = $p->total;
             }
-        } else {        
+        } else {
             $result['status'] = 0;
         }
         */

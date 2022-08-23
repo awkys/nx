@@ -55,7 +55,7 @@ class Payment
 
     public static function returnHTML($request, $response, $args)
     {
-       
+
         return self::getClient()->getReturnHTML($request, $response, $args);
     }
 

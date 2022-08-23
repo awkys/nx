@@ -236,7 +236,7 @@ class Metron
     {
         $info = $this->getConversionInfo($user, $bought);
         if ($info['ret'] !== 1) {
-            return $res;
+            return $info;
         }
         /* 增加 Code 表 */
         $codeq = new Code();
@@ -252,6 +252,7 @@ class Metron
         }
         /* 处理 Bought 表 */
         $bought->renew = 0;
+        $bought->usedd = 0; // 取消生效
         $bought->save();
 
         /* 处理 User */
@@ -375,9 +376,6 @@ class Metron
             if ($coupon == null) {
                 $credit = 0;
             } else {
-                if ($coupon->onetime == 1) {
-                    $onetime = true;
-                }
                 $credit = $coupon->credit;
             }
 
@@ -443,10 +441,6 @@ class Metron
         }
 
         $bought->coupon = $code;
-
-        if (isset($onetime)) {
-            $price = $shop->price;
-        }
         $bought->price = $price;
         $bought->usedd  = 1;
         $bought->save();
