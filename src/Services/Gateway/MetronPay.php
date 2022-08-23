@@ -314,7 +314,8 @@ class MetronPay extends AbstractPayment
             }
             return json_encode($return);
 
-        } else if ($type == 'wxpay') {
+        } else if ($type == 'pay_wxpay') {
+            $type= 'alipay';
             # 微信支付
             $payment_system = MetronSetting::get('pay_wxpay');
             if (MetronSetting::get('max_wxpay_pay') != 'none' && MetronSetting::get('max_wxpay_pay') != '' && MetronSetting::get('max_wxpay_num') != 0 && $price >= MetronSetting::get('max_wxpay_num')) {
