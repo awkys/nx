@@ -53,12 +53,12 @@ $_ENV['mailgun_domain'] = '';
 $_ENV['mailgun_sender'] = '';
 
 # smtp
-$_ENV['smtp_host'] = 'smtp.zoho.com';                          // SMTP 邮局服务器域名
-$_ENV['smtp_username'] = 'nx@ssvipmail.xyz';                          // SMTP 账户名
+$_ENV['smtp_host'] = 'smtp.zoho.com.cn';                          // SMTP 邮局服务器域名
+$_ENV['smtp_username'] = 'hello@nxbest.men';                          // SMTP 账户名
 $_ENV['smtp_password'] = 'nx_Admin321';                           // SMTP 账户密码
 $_ENV['smtp_port'] = 465;                         // SMTP 端口(常见端口 25, 587 465)
 $_ENV['smtp_name'] = '灵溪加速器';                          // SMTP 发信名称
-$_ENV['smtp_sender'] = 'nx@ssvipmail.xyz';                          // SMTP 账户发信地址
+$_ENV['smtp_sender'] = 'hello@nxbest.men';                          // SMTP 账户发信地址
 $_ENV['smtp_ssl'] = true;                        // 是否使用 TLS/SSL 发信
 $_ENV['smtp_reply_to'] = $_ENV['smtp_username'];      // 用户回复邮件的接受地址
 $_ENV['smtp_reply_to_name'] = $_ENV['smtp_sender'];        // 回复地址显示名
