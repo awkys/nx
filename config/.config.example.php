@@ -32,8 +32,7 @@ $_ENV['db_host'] = '';
 $_ENV['db_socket'] = '';
 $_ENV['db_database'] = 'sspanel';           //数据库名
 $_ENV['db_username'] = 'root';              //数据库用户名
-//$_ENV['db_password'] = 'nx_mysql_Admin6688';           //用户名对应的密码
-$_ENV['db_password'] = '12345678';           //用户名对应的密码
+$_ENV['db_password'] = 'nx_mysql_Admin6688';           //用户名对应的密码
 
 
 
