@@ -32,7 +32,8 @@ $_ENV['db_host'] = '';
 $_ENV['db_socket'] = '';
 $_ENV['db_database'] = 'sspanel';           //数据库名
 $_ENV['db_username'] = 'root';              //数据库用户名
-$_ENV['db_password'] = 'nx_mysql_Admin6688';           //用户名对应的密码
+//$_ENV['db_password'] = 'nx_mysql_Admin6688';           //用户名对应的密码
+$_ENV['db_password'] = '12345678';           //用户名对应的密码
 
 
 
@@ -149,7 +150,7 @@ $_ENV['crisp'] = [
 //用户注册设置-----------------------------------------------------------------------------------------
 $_ENV['reg_auto_reset_day'] = 0;                         //注册时的流量重置日，0为不重置
 $_ENV['reg_auto_reset_bandwidth'] = 0;                         //需要重置的流量，0为不重置
-$_ENV['random_group'] = '2';                       //注册时随机分组，注册时随机分配到的分组，多个分组请用英文半角逗号分隔
+$_ENV['random_group'] = '1';                       //注册时随机分组，注册时随机分配到的分组，多个分组请用英文半角逗号分隔
 
 $_ENV['reg_forbidden_ip'] = '127.0.0.0/8,::1/128';     //注册时默认禁止访问IP列表，半角英文逗号分割
 $_ENV['min_port'] = 10000;                     //用户端口池最小值，如果该数值为0则用户在注册的时候不会被分配多用户端口，适合纯V2Ray/Trojan机场
