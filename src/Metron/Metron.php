@@ -283,9 +283,9 @@ class Metron
     public function getAdvanceResetFlow($user)
     {
         $bought = Bought::where('userid', $user->id)->where('usedd', 1)->first();
-//        if ($bought == null) {
-//            return ['ret' => 0, 'msg' => '您没有有效套餐'];
-//        }
+        if ($bought == null) {
+            return ['ret' => 0, 'msg' => '您没有有效套餐'];
+        }
 
         /* 套餐是否有重置属性 */
         $shopinfo = $this->getShopInfo($bought->shopid);
