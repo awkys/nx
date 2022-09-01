@@ -223,8 +223,8 @@ $_MT['shop_conversion_mode'] = 'auto';
 $_MT['shop_conversion'] = false;                      // 允许套餐折算返还余额
 $_MT['shop_formalities'] = 2;                      // 套餐折算时扣除手续费 (单位: 百分比, 0 为不扣手续费) 不建议太高免得挨骂
 
-$_MT['advanceResetFlow'] = false;                  // 提前重置流量
-$_MT['resetFlow_maxValue'] = 5;                     // 用户流量低于多少(GB)时,才允许重置, -1为不限制
+$_MT['advanceResetFlow'] = true;                  // 提前重置流量
+$_MT['resetFlow_maxValue'] = 2;                     // 用户流量低于多少(GB)时,才允许重置, -1为不限制
 
 $_MT['shop_pop_enable'] = true;                 // 商店套餐顶部显示信息, 可用于显示给用户促销,优惠等
 $_MT['shop_pop_info'] = '
