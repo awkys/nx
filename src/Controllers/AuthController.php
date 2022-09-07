@@ -387,7 +387,7 @@ class AuthController extends BaseController
         }
 
 
-        if (User::where("reg_ip", $_SERVER['REMOTE_ADDR'])->count() >= 5){
+        if (User::where("reg_ip", $_SERVER['REMOTE_ADDR'])->count() >= 2){
             $res['ret'] = 0;
             $res['msg'] = '请不要频繁注册账号！';
             return $res;
@@ -398,26 +398,26 @@ class AuthController extends BaseController
         if ($c == null) {
             if (Config::getconfig('Register.string.Mode') === 'invite' && MetronSetting::get('register_code') === true) {
                 $res['ret'] = 0;
-                $res['msg'] = '邀请码无效';
+                $res['msg'] = "用户满员，请去新站注册：<a href='https://www.yuntey.com/auth/register'>点击跳转</a>";
                 return $res;
             }
         } elseif ($c->user_id != 0) {
             $gift_user = User::where('id', '=', $c->user_id)->first();
             if ($gift_user == null) {
                 $res['ret'] = 0;
-                $res['msg'] = '邀请人不存在';
+                $res['msg'] = "用户满员，请去新站注册：<a href='https://www.yuntey.com/auth/register'>点击跳转</a>";
                 return $res;
             }
 
             if ($gift_user->class == 0) {
                 $res['ret'] = 0;
-                $res['msg'] = '邀请人不是VIP';
+                $res['msg'] = "用户满员，请去新站注册：<a href='https://www.yuntey.com/auth/register'>点击跳转</a>";
                 return $res;
             }
 
             if ($gift_user->invite_num == 0) {
                 $res['ret'] = 0;
-                $res['msg'] = '邀请人可用邀请次数为0';
+                $res['msg'] = "用户满员，请去新站注册：<a href='https://www.yuntey.com/auth/register'>点击跳转</a>";
                 return $res;
             }
         }
