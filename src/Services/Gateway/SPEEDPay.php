@@ -54,7 +54,7 @@ class SPEEDPay extends AbstractPayment
             'sign_type' => $settings['sign_type'],
             'input_charset' => $settings['input_charset'],
             'transport' => $settings['transport'],
-            'apiurl' => 'https://pay.hyss.org/'
+            'apiurl' => 'https://pay.ssfxyun.com/'
         );
 		$url_notify = Config::get("baseUrl") . '/payment/notify/SPEEDPay';
         $url_return = (self::isHTTPS() ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'];
