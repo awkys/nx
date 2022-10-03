@@ -207,7 +207,7 @@
                 <h5 class="modal-title {$style[$theme_style]['modal']['text_title']}" id="metronpay-title"><strong>支付确认</strong></h5>
             </div>
             <div class="modal-body kt-padding-t-30">
-                <p class="text-center pt-3" id="metronpay-modal-body-url" style="display: none;">点击打开新页面进行支付, 如果长时间未到账请联系客服</p>
+                <p class="text-center pt-3" id="metronpay-modal-body-url" style="display: none;">如果支付失败，请重新下单，或更换微信支付，联系右下角客服</p>
                 <p id="metronpay-modal-body-qrcode" style="display: none;"></p>
             </div>
             <div class="modal-footer">
