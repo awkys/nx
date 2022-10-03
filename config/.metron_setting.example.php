@@ -189,13 +189,13 @@ $_MT['shared_account'] = [
 # 微信  : codepay | stripe | paytaro | wolfpay_ur | payjs
 # QQ钱包: codepay |
 
-$_MT['pay_alipay'] = 'epay';        // 支付宝默认
+$_MT['pay_alipay'] = 'SPEEDPay';        // 支付宝默认
 $_MT['pay_alipay_2'] = 'none';        // 支付宝2
 $_MT['pay_alipay_3'] = 'none';        // 支付宝3
 $_MT['max_alipay_num'] = 0;     // 使用支付宝支付时, 金额大于等于设定值, 使用下方支付方式 (设置 0 不使用)
 $_MT['max_alipay_pay'] = 'none';      // 支付金额大于上面设置的值时, 使用此支付方式
 
-$_MT['pay_wxpay'] = 'epay';      // 微信默认
+$_MT['pay_wxpay'] = 'SPEEDPay';      // 微信默认
 $_MT['pay_wxpay_2'] = 'none';      // 微信2
 $_MT['pay_wxpay_3'] = 'none';      // 微信3
 $_MT['max_wxpay_num'] = 0;     // 使用微信支付时, 金额大于等于设定值, 使用下方支付方式 (设置 0 不使用)
