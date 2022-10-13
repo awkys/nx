@@ -32,7 +32,7 @@ def send_email(receiver,expireTime):
     server = smtplib.SMTP_SSL('smtp.zoho.com.cn', 465)
     try:
         # 登陆邮箱，发送邮件退出登陆
-        server.login('expire@nxbest.men', 'nx_Admin123')
+        server.login('vip-expire@nxbest.men', 'nx_Admin123')
         server.sendmail(sender, [receiver], message.as_string())
         server.quit()
     except smtplib.SMTPException:
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     # 使用cursor()方法获取操作游标
     cursor = db.cursor()
 
-    # SQL 查询语句
+    # SQL 查询语句 会员当天过期
     sql = """SELECT email,class_expire
                           FROM `user`
                           WHERE class_expire > date_sub(reg_date, INTERVAL -1 DAY)

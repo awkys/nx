@@ -7,7 +7,7 @@ from email.mime.text import MIMEText
 
 def send_email(receiver,expireTime):
     # 接收方／发送方，接收方是一个list，可以接受多个数值
-    sender = 'expire@nxbest.men'
+    sender = 'delete@nxbest.men'
 
     contant = """<div dir="ltr">
         亲亲，您账号已过期，过期时间是：<font color="darkred">%s</font>
@@ -29,7 +29,7 @@ def send_email(receiver,expireTime):
 
     # 拼接邮件内容
     message = MIMEText(contant, "html", "utf-8")
-    message['Subject'] = "灵溪加速器 - 账户删除通知!"
+    message['Subject'] = "灵溪加速器 - 账户删除通知"
     message['From'] = sender
     message['To'] = receiver
 
@@ -37,7 +37,7 @@ def send_email(receiver,expireTime):
     server = smtplib.SMTP_SSL('smtp.zoho.com.cn', 465)
     try:
         # 登陆邮箱，发送邮件退出登陆
-        server.login('expire@nxbest.men', 'nx_Admin123')
+        server.login('delete@nxbest.men', 'nx_Admin123')
         server.sendmail(sender, [receiver], message.as_string())
         server.quit()
     except smtplib.SMTPException:
@@ -53,10 +53,10 @@ if __name__ == '__main__':
     # 使用cursor()方法获取操作游标
     cursor = db.cursor()
 
-    # SQL 查询语句
+    # SQL 查询语句 60天删除账号
     sql = """SELECT email,expire_in
             from `user`
-            where expire_in < DATE_SUB(curdate(),INTERVAL 29 DAY) ;"""
+            where expire_in < DATE_SUB(curdate(),INTERVAL 59 DAY) ;"""
     try:
        # 执行SQL语句
        cursor.execute(sql)
