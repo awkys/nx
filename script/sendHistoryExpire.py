@@ -46,10 +46,11 @@ if __name__ == '__main__':
     # 使用cursor()方法获取操作游标
     cursor = db.cursor()
 
-    # SQL 查询语句
+    # SQL 查询语句 所有会员过期
     sql = """SELECT email,class_expire
     FROM `user`
-    where class_expire < date(now())"""
+    where class_expire < date(now())
+    and class_expire > date_sub(reg_date, INTERVAL -1 DAY)"""
 
     try:
        # 执行SQL语句
