@@ -12,7 +12,7 @@ def send_email(receiver,expireTime):
     contant = """<div dir="ltr">
         亲亲，您账号已过期，过期时间是：<font color="darkred">%s</font>
 		<br><br>
-		已经长时间未续费，账户已被系统自动删除<br><br>
+		已经长时间未续费，账户即将被系统删除<br><br>
 		如有需要，请登录官方网站，<font color="red">重新注册后续费！</font><br>
 		<br>
 		删除原来配置，重新添加线路使用（参考网站第二步教程）<br>
