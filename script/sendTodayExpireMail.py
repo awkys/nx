@@ -7,7 +7,7 @@ from email.mime.text import MIMEText
 
 def send_email(receiver,expireTime):
     # 接收方／发送方，接收方是一个list，可以接受多个数值
-    sender = 'expire@nxbest.men'
+    sender = 'vip-expire@nxbest.men'
 
     contant = """<div dir="ltr">
         亲，您在本站购买的海外网络加速服务已过期。<br><br>
