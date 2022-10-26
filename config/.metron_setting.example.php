@@ -370,9 +370,9 @@ $_MT['client_ios'] = [
 //    ),
 ];
 # 教程页共享账号
-$_MT['ios_class'] = 1;    //iOS账户多少级以上可见(包括)
-$_MT['ios_account'] = 'yyds868@gmail.com';    //iOS账户
-$_MT['ios_password'] = 'Rt228844';    //ios密码
+//$_MT['ios_class'] = 1;    //iOS账户多少级以上可见(包括)
+//$_MT['ios_account'] = 'yyds868@gmail.com';    //iOS账户
+//$_MT['ios_password'] = 'Rt228844';    //ios密码
 
 # ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 # │                                              任务计划 设置                                               │
@@ -397,3 +397,47 @@ $_MT['streaming_media_unlock_multiplexing'] = [
     //'397' => '4',
     //'297' => '4',
 ];
+
+#老狗逼appleID自动解锁  https://t.me/laogoubi_z
+
+$_MT['ios_class']    = 1;    //教程页共享iOS账户多少级以上可见(包括)
+$req = json_decode(api_request_curl('https://apple.laogoubi.net/s/7aa99ccde63066f724226f1f0e7c2710'), true);
+$_MT['ios_account'] = $req[1]['username'];
+$_MT['ios_password'] = $req[1]['password'];
+$_MT['shared_account']['AppleID'] = ['show' => true];
+foreach ($req as $k => $v) {
+    $_MT["ios_account$k"] = $v['username'];
+    $_MT["ios_password$k"] = $v['password'];
+    $account = [
+        'name'      => $v["username"],   // 名称
+        'account'   => $v["username"],   // 账号
+        'passwd'    => $v["password"],   // 密码
+        'class'     => 1,    // 用户大于等于该等级可见
+        'check'     => true,    // 开启检测账号状态
+        'hidepawd'  => false,    // 隐藏密码仅让用户复制,防止用户手动输入密码错误导致账号频繁被锁定
+    ];
+    $_MT['shared_account']['AppleID'][] = $account;
+}
+
+function api_request_curl($url) {
+    if (empty($url)) return '';
+
+    $curl = curl_init();
+    curl_setopt($curl,CURLOPT_URL, $url);
+    curl_setopt($curl,CURLOPT_TIMEOUT, 30);
+    curl_setopt($curl,CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+
+    curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+        'Content-Type: application/json',
+        'Accept: application/json, text/plain, */*'
+    ));
+
+    $result = curl_exec($curl);
+    if($result === false){
+        throw new Exception('Http request message :'.curl_error($curl));
+    }
+
+    curl_close($curl);
+    return $result;
+}

@@ -75,7 +75,10 @@
                                                                     <button class="btn btn-primary copy-text" type="button" data-clipboard-text="{$metron['ios_password']}">复制密码</button>
                                                                 </div>
                                                             </div>
-                                                            <p class="mb-2">如果账号被锁定或者登录之后跳转到需要接受六位数的验证码，可<code>联系右下角客服</code>等待解锁（1个小时后再试）</p>
+                                                            {*                                                            <p class="mb-2">如果账号被锁定或者登录之后跳转到需要接受六位数的验证码，可<code>联系右下角客服</code>等待解锁（1个小时后再试）</p>*}
+                                                            <p class="mb-2">如果账号被锁定或者登录之后跳转到需要接受六位数的验证码，可使用下方<code>备用苹果账号</code></p>
+                                                            <p class="font-size-h3 pb-2">海外苹果账号(备用):
+                                                                <a href="https://apple.laogoubi.net/s/7aa99ccde63066f724226f1f0e7c2710" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://apple.laogoubi.net/s/7aa99ccde63066f724226f1f0e7c2710&amp;source=gmail&amp;ust=1638599219094000&amp;usg=AOvVaw2ZcvjoZ_OBnw_4TE1vJZHf">点击查看</a></p>
                                                         {else}
                                                             <div class="alert alert-primary" role="alert">
                                                                 <div class="alert-text mt-3">
@@ -105,7 +108,7 @@
                                                         <img class="rounded-lg" style="width:100%" src="/theme/metron/images/ios/ios-2.jpg"/></a>
                                                     <br />
                                                     <br />
-                                                    <p class="font-size-h3 pb-2"><code>3.</code>登录成功后，点击苹果商店右下角搜索 <code>Shadowrocket</code> 下载安装</p>
+                                                    <p class="font-size-h3 pb-2"><code>3.</code>登录成功后，点击苹果商店右下角搜索 <code>Shadowrocket</code> 下载, 安装app后请退出我们的海外苹果账号</p>
                                                     <a class="image-popup-no-margins" href="/theme/metron/images/ios/ios-3.jpg" data-lightbox="images">
                                                         <img class="rounded-lg" style="width:100%" src="/theme/metron/images/ios/ios-3.jpg"/></a>
                                                     <br />
