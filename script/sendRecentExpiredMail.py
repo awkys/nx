@@ -19,6 +19,9 @@ def send_email(receiver,expireTime):
         请复制官方地址去浏览器打开 <br> <br>
         灵溪防走失网址： <a href="https://awkys.github.io" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://awkys.github.io&amp;source=gmail&amp;ust=1638599219094000&amp;usg=AOvVaw2ZcvjoZ_OBnw_4TE1vJZHf">https://awkys.github.io</a><div class="yj6qo"></div><div class="adL"> <br> <br>
         有疑问，请联系网站右下角在线客服 。<br> <br>
+        PS:<br> <br>
+        如果网站打不开，可去我们的新站（云轩加速器）重新注册购买套餐。<br> <br>
+        云轩加速器官方网址： <a href="https://www.yuntey.com" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.yuntey.com&amp;source=gmail&amp;ust=1638599219094000&amp;usg=AOvVaw2ZcvjoZ_OBnw_4TE1vJZHf">https://www.yuntey.com</a><div class="yj6qo"></div><div class="adL"> <br> <br>
         </div></div>"""%(str(expireTime))
 
     # 拼接邮件内容
