@@ -113,7 +113,7 @@
                                                         <img class="rounded-lg" style="width:100%" src="/theme/metron/images/ios/ios-3.jpg"/></a>
                                                     <br />
                                                     <br />
-                                                    <p class="font-size-h3 pb-2"><code>打开Shadowrocket</code> -&gt;<code>配置</code> -&gt;<code>点击 default.conf 最右边感叹号</code> -&gt;
+                                                    <p class="font-size-h3 pb-2"><code>4.</code><code>打开Shadowrocket</code> -&gt;<code>配置</code> -&gt;<code>点击 default.conf 最右边感叹号</code> -&gt;
                                                         <code>通用</code> -&gt;<code>DNS覆写添加 223.5.5.5 </code> -&gt;<code>点击右上角勾保存 </code></p>
                                                     <a class="image-popup-no-margins" href="/theme/metron/images/ios/ios-dns.jpg" data-lightbox="images">
                                                         <img class="rounded-lg" style="width:100%" src="/theme/metron/images/ios/ios-dns.jpg"/></a>
