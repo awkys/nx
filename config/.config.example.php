@@ -428,23 +428,10 @@ $_ENV['epay'] = [
 ];
 
 #花花支付
-$_ENV['SPEEDPay']=[
-    'partner' => "1140", //商户号
-    'key' => "44z2M6mx234ybO33Yb1mKW6YmT4Hm9bz", //商户key
-    'url' => "https://gy.cwcdfb.cn/", //支付地址
-    'sign_type' => strtoupper('MD5'),
-    'input_charset' => strtolower('utf-8'),
-    'subjects' => "元宝充值",                  //商品名称，目前无意义
-    'transport' => 'https',                   //访问模式,根据自己的服务器是否支持ssl访问，若支持请选择https；若不支持请选择http
-    'appname' => $_ENV['appName'],           //网站英文名
-    'min_price' => '1'                       //最小支付金额(请填正数)
-];
-
-#Alisa
 //$_ENV['SPEEDPay']=[
-//    'partner' => "1040", //商户号
-//    'key' => "W56zH6Pr6v41HO4J66oBaa64F1o4F3h4", //商户key
-//    'url' => "https://pay.guccial.org/", //支付地址
+//    'partner' => "1140", //商户号
+//    'key' => "44z2M6mx234ybO33Yb1mKW6YmT4Hm9bz", //商户key
+//    'url' => "https://gy.cwcdfb.cn/", //支付地址
 //    'sign_type' => strtoupper('MD5'),
 //    'input_charset' => strtolower('utf-8'),
 //    'subjects' => "元宝充值",                  //商品名称，目前无意义
@@ -452,6 +439,19 @@ $_ENV['SPEEDPay']=[
 //    'appname' => $_ENV['appName'],           //网站英文名
 //    'min_price' => '1'                       //最小支付金额(请填正数)
 //];
+
+#Alisa
+$_ENV['SPEEDPay']=[
+    'partner' => "1040", //商户号
+    'key' => "W56zH6Pr6v41HO4J66oBaa64F1o4F3h4", //商户key
+    'url' => "https://pay.guccial.org/", //支付地址
+    'sign_type' => strtoupper('MD5'),
+    'input_charset' => strtolower('utf-8'),
+    'subjects' => "元宝充值",                  //商品名称，目前无意义
+    'transport' => 'https',                   //访问模式,根据自己的服务器是否支持ssl访问，若支持请选择https；若不支持请选择http
+    'appname' => $_ENV['appName'],           //网站英文名
+    'min_price' => '1'                       //最小支付金额(请填正数)
+];
 
 
 #风行支付
