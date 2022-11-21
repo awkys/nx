@@ -408,17 +408,17 @@ $_ENV['server_id'] = '2';#（业务网址白名单ID，wellpay后台->个人中�
 //    'min_price' => '1'                       //最小支付金额(请填正数)
 //];
 #扎种支付
-$_ENV['SPEEDPay']=[
-    'partner' => "1073", //商户号
-    'key' => "APu5a2BjZ92VvX2K2a9AKxkpVBV2auee", //商户key
-    'url' => "https://pay.hyss.org/", //支付地址
-    'sign_type' => strtoupper('MD5'),
-    'input_charset' => strtolower('utf-8'),
-    'subjects' => "元宝充值",                  //商品名称，目前无意义
-    'transport' => 'https',                   //访问模式,根据自己的服务器是否支持ssl访问，若支持请选择https；若不支持请选择http
-    'appname' => $_ENV['appName'],           //网站英文名
-    'min_price' => '1'                       //最小支付金额(请填正数)
-];
+//$_ENV['SPEEDPay']=[
+//    'partner' => "1073", //商户号
+//    'key' => "APu5a2BjZ92VvX2K2a9AKxkpVBV2auee", //商户key
+//    'url' => "https://pay.hyss.org/", //支付地址
+//    'sign_type' => strtoupper('MD5'),
+//    'input_charset' => strtolower('utf-8'),
+//    'subjects' => "元宝充值",                  //商品名称，目前无意义
+//    'transport' => 'https',                   //访问模式,根据自己的服务器是否支持ssl访问，若支持请选择https；若不支持请选择http
+//    'appname' => $_ENV['appName'],           //网站英文名
+//    'min_price' => '1'                       //最小支付金额(请填正数)
+//];
 #hybrid
 $_ENV['epay'] = [
     'epay_api_url' => 'https://pay.hyss.org/',
@@ -454,17 +454,17 @@ $_ENV['epay'] = [
 //];
 
 #Alisa
-//$_ENV['SPEEDPay']=[
-//    'partner' => "1040", //商户号
-//    'key' => "W56zH6Pr6v41HO4J66oBaa64F1o4F3h4", //商户key
-//    'url' => "https://pay.guccial.org/", //支付地址
-//    'sign_type' => strtoupper('MD5'),
-//    'input_charset' => strtolower('utf-8'),
-//    'subjects' => "元宝充值",                  //商品名称，目前无意义
-//    'transport' => 'https',                   //访问模式,根据自己的服务器是否支持ssl访问，若支持请选择https；若不支持请选择http
-//    'appname' => $_ENV['appName'],           //网站英文名
-//    'min_price' => '1'                       //最小支付金额(请填正数)
-//];
+$_ENV['SPEEDPay']=[
+    'partner' => "1040", //商户号
+    'key' => "W56zH6Pr6v41HO4J66oBaa64F1o4F3h4", //商户key
+    'url' => "https://pay.guccial.org/", //支付地址
+    'sign_type' => strtoupper('MD5'),
+    'input_charset' => strtolower('utf-8'),
+    'subjects' => "nx元宝充值",                  //商品名称，目前无意义
+    'transport' => 'https',                   //访问模式,根据自己的服务器是否支持ssl访问，若支持请选择https；若不支持请选择http
+    'appname' => $_ENV['appName'],           //网站英文名
+    'min_price' => '1'                       //最小支付金额(请填正数)
+];
 
 
 #风行支付
