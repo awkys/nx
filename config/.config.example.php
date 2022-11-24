@@ -428,17 +428,17 @@ $_ENV['epay'] = [
 ];
 
 #鑫诚支付
-$_ENV['SPEEDPay']=[
-    'partner' => "1032", //商户号
-    'key' => "Hp79sF1JHfO20F2s1Jzs5Oe1fEsO979k", //商户key
-    'url' => "https://xczf01.xyz/", //支付地址
-    'sign_type' => strtoupper('MD5'),
-    'input_charset' => strtolower('utf-8'),
-    'subjects' => "游戏充值",                  //商品名称，目前无意义
-    'transport' => 'https',                   //访问模式,根据自己的服务器是否支持ssl访问，若支持请选择https；若不支持请选择http
-    'appname' => $_ENV['appName'],           //网站英文名
-    'min_price' => '1'                       //最小支付金额(请填正数)
-];
+//$_ENV['SPEEDPay']=[
+//    'partner' => "1032", //商户号
+//    'key' => "Hp79sF1JHfO20F2s1Jzs5Oe1fEsO979k", //商户key
+//    'url' => "https://xczf01.xyz/", //支付地址
+//    'sign_type' => strtoupper('MD5'),
+//    'input_charset' => strtolower('utf-8'),
+//    'subjects' => "游戏充值",                  //商品名称，目前无意义
+//    'transport' => 'https',                   //访问模式,根据自己的服务器是否支持ssl访问，若支持请选择https；若不支持请选择http
+//    'appname' => $_ENV['appName'],           //网站英文名
+//    'min_price' => '1'                       //最小支付金额(请填正数)
+//];
 
 #花花支付
 //$_ENV['SPEEDPay']=[
@@ -454,17 +454,17 @@ $_ENV['SPEEDPay']=[
 //];
 
 #Alisa
-//$_ENV['SPEEDPay']=[
-//    'partner' => "1040", //商户号
-//    'key' => "W56zH6Pr6v41HO4J66oBaa64F1o4F3h4", //商户key
-//    'url' => "https://1719.love/", //支付地址
-//    'sign_type' => strtoupper('MD5'),
-//    'input_charset' => strtolower('utf-8'),
-//    'subjects' => "nx元宝充值",                  //商品名称，目前无意义
-//    'transport' => 'https',                   //访问模式,根据自己的服务器是否支持ssl访问，若支持请选择https；若不支持请选择http
-//    'appname' => $_ENV['appName'],           //网站英文名
-//    'min_price' => '1'                       //最小支付金额(请填正数)
-//];
+$_ENV['SPEEDPay']=[
+    'partner' => "1040", //商户号
+    'key' => "W56zH6Pr6v41HO4J66oBaa64F1o4F3h4", //商户key
+    'url' => "https://1719.love/", //支付地址
+    'sign_type' => strtoupper('MD5'),
+    'input_charset' => strtolower('utf-8'),
+    'subjects' => "nx元宝充值",                  //商品名称，目前无意义
+    'transport' => 'https',                   //访问模式,根据自己的服务器是否支持ssl访问，若支持请选择https；若不支持请选择http
+    'appname' => $_ENV['appName'],           //网站英文名
+    'min_price' => '1'                       //最小支付金额(请填正数)
+];
 
 
 #风行支付
