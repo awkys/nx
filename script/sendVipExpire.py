@@ -43,7 +43,7 @@ def send_email(receiver,expireTime):
 
 if __name__ == '__main__':
     # 打开数据库连接
-    db = pymysql.connect(host='localhost',
+    db = pymysql.connect(host='nxkys.com',
                          user='root',
                          password='nx_mysql_Admin6688',
                          database='sspanel')
