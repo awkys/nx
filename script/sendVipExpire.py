@@ -52,10 +52,16 @@ if __name__ == '__main__':
     cursor = db.cursor()
 
     # SQL 查询语句 所有会员过期
+#     sql = """SELECT email,class_expire
+#     FROM `user`
+#     where class_expire < date(now())
+#     and class_expire > date_sub(reg_date, INTERVAL -1 DAY)"""
+
+    # SQL 查询语句 所有会员过期
     sql = """SELECT email,class_expire
     FROM `user`
-    where class_expire < date(now())
-    and class_expire > date_sub(reg_date, INTERVAL -1 DAY)"""
+    where t > 0
+    and class_expire < date_sub(curdate(), INTERVAL -1 DAY);"""
 
     try:
        # 执行SQL语句
