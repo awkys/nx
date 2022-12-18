@@ -322,7 +322,7 @@ class AdminController extends UserController
 
     public function getNodeTraffic($request, $response, $args)
     {
-        $logs = Manager::connection()->select('SELECT *,(SUM(u) + SUM(d)) as sum_ud FROM `user_traffic_log` GROUP BY node_id ORDER BY sum_ud DESC LIMIT 0,10');
+        $logs = Manager::connection()->select('SELECT *,(SUM(u) + SUM(d)) as sum_ud FROM `user_traffic_log` where unix_timestamp(CURDATE()) < log_time GROUP BY node_id ORDER BY sum_ud DESC LIMIT 0,20');
         foreach ($logs as &$log) {
             $log->node_name = Node::query()->where('id', $log->node_id)->value('name');
             $log->traffic = Tools::flowAutoShow($log->sum_ud);
@@ -338,7 +338,7 @@ class AdminController extends UserController
 
     public function getUserTraffic($request, $response, $args)
     {
-        $logs = Manager::connection()->select('SELECT *,(SUM(u) + SUM(d)) as sum_ud FROM `user_traffic_log` GROUP BY user_id ORDER BY sum_ud DESC LIMIT 0,10');
+        $logs = Manager::connection()->select('SELECT *,(SUM(u) + SUM(d)) as sum_ud FROM `user_traffic_log` where unix_timestamp(CURDATE()) < log_time GROUP BY user_id ORDER BY sum_ud DESC LIMIT 0,10');
         foreach ($logs as &$log) {
             $user = User::query()->where('id', $log->user_id)->first();
             $log->user_name = $user->user_name;
