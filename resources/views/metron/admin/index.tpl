@@ -123,7 +123,7 @@
                         <div class="card">
                             <div class="card-main">
                                 <div class="card-inner">
-                                    <h5>当天节点流量使用排名</h5>
+                                    <h5>最近1小时节点流量使用排名</h5>
                                     <table>
                                         <thead>
                                         <tr>
