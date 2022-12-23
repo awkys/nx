@@ -35,7 +35,7 @@ def send_email(receiver,expireTime):
     server = smtplib.SMTP_SSL('smtp.zoho.com.cn', 465)
     try:
         # 登陆邮箱，发送邮件退出登陆
-        server.login('vip-expire@nxbest.men', 'nx_Admin123')
+        server.login('delete@nxbest.men', 'nx_Admin123')
         server.sendmail(sender, [receiver], message.as_string())
         server.quit()
     except smtplib.SMTPException:
