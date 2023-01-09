@@ -387,7 +387,7 @@ class AuthController extends BaseController
         }
 
 
-        if (User::where("reg_ip", $_SERVER['REMOTE_ADDR'])->count() >= 2){
+        if (User::where("reg_ip", $_SERVER['REMOTE_ADDR'])->count() >= 3){
             $res['ret'] = 0;
             $res['msg'] = '请不要频繁注册账号！';
             return $res;
@@ -409,11 +409,11 @@ class AuthController extends BaseController
                 return $res;
             }
 
-            if ($gift_user->class == 0) {
-                $res['ret'] = 0;
-                $res['msg'] = "用户满员，请去新站注册：<a href='https://www.yuntey.com/auth/register'>点击跳转</a>";
-                return $res;
-            }
+//            if ($gift_user->class == 0) {
+//                $res['ret'] = 0;
+//                $res['msg'] = "用户满员，请去新站注册：<a href='https://www.yuntey.com/auth/register'>点击跳转</a>";
+//                return $res;
+//            }
 
             if ($gift_user->invite_num == 0) {
                 $res['ret'] = 0;
